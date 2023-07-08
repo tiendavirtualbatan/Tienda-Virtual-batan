@@ -18,7 +18,7 @@
     <header>
       <h1 class="gradient-text">Tienda Virtual Batan</h1>
       <nav id="nav">
-        <a href="index.html" onclick="seleccionar()">Inicio</a>
+        <a href="/index.html" onclick="seleccionar()">Inicio</a>
         <a href="menu.html" onclick="seleccionar()">Menu</a>
         <a href="cargar-producto.php" onclick="seleccionar()">Subir</a>
         <a href="eliminar-producto.php" onclick="seleccionar()">Eliminar</a>
@@ -30,7 +30,43 @@
     <section id="porfolio">
       <div class="product-container">
 
-        No se encontraron productos en la base de datos.        
+        
+              <div class='product-card'>
+                <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/Samsung A70.jpg","_self");'>
+                    <img src='productos/Samsung A70.jpg' alt='Samsung A70'>
+                  </div>
+                  <h3>Samsung A70</h3>
+                  <p>128 Gb de memoria Interna, 6 Gb de ram, 32 pixel Camara</p>
+                  <p class='price'>Precio: <span>₡ 60,000.00</span></p>
+                  <form>
+                    <input type='hidden' name='descripcion' value='Samsung A70'>
+                    <input type='hidden' name='precio' value='60000.00'>
+                    <div id='paypal-button-container-0'></div>
+                  </form>
+                </div>
+              </div>
+            
+              <script>
+                paypal.Buttons({
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{
+                        description: 'Samsung A70',
+                        amount: {
+                          value: '60000.00'
+                        }
+                      }]
+                    });
+                  },
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                    });
+                  }
+                }).render('#paypal-button-container-0');
+              </script>
+                    
       </div>
     </section>
     <section id="contacto"></section>
