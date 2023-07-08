@@ -119,7 +119,7 @@ header nav a:hover {
     background-color: #f9f9f9;
     position: relative;
     overflow: hidden;
-    width: auto; /* Modificado */
+    width: 280px; /* Modificado */
     height: auto;
     display: inline-block;
     margin-right: 20px;
