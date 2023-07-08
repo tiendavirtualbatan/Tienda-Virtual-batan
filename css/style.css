@@ -47,6 +47,29 @@ body {
      font-weight: normal;
      overflow-x: hidden;
 }
+    /* Estilo inicial del enlace */
+    .nav-link {
+        color: black;
+        text-decoration: none;
+      }
+  
+      /* Animación de parpadeo */
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+  
+      /* Aplicar animación al enlace */
+      .nav-link.intermitente {
+        animation: blink 1s infinite;
+      }
 
 a {
      color: #1f1f1f;
@@ -334,14 +357,14 @@ button {
     float: left;
     font-size: 18px;
     color: #ffffff;
-    background-color: #1f7002;
+    background-color: #fc3f94;
     padding: 8px 5px;
     text-align: center;
     text-transform: uppercase;
 }
 .read_bt a:hover{
     color: #ffffff;
-    background-color: #e4e219;
+    background-color: #19e448;
 }
 
 .contact_bt{
@@ -353,7 +376,7 @@ button {
     width: 100%;
     float: left;
     font-size: 18px;
-    color: #ffffff;
+    color: #070707;
     background-color: #191616;
     padding: 8px 5px;
     text-align: center;
@@ -365,7 +388,7 @@ button {
     background-color: #e4e219;
 }
 .contact_bt.active a{
-    background-color: #e419c2;
+    background-color: #00ff1e;
 }
 
 #main_slider a.carousel-control-next {
@@ -446,10 +469,10 @@ button {
     border-radius: 15px;
     width: 100%;
     float: left;
-    font-size: 18px;
+    font-size: 1px;
     color: #fc067d;
-    background-color: #fc067d;
-    padding: 8px 5px;
+    background-image: linear-gradient(to right, #FF0018, #FFA52C, #FFD500, #008018, #0000F9, #86007D);
+    padding: 4px 5px;
     text-align: center;
     text-transform: uppercase;
     margin-top: 40px;
@@ -549,10 +572,10 @@ button {
     border-radius: 15px;
     width: 100%;
     float: left;
-    font-size: 18px;
+    font-size: 1px;
     color: #077ff7;
-    background-color: #077ff7;
-    padding: 8px 5px;
+    background-image: linear-gradient(to right, #FF0018, #FFA52C, #FFD500, #008018, #0000F9, #86007D);
+    padding: 4px 5px;
     text-align: center;
     text-transform: uppercase;
     margin-top: 40px;
