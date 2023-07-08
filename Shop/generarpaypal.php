@@ -34,6 +34,22 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
       <div class="product-container">
 
         <?php
+        // Función para convertir colones a dólares utilizando una API de conversión de moneda
+        function convertirColonesADolares($cantidad) {
+          $url = "https://api.exchangerate-api.com/v4/latest/USD";
+
+          $response = file_get_contents($url);
+          $data = json_decode($response);
+
+          if ($data && isset($data->rates) && isset($data->rates->CRC)) {
+            $tipoCambio = $data->rates->CRC;
+            $cantidadEnDolares = $cantidad / $tipoCambio;
+            return round($cantidadEnDolares, 2);
+          }
+
+          return $cantidad; // Si no se puede obtener el tipo de cambio, se devuelve la cantidad original en colones
+        }
+
         // Conexión a la base de datos
         $servername = "localhost";
         $username = "root";
@@ -61,6 +77,7 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
             $nombre = htmlspecialchars($fila['nombre']);
             $detalles = htmlspecialchars($fila['detalles']);
             $precio = htmlspecialchars($fila['precio']);
+            $precioEnDolares = convertirColonesADolares($precio);
 
             // Formatear el precio con separador de miles
             $precioFormateado = number_format($precio, 2, '.', ',');
@@ -96,7 +113,8 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
                       purchase_units: [{
                         description: '$nombre',
                         amount: {
-                          value: '$precio'
+                          currency_code: 'USD',
+                          value: '$precioEnDolares'
                         }
                       }]
                     });
@@ -119,7 +137,7 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
         // Cerrar la conexión a la base de datos
         $conn->close();
         ?>
-        
+
       </div>
     </section>
     <section id="contacto"></section>
