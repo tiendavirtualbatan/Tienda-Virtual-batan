@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es-es">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tienda Virtual Batan</title>
+      <!-- Agrega aquí tus estilos CSS si los necesitas -->
+      <style>
+         /* Estilos generales */
+         body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         }
+         .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 20px;
+         }
+         /* Estilos para el encabezado */
+         header {
+         background: linear-gradient(45deg, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D);
+         color: #fff;
+         padding: 20px;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         }
+         header h1 {
+         margin: 0;
+         font-size: 28px;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         font-weight: bold;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+         }
+         /* Estilos para la barra de navegación */
+         nav {
+         background-color: #f1335f;
+         color: #fff;
+         padding: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         nav ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         }
+         nav ul li {
+         display: inline;
+         margin-right: 10px;
+         }
+         nav ul li a {
+         color: #fff;
+         text-decoration: none;
+         }
+         /* Estilos para la sección de videos */
+         section {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: flex-start;
+         padding: 20px;
+         position: relative;
+         }
+         /* Estilos para el pie de página */
+         footer {
+         background-color: #f1335f;
+         color: #fff;
+         padding: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         /* Estilos para la paginación */
+         .pagination {
+         position: absolute;
+         /* Agregado */
+         bottom: -30px;
+         /* Ajusta la posición vertical según necesites */
+         left: 50%;
+         /* Centra horizontalmente */
+         transform: translateX(-50%);
+         /* Centra horizontalmente */
+         display: flex;
+         justify-content: center;
+         margin-top: 20px;
+         padding-bottom: 20px;
+         }
+         .pagination a {
+         display: inline-block;
+         border-radius: 20px;
+         padding: 16px 24px;
+         background-color: #0ea841;
+         color: #fff;
+         text-decoration: none;
+         margin-right: 5px;
+         }
+         .pagination a.active {
+         background-color: #f5bd06;
+         font-weight: bold;
+         }
+         .wrapper {
+         top: 10px;
+         width: 100%;
+         text-align: center;
+         }
+         .page_categories {
+         width: 100%;
+         margin: 0 auto;
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: center;
+         }
+         .gallery {
+         width: 175px;
+         height: 60px;
+         margin: 10px;
+         padding: 0 5px 0 10px;
+         border-radius: 4px;
+         transition: 200ms ease-in-out;
+         }
+         .gallery:hover {
+         cursor: pointer;
+         margin-top: 2px;
+         }
+         .gallery h1 {
+         color: #fff;
+         font-size: 15px;
+         font-weight: 100;
+         margin-top: 22px;
+         }
+         .fighting_games {
+         background: #9CECFB;
+         background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+         background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+         box-shadow: 0 10px 20px lightblue;
+         }
+         .sports_games {
+         background: #ee0979;
+         background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+         background: linear-gradient(to right, #ff6a00, #ee0979);
+         box-shadow: 0 3px 40px tomato;
+         }
+         .girls_games {
+         background: #ff00cc;
+         background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+         background: linear-gradient(to right, #333399, #ff00cc);
+         box-shadow: 0 10px 50px violet;
+         }
+         .racing_games {
+         background: #56ab2f;
+         background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
+         background: linear-gradient(to right, #a8e063, #56ab2f);
+         box-shadow: 0 10px 40px lightgreen;
+         }
+         .shooting_games {
+         background: #FFB75E;
+         background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
+         background: linear-gradient(to right, #ED8F03, #FFB75E);
+         box-shadow: 0 3px 50px orange;
+         }
+         .RBG_games {
+         background: #00C9FF;
+         background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);
+         background: linear-gradient(to right, #92FE9D, #00C9FF);
+         box-shadow: 0 0px 50px aqua;
+         }
+         /* BOTTOM CARDS */
+         .popular_title {
+         margin-top: 40px;
+         }
+         .popular_games {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         }
+         .popular-card {
+         width: 190px;
+         height: 300px;
+         margin: 10px;
+         background: #000;
+         border-radius: 4px;
+         transition: 200ms ease-in-out;
+         }
+         .popular-card:hover {
+         margin-top: -1px;
+         }
+         .popular_games {
+         width: 100%;
+         margin-top: 50px;
+         }
+         .shooting {
+         background: #FFB75E;
+         background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
+         background: linear-gradient(to right, #ED8F03, #FFB75E);
+         box-shadow: 0 3px 20px orange;
+         }
+         .sports {
+         background: #ee0979;
+         background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+         background: linear-gradient(to right, #ff6a00, #ee0979);
+         box-shadow: 0 3px 40px tomato;
+         }
+         .fighting {
+         background: #9CECFB;
+         background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+         background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+         box-shadow: 0 10px 20px lightblue;
+         }
+         .racing {
+         background: #56ab2f;
+         background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
+         background: linear-gradient(to right, #a8e063, #56ab2f);
+         box-shadow: 0 10px 40px lightgreen;
+         }
+         .girls {
+         background: #ff00cc;
+         background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+         background: linear-gradient(to right, #333399, #ff00cc);
+         box-shadow: 0 10px 40px violet;
+         }
+         .RBG {
+         background: #00C9FF;
+         background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);
+         background: linear-gradient(to right, #92FE9D, #00C9FF);
+         box-shadow: 0 0px 50px aqua;
+         }
+         .img_container {
+         width: 120px;
+         height: 120px;
+         margin: 30px auto;
+         border-radius: 100px;
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         box-shadow: 0 0px 30px rgba(0,0,0,0.5);
+         }
+         .game_title {
+         color: #fff;
+         font-size: 20px;
+         margin-top: -20px;
+         font-weight: 100;
+         }
+         .download_button {
+         color: #fff;
+         width: 65%;
+         border: none;
+         padding: 15px;
+         outline: none;
+         background: rgba(225,225,225,0.2);
+         margin-top: 10px;
+         font-size: 15px;
+         border-radius: 9px;
+         text-decoration: none;
+         box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+         transition: 200ms ease-in-out;
+         }
+         .download_button:hover {
+         cursor: pointer;
+         transform: scale(1.1);
+         background: rgba(225,225,225,0.4);
+         }
+         /* Estilos para dispositivos móviles */
+         @media only screen and (max-width: 768px) {
+         body {
+         font-size: 14px;
+         }
+         header h1 {
+         font-size: 24px;
+         }
+         nav ul li {
+         margin-right: 5px;
+         }
+         section {
+         padding: 10px;
+         }
+         .pagination {
+         bottom: -15px;
+         margin-top: 10px;
+         padding-bottom: 10px;
+         }
+         .pagination a {
+         padding: 12px 18px;
+         font-size: 12px;
+         margin-right: 3px;
+         }
+         .gallery {
+         width: 120px;
+         height: 40px;
+         margin: 8px;
+         padding: 0 5px 0 8px;
+         }
+         .gallery h1 {
+         font-size: 12px;
+         }
+         .popular-card {
+         width: 150px;
+         height: 240px;
+         margin: 5px;
+         }
+         .game_title {
+         font-size: 16px;
+         }
+         .download_button {
+         width: 70%;
+         padding: 12px;
+         font-size: 12px;
+         margin-top: 8px;
+         border-radius: 6px;
+         }
+         .description {
+         font-size: 10px;
+         margin-top: 15px;
+         }
+         }
+      </style>
+      <!-- Llama al archivo JavaScript -->
+   </head>
+   <body>
+      <header>
+         <h1>Tienda Virtual Batan</h1>
+      </header>
+      <nav>
+         <!-- Aquí puedes agregar tus elementos de menú utilizando el formato de una barra de navegación (navbar) -->
+         <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cargar-producto.php">Subir</a></li>
+            <li><a href="eliminar-producto.php">Eliminar</a></li>
+            <li><a href="ver-producto.php">Productos</a></li>
+            <li><a href="generarpaypal.php">Tienda PayPal</a></li>
+            <!-- Agrega aquí más elementos de menú según tus necesidades -->
+         </ul>
+      </nav>
+      <section>
+         <!-- Agrega aquí el código para mostrar los videos -->
+         <div class="wrapper">
+
+         <div class="popular_games">
+            <div class="sports popular-card">
+               <img class="img_container" src="img/55ad22d62a000028007af9e5.jpeg" alt="">
+               <h4 class="game_title">Tienda Online</h4>
+               <button class="download_button" href=""> <i class="fas fa-download"></i>Entrar</button>
+            </div>
+            <div class="shooting popular-card">
+               <img class="img_container" src="img/81mE8WEnsAL._SX342_.jpg" alt="">
+               <h4 class="game_title">Raven Squad</h4>
+               <button class="download_button" href="#"> <i class="fas fa-download"></i> Free </button>
+            </div>
+            <div class="girls popular-card">
+               <img class="img_container" src="img/AL_.jpg" alt="">
+               <h4 class="game_title">Princess Mulan</h4>
+               <button class="download_button" href="#"> <i class="fas fa-download"></i> Play Now </button>
+            </div>
+            <div class="racing popular-card">
+               <img class="img_container" src="img/81mE8WEnsAL._SX342_.jpg" alt="">
+               <h4 class="game_title">Need for Speed</h4>
+               <button class="download_button" href="#"> <i class="fas fa-download"></i> Free </button>
+            </div>
+            <div class="RBG popular-card">
+               <img class="img_container" src="img/Skyrim_Cover.webp" alt="">
+               <h4 class="game_title">Skyrim</h4>
+               <button class="download_button" href="#"> <i class="fas fa-download"></i> Free </button>
+            </div>
+            <div class="fighting popular-card">
+               <img class="img_container" src="img/fighting.jpg" alt="">
+               <h4 class="game_title">Street Fighter</h4>
+               <button class="download_button" href="#"> <i class="fas fa-download"></i> Play Now </button>
+            </div>
+         </div>
+         <div class="page_categories">
+            <div class="fighting_games gallery">
+               <h1><i class="fas fa-helicopter"></i>...</h1></div>
+               <div class="sports_games gallery">
+               <h1><i class="fas fa-futbol"></i>...</h1></div>
+               <div class="girls_games gallery">
+               <h1><i class="fab fa-gitlab"></i>...</h1></div>
+               <div class="racing_games gallery">
+               <h1><i class="fas fa-flag-checkered"></i>...</h1></div>
+               <div class="shooting_games gallery">
+               <h1><i class="fas fa-fighter-jet"></i>...</h1></div>
+               <div class="RBG_games gallery"><h1><i class="fab fa-accusoft"></i>...</h1>
+            </div>
+						  
+         </div>
+      </section>
+      <footer>
+         <p>Bienvenidos</p>
+      </footer>
+   </body>
+</html>

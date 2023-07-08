@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="all.min.css">
+  <link rel="stylesheet" href="generar_copia.css">
+  <link rel="stylesheet" href="swap.css">
+  <title>Tienda Virtual Batan</title>
+
+  <!-- Agregar el script de PayPal -->
+  <script src="https://www.paypal.com/sdk/js?client-id=Aci8OeCE39xD0lUF-0GQM1DgnKq0Lx59GW5s8G6VwpMINJdxh4VvTAaWzF5WR3h7VswalUe8cHr9TtoK"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="gradient-text">Tienda Virtual Batan</h1>
+      <nav id="nav">
+        <a href="index.html" onclick="seleccionar()">Inicio</a>
+        <a href="menu.html" onclick="seleccionar()">Menu</a>
+        <a href="cargar-producto.php" onclick="seleccionar()">Subir</a>
+        <a href="eliminar-producto.php" onclick="seleccionar()">Eliminar</a>
+      </nav>
+      <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+    <section id="porfolio">
+      <div class="product-container">
+
+        
+              <div class='product-card'>
+                <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/audifono_3.jpg","_self");'>
+                    <img src='productos/audifono_3.jpg' alt='audifono'>
+                  </div>
+                  <h3>audifono</h3>
+                  <p>gdfg</p>
+                  <p class='price'>Precio: <span>₡ 34,534.00</span></p>
+                  <form>
+                    <input type='hidden' name='descripcion' value='audifono'>
+                    <input type='hidden' name='precio' value='34534.00'>
+                    <div id='paypal-button-container-0'></div>
+                  </form>
+                </div>
+              </div>
+            
+              <script>
+                paypal.Buttons({
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{
+                        description: 'audifono',
+                        amount: {
+                          value: '34534.00'
+                        }
+                      }]
+                    });
+                  },
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                    });
+                  }
+                }).render('#paypal-button-container-0');
+              </script>
+            
+              <div class='product-card'>
+                <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/parlante_2.jpg","_self");'>
+                    <img src='productos/parlante_2.jpg' alt='parlante'>
+                  </div>
+                  <h3>parlante</h3>
+                  <p>dfg</p>
+                  <p class='price'>Precio: <span>₡ 465.00</span></p>
+                  <form>
+                    <input type='hidden' name='descripcion' value='parlante'>
+                    <input type='hidden' name='precio' value='465.00'>
+                    <div id='paypal-button-container-1'></div>
+                  </form>
+                </div>
+              </div>
+            
+              <script>
+                paypal.Buttons({
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{
+                        description: 'parlante',
+                        amount: {
+                          value: '465.00'
+                        }
+                      }]
+                    });
+                  },
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                    });
+                  }
+                }).render('#paypal-button-container-1');
+              </script>
+            
+              <div class='product-card'>
+                <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/chrome.jpg","_self");'>
+                    <img src='productos/chrome.jpg' alt='chrome'>
+                  </div>
+                  <h3>chrome</h3>
+                  <p>fdg</p>
+                  <p class='price'>Precio: <span>₡ 3,543.00</span></p>
+                  <form>
+                    <input type='hidden' name='descripcion' value='chrome'>
+                    <input type='hidden' name='precio' value='3543.00'>
+                    <div id='paypal-button-container-2'></div>
+                  </form>
+                </div>
+              </div>
+            
+              <script>
+                paypal.Buttons({
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{
+                        description: 'chrome',
+                        amount: {
+                          value: '3543.00'
+                        }
+                      }]
+                    });
+                  },
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                    });
+                  }
+                }).render('#paypal-button-container-2');
+              </script>
+            
+              <div class='product-card'>
+                <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/chrome_1.jpg","_self");'>
+                    <img src='productos/chrome_1.jpg' alt='chrome'>
+                  </div>
+                  <h3>chrome</h3>
+                  <p>fdg</p>
+                  <p class='price'>Precio: <span>₡ 3,543.00</span></p>
+                  <form>
+                    <input type='hidden' name='descripcion' value='chrome'>
+                    <input type='hidden' name='precio' value='3543.00'>
+                    <div id='paypal-button-container-3'></div>
+                  </form>
+                </div>
+              </div>
+            
+              <script>
+                paypal.Buttons({
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{
+                        description: 'chrome',
+                        amount: {
+                          value: '3543.00'
+                        }
+                      }]
+                    });
+                  },
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                    });
+                  }
+                }).render('#paypal-button-container-3');
+              </script>
+            
+              <div class='product-card'>
+                <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/chrome_2.jpg","_self");'>
+                    <img src='productos/chrome_2.jpg' alt='chrome'>
+                  </div>
+                  <h3>chrome</h3>
+                  <p>dgdf</p>
+                  <p class='price'>Precio: <span>₡ 34,534.00</span></p>
+                  <form>
+                    <input type='hidden' name='descripcion' value='chrome'>
+                    <input type='hidden' name='precio' value='34534.00'>
+                    <div id='paypal-button-container-4'></div>
+                  </form>
+                </div>
+              </div>
+            
+              <script>
+                paypal.Buttons({
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{
+                        description: 'chrome',
+                        amount: {
+                          value: '34534.00'
+                        }
+                      }]
+                    });
+                  },
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                    });
+                  }
+                }).render('#paypal-button-container-4');
+              </script>
+                    
+      </div>
+    </section>
+    <section id="contacto"></section>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
+
