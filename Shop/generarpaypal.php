@@ -96,6 +96,7 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
                       purchase_units: [{
                         description: '$nombre',
                         amount: {
+                          currency_code: 'CRC',
                           value: '$precio'
                         }
                       }]
