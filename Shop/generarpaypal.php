@@ -5,6 +5,10 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<meta property="og:title" content="Tienda Virtual Batan">
+<meta property="og:description" content="Ventas y Reparaciones">
+<meta property="og:image" content="img/log.png">
+<meta property="og:url" content="https://tiendavirtualbatan.com/Shop/index.html">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
