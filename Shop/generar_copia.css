@@ -9,8 +9,6 @@ html {
    scroll-behavior: smooth;
 }
 
-
-
 /* Capa para el fondo del cuerpo con efecto gaussiano */
 body::before {
   content: "";
