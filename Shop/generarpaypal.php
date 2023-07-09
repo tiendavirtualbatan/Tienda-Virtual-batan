@@ -1,5 +1,6 @@
 <?php
-ob_start(); // Iniciar el almacenamiento en búfer de salida
+ob_start();
+// Iniciar el almacenamiento en búfer de salida
 ?>
 
 <!DOCTYPE html>
@@ -36,19 +37,20 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
 
         <?php
         // Función para convertir colones a dólares utilizando una API de conversión de moneda
-        function convertirColonesADolares($cantidad) {
-          $url = "https://api.exchangerate-api.com/v4/latest/USD";
+        function convertirColonesADolares($cantidad)
+        {
+            $url = "https://api.exchangerate-api.com/v4/latest/USD";
 
-          $response = file_get_contents($url);
-          $data = json_decode($response);
+            $response = file_get_contents($url);
+            $data = json_decode($response);
 
-          if ($data && isset($data->rates) && isset($data->rates->CRC)) {
-            $tipoCambio = $data->rates->CRC;
-            $cantidadEnDolares = $cantidad / $tipoCambio;
-            return round($cantidadEnDolares, 2);
-          }
+            if ($data && isset($data->rates) && isset($data->rates->CRC)) {
+                $tipoCambio = $data->rates->CRC;
+                $cantidadEnDolares = $cantidad / $tipoCambio;
+                return round($cantidadEnDolares, 2);
+            }
 
-          return $cantidad; // Si no se puede obtener el tipo de cambio, se devuelve la cantidad original en colones
+            return $cantidad; // Si no se puede obtener el tipo de cambio, se devuelve la cantidad original en colones
         }
 
         // Conexión a la base de datos
@@ -62,7 +64,9 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
 
         // Verificar la conexión
         if ($conn->connect_error) {
-          die("Error de conexión a la base de datos: " . $conn->connect_error);
+            die(
+                "Error de conexión a la base de datos: " . $conn->connect_error
+            );
         }
 
         // Consultar los productos de la base de datos
@@ -71,23 +75,23 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
 
         // Verificar si se encontraron productos
         if ($resultado->num_rows > 0) {
-          $contador = 0; // Inicializar el contador
-          // Recorrer los productos y generar las tarjetas
-          while ($fila = $resultado->fetch_assoc()) {
-            $imagen = htmlspecialchars($fila['imagen']);
-            $nombre = htmlspecialchars($fila['nombre']);
-            $detalles = htmlspecialchars($fila['detalles']);
-            $precio = htmlspecialchars($fila['precio']);
-            $precioEnDolares = convertirColonesADolares($precio);
+            $contador = 0; // Inicializar el contador
+            // Recorrer los productos y generar las tarjetas
+            while ($fila = $resultado->fetch_assoc()) {
+                $imagen = htmlspecialchars($fila["imagen"]);
+                $nombre = htmlspecialchars($fila["nombre"]);
+                $detalles = htmlspecialchars($fila["detalles"]);
+                $precio = htmlspecialchars($fila["precio"]);
+                $precioEnDolares = convertirColonesADolares($precio);
 
-            // Formatear el precio con separador de miles
-            $precioFormateado = number_format($precio, 2, '.', ',');
+                // Formatear el precio con separador de miles
+                $precioFormateado = number_format($precio, 2, ".", ",");
 
-            // Agregar el símbolo de la moneda al precio
-            $moneda = '₡';
+                // Agregar el símbolo de la moneda al precio
+                $moneda = "₡";
 
-            // Agregar la tarjeta del producto al contenido HTML
-            echo "
+                // Agregar la tarjeta del producto al contenido HTML
+                echo "
               <div class='product-card'>
                 <div class='product-card-inner'>
                   <div class='image-container' onclick='window.open(\"$imagen\",\"_self\");'>
@@ -105,8 +109,8 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
               </div>
             ";
 
-            // Bloque de script de PayPal para el producto actual
-            echo "
+                // Bloque de script de PayPal para el producto actual
+                echo "
               <script>
                 paypal.Buttons({
                   createOrder: function(data, actions) {
@@ -129,10 +133,10 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
               </script>
             ";
 
-            $contador++; // Incrementar el contador
-          }
+                $contador++; // Incrementar el contador
+            }
         } else {
-          echo "No se encontraron productos en la base de datos.";
+            echo "No se encontraron productos en la base de datos.";
         }
 
         // Cerrar la conexión a la base de datos
@@ -152,9 +156,10 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
 $contenidoHTML = ob_get_clean();
 
 // Guardar el contenido HTML en el archivo index.html
-file_put_contents('index.html', $contenidoHTML);
+file_put_contents("index.html", $contenidoHTML);
 
 // Redirigir a la página index.html
 header("Location: index.html");
 exit();
+
 ?>
