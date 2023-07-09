@@ -70,15 +70,15 @@
             
               <div class='product-card'>
                 <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("productos/Samsung J2 prime.jpg","_self");'>
-                    <img src='productos/Samsung J2 prime.jpg' alt='Samsung J2 prime'>
+                  <div class='image-container' onclick='window.open("productos/J2 prime.jpg","_self");'>
+                    <img src='productos/J2 prime.jpg' alt='J2 prime'>
                   </div>
-                  <h3>Samsung J2 prime</h3>
+                  <h3>J2 prime</h3>
                   <p>En buen estado</p>
-                  <p class='price'>Precio: <span>₡ 30,000.00</span></p>
+                  <p class='price'>Precio: <span>₡ 25,000.00</span></p>
                   <form>
-                    <input type='hidden' name='descripcion' value='Samsung J2 prime'>
-                    <input type='hidden' name='precio' value='30000.00'>
+                    <input type='hidden' name='descripcion' value='J2 prime'>
+                    <input type='hidden' name='precio' value='25000.00'>
                     <div id='paypal-button-container-1'></div>
                   </form>
                 </div>
@@ -89,10 +89,10 @@
                   createOrder: function(data, actions) {
                     return actions.order.create({
                       purchase_units: [{
-                        description: 'Samsung J2 prime',
+                        description: 'J2 prime',
                         amount: {
                           currency_code: 'USD',
-                          value: '55.34'
+                          value: '46.11'
                         }
                       }]
                     });
