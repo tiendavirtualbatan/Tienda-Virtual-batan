@@ -25,10 +25,7 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
     <header>
       <h1 class="gradient-text">Tienda Virtual Batan</h1>
       <nav id="nav">
-        <a href="/index.html" onclick="seleccionar()">Inicio</a>
-        <a href="menu.html" onclick="seleccionar()">Menu</a>
-        <a href="cargar-producto.php" onclick="seleccionar()">Subir</a>
-        <a href="eliminar-producto.php" onclick="seleccionar()">Eliminar</a>
+        <a href="https://wa.me/50687895592" onclick="seleccionar()">WhatsApp</a>
       </nav>
       <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
         <i class="fa-solid fa-bars"></i>
