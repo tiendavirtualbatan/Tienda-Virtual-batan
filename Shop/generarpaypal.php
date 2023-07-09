@@ -5,7 +5,7 @@ ob_start(); // Iniciar el almacenamiento en búfer de salida
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta property="og:title" content="Desbloqueos y Reparaciones Batan, Siquirres">
+<meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
 <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
 <meta property="og:image" content="img/log.png">
 <meta property="og:url" content="https://tiendavirtualbatan.com/Shop/index.html">
