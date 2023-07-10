@@ -469,7 +469,7 @@ button {
     border-radius: 15px;
     width: 100%;
     float: left;
-    font-size: 1px;
+    font-size: 20px;
     color: #fc067d;
     background-image: linear-gradient(to right, #FF0018, #FFA52C, #FFD500, #008018, #0000F9, #86007D);
     padding: 4px 5px;
@@ -572,7 +572,7 @@ button {
     border-radius: 15px;
     width: 100%;
     float: left;
-    font-size: 1px;
+    font-size: 20px;
     color: #077ff7;
     background-image: linear-gradient(to right, #FF0018, #FFA52C, #FFD500, #008018, #0000F9, #86007D);
     padding: 4px 5px;
