@@ -298,6 +298,11 @@ button {
     width: 50%;
     float: left;
 }
+.logo .logo-image {
+    /* Estilos específicos para la imagen del logo */
+    width: 300px; /* Tamaño personalizado para la imagen */
+    height: auto;
+}
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 15px;
     padding-left: 15px;
