@@ -471,7 +471,7 @@ button {
     float: left;
     font-size: 20px;
     color: #fc067d;
-    background-image: linear-gradient(to right, #FF0018, #FFA52C, #FFD500, #008018, #0000F9, #86007D);
+    background-image: linear-gradient(to right, #ff001900);
     padding: 4px 5px;
     text-align: center;
     text-transform: uppercase;
@@ -574,7 +574,7 @@ button {
     float: left;
     font-size: 20px;
     color: #077ff7;
-    background-image: linear-gradient(to right, #FF0018, #FFA52C, #FFD500, #008018, #0000F9, #86007D);
+    background-image: linear-gradient(to right, #ff001900);
     padding: 4px 5px;
     text-align: center;
     text-transform: uppercase;
@@ -588,7 +588,7 @@ button {
     padding-right: 0px;
 }
 .padding_left_0{
-    padding-left: 50px;
+    padding-left: 30px;
 }
 /* blog section end */
 
