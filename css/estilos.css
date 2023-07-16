@@ -371,7 +371,8 @@ nav {
 }
 
 .services>img {
-    width: 500px;
+    width: 350px;
+    border-radius: 20px;
 }
 
 .box-skills {
