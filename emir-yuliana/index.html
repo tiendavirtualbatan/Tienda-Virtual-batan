@@ -23,6 +23,7 @@
       <h1 class="gradient-text">Tienda Virtual Batan</h1>
       <nav id="nav">
         <a href="https://wa.me/50687895592" onclick="seleccionar()">WhatsApp</a>
+        <a href="../Tienda-Virtual-batan/index.html" onclick="seleccionar()">WhatsApp</a>
       </nav>
       <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
         <i class="fa-solid fa-bars"></i>
@@ -34,15 +35,15 @@
         
               <div class='product-card'>
                 <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("tienda-virtual-batan/emir-yuliana/productos/Tanga.png","_self");'>
-                    <img src='tienda-virtual-batan/emir-yuliana/productos/Tanga.png' alt='Tanga'>
+                  <div class='image-container' onclick='window.open("productos/mini short.png","_self");'>
+                    <img src='productos/mini short.png' alt='mini short'>
                   </div>
-                  <h3>Tanga</h3>
-                  <p>dgd</p>
-                  <p class='price'>Precio: <span>₡ 543,534.00</span></p>
+                  <h3>mini short</h3>
+                  <p>sexy</p>
+                  <p class='price'>Precio: <span>₡ 345,345.00</span></p>
                   <form>
-                    <input type='hidden' name='descripcion' value='Tanga'>
-                    <input type='hidden' name='precio' value='543534.00'>
+                    <input type='hidden' name='descripcion' value='mini short'>
+                    <input type='hidden' name='precio' value='345345.00'>
                     <div id='paypal-button-container-0'></div>
                   </form>
                 </div>
@@ -53,10 +54,10 @@
                   createOrder: function(data, actions) {
                     return actions.order.create({
                       purchase_units: [{
-                        description: 'Tanga',
+                        description: 'mini short',
                         amount: {
                           currency_code: 'USD',
-                          value: '1001.09'
+                          value: '636.06'
                         }
                       }]
                     });
@@ -67,117 +68,6 @@
                     });
                   }
                 }).render('#paypal-button-container-0');
-              </script>
-            
-              <div class='product-card'>
-                <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("tienda-virtual-batan/emir-yuliana/productos/Tanga_1.jpg","_self");'>
-                    <img src='tienda-virtual-batan/emir-yuliana/productos/Tanga_1.jpg' alt='Tanga'>
-                  </div>
-                  <h3>Tanga</h3>
-                  <p>dgd</p>
-                  <p class='price'>Precio: <span>₡ 543,534.00</span></p>
-                  <form>
-                    <input type='hidden' name='descripcion' value='Tanga'>
-                    <input type='hidden' name='precio' value='543534.00'>
-                    <div id='paypal-button-container-1'></div>
-                  </form>
-                </div>
-              </div>
-            
-              <script>
-                paypal.Buttons({
-                  createOrder: function(data, actions) {
-                    return actions.order.create({
-                      purchase_units: [{
-                        description: 'Tanga',
-                        amount: {
-                          currency_code: 'USD',
-                          value: '1001.09'
-                        }
-                      }]
-                    });
-                  },
-                  onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                    });
-                  }
-                }).render('#paypal-button-container-1');
-              </script>
-            
-              <div class='product-card'>
-                <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("./tienda-virtual-batan/emir-yuliana/productos/Tanga_2.jpg","_self");'>
-                    <img src='./tienda-virtual-batan/emir-yuliana/productos/Tanga_2.jpg' alt='Tanga'>
-                  </div>
-                  <h3>Tanga</h3>
-                  <p>dfgd</p>
-                  <p class='price'>Precio: <span>₡ 3,543.00</span></p>
-                  <form>
-                    <input type='hidden' name='descripcion' value='Tanga'>
-                    <input type='hidden' name='precio' value='3543.00'>
-                    <div id='paypal-button-container-2'></div>
-                  </form>
-                </div>
-              </div>
-            
-              <script>
-                paypal.Buttons({
-                  createOrder: function(data, actions) {
-                    return actions.order.create({
-                      purchase_units: [{
-                        description: 'Tanga',
-                        amount: {
-                          currency_code: 'USD',
-                          value: '6.53'
-                        }
-                      }]
-                    });
-                  },
-                  onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                    });
-                  }
-                }).render('#paypal-button-container-2');
-              </script>
-            
-              <div class='product-card'>
-                <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("productos/Tanga.jpg","_self");'>
-                    <img src='productos/Tanga.jpg' alt='Tanga'>
-                  </div>
-                  <h3>Tanga</h3>
-                  <p>sfsd</p>
-                  <p class='price'>Precio: <span>₡ 4,354.00</span></p>
-                  <form>
-                    <input type='hidden' name='descripcion' value='Tanga'>
-                    <input type='hidden' name='precio' value='4354.00'>
-                    <div id='paypal-button-container-3'></div>
-                  </form>
-                </div>
-              </div>
-            
-              <script>
-                paypal.Buttons({
-                  createOrder: function(data, actions) {
-                    return actions.order.create({
-                      purchase_units: [{
-                        description: 'Tanga',
-                        amount: {
-                          currency_code: 'USD',
-                          value: '8.02'
-                        }
-                      }]
-                    });
-                  },
-                  onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                    });
-                  }
-                }).render('#paypal-button-container-3');
               </script>
             
       </div>
