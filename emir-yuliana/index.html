@@ -143,6 +143,43 @@
                 }).render('#paypal-button-container-2');
               </script>
             
+              <div class='product-card'>
+                <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/Tanga.jpg","_self");'>
+                    <img src='productos/Tanga.jpg' alt='Tanga'>
+                  </div>
+                  <h3>Tanga</h3>
+                  <p>sfsd</p>
+                  <p class='price'>Precio: <span>₡ 4,354.00</span></p>
+                  <form>
+                    <input type='hidden' name='descripcion' value='Tanga'>
+                    <input type='hidden' name='precio' value='4354.00'>
+                    <div id='paypal-button-container-3'></div>
+                  </form>
+                </div>
+              </div>
+            
+              <script>
+                paypal.Buttons({
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{
+                        description: 'Tanga',
+                        amount: {
+                          currency_code: 'USD',
+                          value: '8.02'
+                        }
+                      }]
+                    });
+                  },
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                    });
+                  }
+                }).render('#paypal-button-container-3');
+              </script>
+            
       </div>
     </section>
     <section id="contacto"></section>
