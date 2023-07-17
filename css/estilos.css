@@ -436,11 +436,14 @@ footer {
 }
 
 .partFooter h4 {
-    color: #1d273b;
-    font-size: 20px;
-    font-weight: 400;
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
     margin-bottom: 30px;
-}
+    margin-top: 20px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Aura */
+  }
+  
 
 .partFooter a {
     display: block;
