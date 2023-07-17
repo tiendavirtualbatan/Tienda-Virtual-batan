@@ -1,0 +1,280 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Open Sans';
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+/* Capa para el fondo del cuerpo con efecto gaussiano */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/20230629_132749.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px); /* Aplica el efecto gaussiano con desenfoque */
+  z-index: -1; /* Coloca la capa detrás del contenido */
+  pointer-events: none; /* Evita que la capa interfiera con los eventos de los elementos superiores */
+}
+.container {
+   max-width: 150vh;
+   margin: auto;
+ /* Para permitir el posicionamiento de los elementos internos */
+      /* Resto de estilos del contenedor */
+    }
+
+/* seccion cabecera */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #1055f6, #ff2c2c, #ffd041, #008018, #0000F9, #fb1b1b);
+  padding: 10px 40px;
+  border-radius: 10px;
+  margin: 30px 0;
+  background-size: 600% 600%; /* Ajusta el tamaño del fondo */
+  animation: gradientAnimation 10s ease infinite; /* Agrega una animación al fondo */
+}
+
+@keyframes gradientAnimation {
+ 0% {
+   background-position: 0% 50%;
+ }
+ 50% {
+   background-position: 100% 50%;
+ }
+ 100% {
+   background-position: 0% 50%;
+ }
+}
+
+
+.gradient-text {
+  background-image: linear-gradient(45deg, #ed921a, #d5235f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: white; /* Agrega esta línea para establecer el color del texto como blanco */
+}
+
+header nav a {
+   text-decoration: none;
+   display: inline-block;
+   color: #fff;
+   margin-left: 20px;
+}
+
+header nav a:hover {
+   color: #fe9018;
+}
+
+.nav-responsive {
+   display: none;
+   font-size: 25px;
+   color: #a8a8a8;
+}
+
+/* sección porfolio */
+#porfolio {
+  background-color: rgba(38, 38, 38, 0.5); /* Cambia el valor de transparencia (0.5) según tus preferencias */
+  margin: 30px 0;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+/* sección contacto */
+#contacto {
+  background: linear-gradient(45deg, #1055f6, #ff2c2c, #ffd041, #008018, #0000F9, #fb1b1b);
+  margin: 30px 0;
+  border-radius: 10px;
+  padding: 5px;
+  background-size: 600% 600%; /* Ajusta el tamaño del fondo */
+  animation: blendAnimation 10s ease infinite; /* Agrega una animación al fondo */
+}
+
+@keyframes blendAnimation {
+ 0% {
+   background-position: 0% 0%;
+ }
+ 100% {
+   background-position: 100% 100%;
+ }
+}
+
+/* sección responsive */
+@media only screen and (max-width: 700px) {
+   header nav {
+      position: initial;
+      display: none;
+      transform: translate(0);
+   }
+
+   .nav-responsive {
+      display: block;
+   }
+
+   nav.responsive {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #252A2E;
+      z-index: 99;
+   }
+
+   nav.responsive a {
+      display: block;
+      width: fit-content;
+      margin: 10px auto;
+      font-size: 30px;
+   }
+}
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-card {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 1px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    width: 280px; /* Modificado */
+    height: auto;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .product-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1px;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+
+  .product-card .image-container {
+    max-width: 280px;
+    height: 350px;
+    border-radius: 15px;
+    margin: -10px auto 5px auto;
+    display: block;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .product-card .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .product-card h3 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .product-card p {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #777;
+  }
+
+  .product-card p.price {
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+  }
+
+  .product-card p.price span {
+    color: red;
+  }
+  .buy-button {
+   display: block;
+   width: 150px;
+   height: 40px;
+   margin: 0 auto;
+   margin-top: 10px;
+   border: none;
+   border-radius: 20px;
+   background-color: green;
+   color: white;
+   font-size: 16px;
+   text-align: center;
+   line-height: 40px;
+   text-decoration: none;
+   position: relative;
+   overflow: hidden;
+ }
+ 
+ .buy-button:hover::before {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.3);
+   animation: pulse 1s infinite;
+ }
+ 
+ @keyframes pulse {
+   0% {
+     transform: scale(1);
+   }
+   50% {
+     transform: scale(1.1);
+   }
+   100% {
+     transform: scale(1);
+   }
+ }
+ 
+ 
+ 
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .pagination .page-link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+  }
