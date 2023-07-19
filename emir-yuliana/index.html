@@ -1,80 +1,243 @@
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
-<meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
-<meta property="og:image" content="img/Ilustracion.png">
-<meta property="og:url" content="https://tiendavirtualbatan.com/emir-yuliana/index.html">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="all.min.css">
-  <link rel="stylesheet" href="generar_copia.css">
-  <link rel="stylesheet" href="swap.css">
-  <title>Tienda Virtual Batan</title>
-
-  <!-- Agregar el script de PayPal -->
-  <script src="https://www.paypal.com/sdk/js?client-id=Aci8OeCE39xD0lUF-0GQM1DgnKq0Lx59GW5s8G6VwpMINJdxh4VvTAaWzF5WR3h7VswalUe8cHr9TtoK"></script>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1 class="gradient-text">Tienda Virtual Batan</h1>
-      <nav id="nav">
-        <a href="https://wa.me/50687895592" onclick="seleccionar()">WhatsApp</a>        
-      </nav>
-      <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </header>
-    <section id="porfolio">
-      <div class="product-container">
-
-        
-              <div class='product-card'>
-                <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("productos/mini short.png","_self");'>
-                    <img src='productos/mini short.png' alt='mini short'>
-                  </div>
-                  <h3>mini short</h3>
-                  <p>sexy</p>
-                  <p class='price'>Precio: <span>₡ 345,345.00</span></p>
-                  <form>
-                    <input type='hidden' name='descripcion' value='mini short'>
-                    <input type='hidden' name='precio' value='345345.00'>
-                    <div id='paypal-button-container-0'></div>
-                  </form>
-                </div>
-              </div>
-            
-              <script>
-                paypal.Buttons({
+   <head>
+      <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
+      <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
+      <meta property="og:image" content="img/Ilustracion.png">
+      <meta property="og:url" content="https://tiendavirtualbatan.com/emir-yuliana/index.html">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="all.min.css">
+      <link rel="stylesheet" href="generar_index.css">
+      <link rel="stylesheet" href="swap.css">
+      <title>Tienda Virtual Batan</title>
+      <!-- Agregar el script de PayPal -->
+      <script src="https://www.paypal.com/sdk/js?client-id=Ac9-lxYDjrbfFds12XA9lqe-OsQaSbdDRrLd7SVGLgW7p0Lb8QI-D_ENmgH82xTJnQ2S0sWV89lL5hnB"></script>
+   </head>
+   <body>
+      <div class="container">
+         <header>
+            <div class="gradient-text-container">
+               <h1 class="gradient-text">Tienda Virtual Batan</h1>
+            </div>
+            <nav id="nav">
+               <a href="https://tiendavirtualbatan.com" onclick="seleccionar()">Inicio</a>        
+            </nav>
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+               <i class="fa-solid fa-bars"></i>
+            </div>
+         </header>
+         <section id="porfolio">
+            <div class="product-container">
+               
+                        <div class='product-card'>
+                          <div class='product-card-inner'>
+                            <div class='image-container' onclick='window.open("productos/Teclado Gaming.png","_self");'>
+                              <img src='productos/Teclado Gaming.png' alt='Teclado Gaming'>
+                            </div>
+                            <h3>Teclado Gaming</h3>
+                            <p>Se vende de 500 unidades en adelante</p>
+                            <p class='price'>Precio: <span>₡ 22,000.00</span></p>
+                            <form>
+                              <input type='hidden' name='descripcion' value='Teclado Gaming'>
+                              <input type='hidden' name='precio' value='22000.00'>
+                              <div id='paypal-button-container-0'></div>
+                            </form>
+                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  
+                          </div>
+                        </div>
+                      
+                  <script>
+                  paypal.Buttons({
                   createOrder: function(data, actions) {
-                    return actions.order.create({
-                      purchase_units: [{
-                        description: 'mini short',
-                        amount: {
-                          currency_code: 'USD',
-                          value: '636.06'
-                        }
-                      }]
-                    });
+                  return actions.order.create({
+                    purchase_units: [{
+                      description: 'Teclado Gaming',
+                      amount: {
+                        currency_code: 'USD',
+                        value: '40.89'
+                      }
+                    }]
+                  });
                   },
                   onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                      alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                    });
+                  return actions.order.capture().then(function(details) {
+                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                  });
                   }
-                }).render('#paypal-button-container-0');
-              </script>
-            
+                  }).render('#paypal-button-container-0');
+                  // Agrega estilos para ajustar el ancho del contenedor del botón
+                  document.querySelector('#paypal-button-container-0').style.width = '340px';
+                  </script>
+                  
+                        <div class='product-card'>
+                          <div class='product-card-inner'>
+                            <div class='image-container' onclick='window.open("productos/Tanga.png","_self");'>
+                              <img src='productos/Tanga.png' alt='Tanga'>
+                            </div>
+                            <h3>Tanga</h3>
+                            <p>De algodon</p>
+                            <p class='price'>Precio: <span>₡ 8,000.00</span></p>
+                            <form>
+                              <input type='hidden' name='descripcion' value='Tanga'>
+                              <input type='hidden' name='precio' value='8000.00'>
+                              <div id='paypal-button-container-1'></div>
+                            </form>
+                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  
+                          </div>
+                        </div>
+                      
+                  <script>
+                  paypal.Buttons({
+                  createOrder: function(data, actions) {
+                  return actions.order.create({
+                    purchase_units: [{
+                      description: 'Tanga',
+                      amount: {
+                        currency_code: 'USD',
+                        value: '14.87'
+                      }
+                    }]
+                  });
+                  },
+                  onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                  });
+                  }
+                  }).render('#paypal-button-container-1');
+                  // Agrega estilos para ajustar el ancho del contenedor del botón
+                  document.querySelector('#paypal-button-container-1').style.width = '340px';
+                  </script>
+                  
+                        <div class='product-card'>
+                          <div class='product-card-inner'>
+                            <div class='image-container' onclick='window.open("productos/Samsung A21s.webp","_self");'>
+                              <img src='productos/Samsung A21s.webp' alt='Samsung A21s'>
+                            </div>
+                            <h3>Samsung A21s</h3>
+                            <p>En buen estado</p>
+                            <p class='price'>Precio: <span>₡ 60,000.00</span></p>
+                            <form>
+                              <input type='hidden' name='descripcion' value='Samsung A21s'>
+                              <input type='hidden' name='precio' value='60000.00'>
+                              <div id='paypal-button-container-2'></div>
+                            </form>
+                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  
+                          </div>
+                        </div>
+                      
+                  <script>
+                  paypal.Buttons({
+                  createOrder: function(data, actions) {
+                  return actions.order.create({
+                    purchase_units: [{
+                      description: 'Samsung A21s',
+                      amount: {
+                        currency_code: 'USD',
+                        value: '111.51'
+                      }
+                    }]
+                  });
+                  },
+                  onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                  });
+                  }
+                  }).render('#paypal-button-container-2');
+                  // Agrega estilos para ajustar el ancho del contenedor del botón
+                  document.querySelector('#paypal-button-container-2').style.width = '340px';
+                  </script>
+                  
+                        <div class='product-card'>
+                          <div class='product-card-inner'>
+                            <div class='image-container' onclick='window.open("productos/Samsung A30s.jpg","_self");'>
+                              <img src='productos/Samsung A30s.jpg' alt='Samsung A30s'>
+                            </div>
+                            <h3>Samsung A30s</h3>
+                            <p>En buen estado</p>
+                            <p class='price'>Precio: <span>₡ 55,000.00</span></p>
+                            <form>
+                              <input type='hidden' name='descripcion' value='Samsung A30s'>
+                              <input type='hidden' name='precio' value='55000.00'>
+                              <div id='paypal-button-container-3'></div>
+                            </form>
+                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  
+                          </div>
+                        </div>
+                      
+                  <script>
+                  paypal.Buttons({
+                  createOrder: function(data, actions) {
+                  return actions.order.create({
+                    purchase_units: [{
+                      description: 'Samsung A30s',
+                      amount: {
+                        currency_code: 'USD',
+                        value: '102.22'
+                      }
+                    }]
+                  });
+                  },
+                  onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                  });
+                  }
+                  }).render('#paypal-button-container-3');
+                  // Agrega estilos para ajustar el ancho del contenedor del botón
+                  document.querySelector('#paypal-button-container-3').style.width = '340px';
+                  </script>
+                  
+                        <div class='product-card'>
+                          <div class='product-card-inner'>
+                            <div class='image-container' onclick='window.open("productos/Samsung A70.webp","_self");'>
+                              <img src='productos/Samsung A70.webp' alt='Samsung A70'>
+                            </div>
+                            <h3>Samsung A70</h3>
+                            <p>En buen estado</p>
+                            <p class='price'>Precio: <span>₡ 60,000.00</span></p>
+                            <form>
+                              <input type='hidden' name='descripcion' value='Samsung A70'>
+                              <input type='hidden' name='precio' value='60000.00'>
+                              <div id='paypal-button-container-4'></div>
+                            </form>
+                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  
+                          </div>
+                        </div>
+                      
+                  <script>
+                  paypal.Buttons({
+                  createOrder: function(data, actions) {
+                  return actions.order.create({
+                    purchase_units: [{
+                      description: 'Samsung A70',
+                      amount: {
+                        currency_code: 'USD',
+                        value: '111.51'
+                      }
+                    }]
+                  });
+                  },
+                  onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                  });
+                  }
+                  }).render('#paypal-button-container-4');
+                  // Agrega estilos para ajustar el ancho del contenedor del botón
+                  document.querySelector('#paypal-button-container-4').style.width = '340px';
+                  </script>
+                              </div>
+         </section>
       </div>
-    </section>
-    <section id="contacto"></section>
-  </div>
-  <script src="script.js"></script>
-
-</body>
+      <script src="script.js"></script>
+   </body>
 </html>
-
