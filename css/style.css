@@ -182,3 +182,9 @@ header {
 	border-radius: 5px;
 	margin-top: 10px;
 }
+
+
+.card {
+	display: none;
+	/* Agrega estilos de diseño según tus necesidades */
+  }
