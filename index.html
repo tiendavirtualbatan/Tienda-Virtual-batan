@@ -7,6 +7,16 @@
       <meta property="og:url" content="https://tiendavirtualbatan.com/emir-yuliana/index.html">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script>
+  // Deshabilitar el zoom en dispositivos móviles
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    var viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+      viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+    }
+  }
+</script>
+
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       
       <link rel="stylesheet" href="css/style.css">
