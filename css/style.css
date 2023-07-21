@@ -248,4 +248,19 @@ header {
 	margin-top: 10px; /* Puedes ajustar el valor del margen según tu preferencia */
   }
 
-  
+  /* ... Tus estilos actuales ... */
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%; /* Ajusta el ancho al 100% del dispositivo móvil */
+  }
+
+  .product-container {
+    justify-content: space-between; /* Para que los productos se distribuyan en dos filas */
+  }
+
+  .product-card {
+    width: calc(50% - 10px); /* Ajusta el ancho para que haya dos tarjetas por fila */
+  }
+}
