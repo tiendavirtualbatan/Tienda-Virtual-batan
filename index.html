@@ -16,32 +16,34 @@
    <body>
       <div class="container">
          <header>
-         <a href="emir-yuliana/index.html">
-            <div class="gradient-text-container">
-               <h1 class="gradient-text">Tienda Virtual Batan</h1>
-            </div>
-         </a>
+            <a href="emir-yuliana/index.html">
+               <div class="gradient-text-container">
+                  <h1 class="gradient-text">Tienda Virtual Batan</h1>
+               </div>
+            </a>
          </header>
          <section id="porfolio">
             <div class="product-container">
                
-                        <div class='product-card'>
-                          <div class='product-card-inner'>
-                            <div class='image-container' onclick='window.open("productos/Teclado Gaming.png","_self");'>
-                              <img src='productos/Teclado Gaming.png' alt='Teclado Gaming'>
-                            </div>
-                            <h3>Teclado Gaming</h3>
-                            <p>Se vende de 500 unidades en adelante</p>
-                            <p class='price'>Precio: <span>₡ 22,000.00</span></p>
-                            <form>
-                              <input type='hidden' name='descripcion' value='Teclado Gaming'>
-                              <input type='hidden' name='precio' value='22000.00'>
-                              <div id='paypal-button-container-0'></div>
-                            </form>
-                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  <div class='product-card'>
+                  <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/Teclado Gaming.png","_self");'>
+                  <img src='productos/Teclado Gaming.png' alt='Teclado Gaming'>
+                  </div>
+                  <h3>Teclado Gaming</h3>
+                  <p class='price'>Precio: <span>₡ 25,000.00</span></p>
+                  <button class='ver-detalles-button' onclick='abrirModal("Teclado Gaming", "Con luces multi RGB de ultima tecnologia, se vende al mayoreo de 500 unidades como minimo")'>Ver detalles</button>
+                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
+                  <form>
+                  <input type='hidden' name='descripcion' value='Teclado Gaming'>
+                  <input type='hidden' name='precio' value='25000.00'>
+                  <div id='paypal-button-container-0'></div>
+                  </form>
+                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  </div>
+                  </div>
                   
-                          </div>
-                        </div>
+                        
                       
                   <script>
                   paypal.Buttons({
@@ -51,7 +53,7 @@
                       description: 'Teclado Gaming',
                       amount: {
                         currency_code: 'USD',
-                        value: '40.9'
+                        value: '46.47'
                       }
                     }]
                   });
@@ -66,33 +68,35 @@
                   document.querySelector('#paypal-button-container-0').style.width = '300px';
                   </script>
                   
-                        <div class='product-card'>
-                          <div class='product-card-inner'>
-                            <div class='image-container' onclick='window.open("productos/Tanga.png","_self");'>
-                              <img src='productos/Tanga.png' alt='Tanga'>
-                            </div>
-                            <h3>Tanga</h3>
-                            <p>De algodon</p>
-                            <p class='price'>Precio: <span>₡ 8,000.00</span></p>
-                            <form>
-                              <input type='hidden' name='descripcion' value='Tanga'>
-                              <input type='hidden' name='precio' value='8000.00'>
-                              <div id='paypal-button-container-1'></div>
-                            </form>
-                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  <div class='product-card'>
+                  <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/Kit Soldadura.jpg","_self");'>
+                  <img src='productos/Kit Soldadura.jpg' alt='Kit Soldadura'>
+                  </div>
+                  <h3>Kit Soldadura</h3>
+                  <p class='price'>Precio: <span>₡ 250,000.00</span></p>
+                  <button class='ver-detalles-button' onclick='abrirModal("Kit Soldadura", "Kit completo de herramientas para trabajar en electronia")'>Ver detalles</button>
+                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
+                  <form>
+                  <input type='hidden' name='descripcion' value='Kit Soldadura'>
+                  <input type='hidden' name='precio' value='250000.00'>
+                  <div id='paypal-button-container-1'></div>
+                  </form>
+                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  </div>
+                  </div>
                   
-                          </div>
-                        </div>
+                        
                       
                   <script>
                   paypal.Buttons({
                   createOrder: function(data, actions) {
                   return actions.order.create({
                     purchase_units: [{
-                      description: 'Tanga',
+                      description: 'Kit Soldadura',
                       amount: {
                         currency_code: 'USD',
-                        value: '14.87'
+                        value: '464.74'
                       }
                     }]
                   });
@@ -107,33 +111,35 @@
                   document.querySelector('#paypal-button-container-1').style.width = '300px';
                   </script>
                   
-                        <div class='product-card'>
-                          <div class='product-card-inner'>
-                            <div class='image-container' onclick='window.open("productos/Samsung A21s.webp","_self");'>
-                              <img src='productos/Samsung A21s.webp' alt='Samsung A21s'>
-                            </div>
-                            <h3>Samsung A21s</h3>
-                            <p>En buen estado</p>
-                            <p class='price'>Precio: <span>₡ 60,000.00</span></p>
-                            <form>
-                              <input type='hidden' name='descripcion' value='Samsung A21s'>
-                              <input type='hidden' name='precio' value='60000.00'>
-                              <div id='paypal-button-container-2'></div>
-                            </form>
-                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  <div class='product-card'>
+                  <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/Audifonos Gamer.jpg","_self");'>
+                  <img src='productos/Audifonos Gamer.jpg' alt='Audifonos Gamer'>
+                  </div>
+                  <h3>Audifonos Gamer</h3>
+                  <p class='price'>Precio: <span>₡ 20,000.00</span></p>
+                  <button class='ver-detalles-button' onclick='abrirModal("Audifonos Gamer", "Precio Variable")'>Ver detalles</button>
+                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
+                  <form>
+                  <input type='hidden' name='descripcion' value='Audifonos Gamer'>
+                  <input type='hidden' name='precio' value='20000.00'>
+                  <div id='paypal-button-container-2'></div>
+                  </form>
+                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  </div>
+                  </div>
                   
-                          </div>
-                        </div>
+                        
                       
                   <script>
                   paypal.Buttons({
                   createOrder: function(data, actions) {
                   return actions.order.create({
                     purchase_units: [{
-                      description: 'Samsung A21s',
+                      description: 'Audifonos Gamer',
                       amount: {
                         currency_code: 'USD',
-                        value: '111.54'
+                        value: '37.18'
                       }
                     }]
                   });
@@ -148,33 +154,35 @@
                   document.querySelector('#paypal-button-container-2').style.width = '300px';
                   </script>
                   
-                        <div class='product-card'>
-                          <div class='product-card-inner'>
-                            <div class='image-container' onclick='window.open("productos/Samsung A30s.jpg","_self");'>
-                              <img src='productos/Samsung A30s.jpg' alt='Samsung A30s'>
-                            </div>
-                            <h3>Samsung A30s</h3>
-                            <p>En buen estado</p>
-                            <p class='price'>Precio: <span>₡ 55,000.00</span></p>
-                            <form>
-                              <input type='hidden' name='descripcion' value='Samsung A30s'>
-                              <input type='hidden' name='precio' value='55000.00'>
-                              <div id='paypal-button-container-3'></div>
-                            </form>
-                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  <div class='product-card'>
+                  <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/Altavoces para PC.jpg","_self");'>
+                  <img src='productos/Altavoces para PC.jpg' alt='Altavoces para PC'>
+                  </div>
+                  <h3>Altavoces para PC</h3>
+                  <p class='price'>Precio: <span>₡ 12,000.00</span></p>
+                  <button class='ver-detalles-button' onclick='abrirModal("Altavoces para PC", "Diferentes tamaños y precios")'>Ver detalles</button>
+                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
+                  <form>
+                  <input type='hidden' name='descripcion' value='Altavoces para PC'>
+                  <input type='hidden' name='precio' value='12000.00'>
+                  <div id='paypal-button-container-3'></div>
+                  </form>
+                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  </div>
+                  </div>
                   
-                          </div>
-                        </div>
+                        
                       
                   <script>
                   paypal.Buttons({
                   createOrder: function(data, actions) {
                   return actions.order.create({
                     purchase_units: [{
-                      description: 'Samsung A30s',
+                      description: 'Altavoces para PC',
                       amount: {
                         currency_code: 'USD',
-                        value: '102.24'
+                        value: '22.31'
                       }
                     }]
                   });
@@ -189,33 +197,35 @@
                   document.querySelector('#paypal-button-container-3').style.width = '300px';
                   </script>
                   
-                        <div class='product-card'>
-                          <div class='product-card-inner'>
-                            <div class='image-container' onclick='window.open("productos/Samsung A70.webp","_self");'>
-                              <img src='productos/Samsung A70.webp' alt='Samsung A70'>
-                            </div>
-                            <h3>Samsung A70</h3>
-                            <p>En buen estado</p>
-                            <p class='price'>Precio: <span>₡ 60,000.00</span></p>
-                            <form>
-                              <input type='hidden' name='descripcion' value='Samsung A70'>
-                              <input type='hidden' name='precio' value='60000.00'>
-                              <div id='paypal-button-container-4'></div>
-                            </form>
-                            <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  <div class='product-card'>
+                  <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/Camaras Vision Nocturna.jpg","_self");'>
+                  <img src='productos/Camaras Vision Nocturna.jpg' alt='Camaras Vision Nocturna'>
+                  </div>
+                  <h3>Camaras Vision Nocturna</h3>
+                  <p class='price'>Precio: <span>₡ 25,000.00</span></p>
+                  <button class='ver-detalles-button' onclick='abrirModal("Camaras Vision Nocturna", "Diferentes Tamaños y Precios")'>Ver detalles</button>
+                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
+                  <form>
+                  <input type='hidden' name='descripcion' value='Camaras Vision Nocturna'>
+                  <input type='hidden' name='precio' value='25000.00'>
+                  <div id='paypal-button-container-4'></div>
+                  </form>
+                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  </div>
+                  </div>
                   
-                          </div>
-                        </div>
+                        
                       
                   <script>
                   paypal.Buttons({
                   createOrder: function(data, actions) {
                   return actions.order.create({
                     purchase_units: [{
-                      description: 'Samsung A70',
+                      description: 'Camaras Vision Nocturna',
                       amount: {
                         currency_code: 'USD',
-                        value: '111.54'
+                        value: '46.47'
                       }
                     }]
                   });
@@ -229,9 +239,90 @@
                   // Agrega estilos para ajustar el ancho del contenedor del botón
                   document.querySelector('#paypal-button-container-4').style.width = '300px';
                   </script>
+                  
+                  <div class='product-card'>
+                  <div class='product-card-inner'>
+                  <div class='image-container' onclick='window.open("productos/Estuches y Temperados.jpg","_self");'>
+                  <img src='productos/Estuches y Temperados.jpg' alt='Estuches y Temperados'>
+                  </div>
+                  <h3>Estuches y Temperados</h3>
+                  <p class='price'>Precio: <span>₡ 2,000.00</span></p>
+                  <button class='ver-detalles-button' onclick='abrirModal("Estuches y Temperados", "Diferentes precios")'>Ver detalles</button>
+                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
+                  <form>
+                  <input type='hidden' name='descripcion' value='Estuches y Temperados'>
+                  <input type='hidden' name='precio' value='2000.00'>
+                  <div id='paypal-button-container-5'></div>
+                  </form>
+                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
+                  </div>
+                  </div>
+                  
+                        
+                      
+                  <script>
+                  paypal.Buttons({
+                  createOrder: function(data, actions) {
+                  return actions.order.create({
+                    purchase_units: [{
+                      description: 'Estuches y Temperados',
+                      amount: {
+                        currency_code: 'USD',
+                        value: '3.72'
+                      }
+                    }]
+                  });
+                  },
+                  onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
+                  });
+                  }
+                  }).render('#paypal-button-container-5');
+                  // Agrega estilos para ajustar el ancho del contenedor del botón
+                  document.querySelector('#paypal-button-container-5').style.width = '300px';
+                  </script>
                               </div>
          </section>
       </div>
       <script src="script.js"></script>
+      <!-- Dentro del <body> antes del cierre </body> -->
+      <!-- Modal -->
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+         <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2 id="modal-producto-nombre"></h2>
+            <p id="modal-producto-detalles"></p>
+         </div>
+      </div>
+      <script>
+         // Función para abrir el modal y mostrar los detalles del producto
+         function abrirModal(nombre, detalles) {
+           var modal = document.getElementById("myModal");
+           var modalProductoNombre = document.getElementById("modal-producto-nombre");
+           var modalProductoDetalles = document.getElementById("modal-producto-detalles");
+         
+           modalProductoNombre.textContent = nombre;
+           modalProductoDetalles.textContent = detalles;
+         
+           modal.style.display = "block";
+         }
+         
+         // Función para cerrar el modal al hacer clic en la "x"
+         function cerrarModal() {
+           var modal = document.getElementById("myModal");
+           modal.style.display = "none";
+         }
+         
+         // Cierra el modal si el usuario hace clic fuera del contenido del modal
+         window.onclick = function(event) {
+           var modal = document.getElementById("myModal");
+           if (event.target == modal) {
+             modal.style.display = "none";
+           }
+         };
+         
+      </script>
    </body>
 </html>

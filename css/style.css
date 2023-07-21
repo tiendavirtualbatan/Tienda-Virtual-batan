@@ -184,7 +184,66 @@ header {
 }
 
 
-.card {
+/* Estilos generales del modal */
+.modal {
 	display: none;
-	/* Agrega estilos de diseño según tus necesidades */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
   }
+  
+  .modal .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	max-width: 400px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	position: relative;
+  }
+  
+  /* Estilos del botón "Cerrar" */
+  .modal .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 24px;
+	cursor: pointer;
+  }
+  
+  /* Estilos del contenido del modal */
+  .modal #modal-producto-nombre {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+  }
+  
+  .modal #modal-producto-detalles {
+	font-size: 16px;
+  }
+  
+  /* Estilos del botón "Ver detalles" específicos para la tarjeta */
+  .product-card .ver-detalles-button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  .product-card .ver-detalles-button:hover {
+	background-color: #45a049;
+  }
+  
+.button-spacing {
+	margin-top: 10px; /* Puedes ajustar el valor del margen según tu preferencia */
+  }
+
+  
