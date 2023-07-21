@@ -247,34 +247,3 @@ header {
 .button-spacing {
 	margin-top: 10px; /* Puedes ajustar el valor del margen según tu preferencia */
   }
-
-  /* ... Tus estilos actuales ... */
-
-/* ... Tus estilos actuales ... */
-
-/* Ajustes para dispositivos móviles */
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column; /* Cambiar a diseño de columna para dispositivos móviles */
-    align-items: center; /* Centrar todo el contenido en el centro */
-  }
-
-  header {
-    width: 100%;
-  }
-
-  .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0; /* Eliminar los márgenes laterales para que los productos se expandan al 100% del ancho */
-  }
-
-  .product-card {
-    width: calc(50% - 10px);
-    margin: 5px; /* Añadir margen entre las tarjetas */
-  }
-}
