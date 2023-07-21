@@ -32,7 +32,7 @@ body::before {
 	pointer-events: none;
 }
 .container {
-	max-width: 150vh;
+	max-width: 200vh;
 	margin: auto;
 }
 header {
@@ -63,25 +63,27 @@ header {
 	background-color: rgba(38, 38, 38, 0.603);
 	margin: 30px 0;
 	border-radius: 10px;
-	padding: 40px;
+	padding: 10px;
 }
 .product-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	margin-left: 1px;
+	margin-right: 1px;
 }
 .product-card {
 	border-radius: 15px;
 	padding: 0;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 	background-color: #ffffffb1;
 	position: relative;
 	overflow: hidden;
-	width: 300px;
+	width: 250px;
 	height: auto;
 	display: inline-block;
-	margin-right: 20px;
+	margin-right: 10px;
   }  
   .product-content {
 	padding: 0px;
