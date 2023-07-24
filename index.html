@@ -160,11 +160,14 @@
     /* Estilos para mostrar 2 productos por línea en dispositivos móviles */
     @media screen and (max-width: 767px) {
         .main-products {
-            justify-content: flex-start;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
         }
 
         .product-container {
-            width: calc(50% - 20px);
+            width: 100%;
+            max-width: 200px;
         }
     }
      </style>
