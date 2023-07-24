@@ -157,19 +157,27 @@
     .sticky li p a:hover{
         text-decoration:underline;
     }
-    /* Estilos para mostrar 2 productos por línea en dispositivos móviles */
+    
     @media screen and (max-width: 767px) {
-        .main-products {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
+      .main-products {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          gap: 20px;
+      }
 
-        .product-container {
-            width: 100%;
-            max-width: 200px;
-        }
-    }
+      .product-container {
+          width: 100%;
+          max-width: 150px;
+      }
+
+      .home-dot-element {
+          height: 100%;
+      }
+
+      .img {
+          height: 150px;
+      }
+  }
      </style>
    </head>
    <body>
