@@ -1,328 +1,144 @@
 <!DOCTYPE html>
-<html lang="es">
+   <html lang="es-es">
    <head>
-      <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
-      <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
-      <meta property="og:image" content="img/Ilustracion.png">
-      <meta property="og:url" content="https://tiendavirtualbatan.com/emir-yuliana/index.html">
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="css/style.css">
-      <title>Tienda Virtual Batan</title>
-      <!-- Agregar el script de PayPal -->
-      <script src="https://www.paypal.com/sdk/js?client-id=Ac9-lxYDjrbfFds12XA9lqe-OsQaSbdDRrLd7SVGLgW7p0Lb8QI-D_ENmgH82xTJnQ2S0sWV89lL5hnB"></script>
+   <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
+   <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
+   <meta property="og:image" content="img/Ilustracion.png">
+   <meta property="og:url" content="https://tiendavirtualbatan.com/emir-yuliana/index.html">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tienda Virtual Batan</title>
+   <!-- Agregar el script de PayPal -->
+         <script src="https://www.paypal.com/sdk/js?client-id=Ac9-lxYDjrbfFds12XA9lqe-OsQaSbdDRrLd7SVGLgW7p0Lb8QI-D_ENmgH82xTJnQ2S0sWV89lL5hnB"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+     <style>
+       /* Estilos generales */
+       body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         line-height: 1.6;
+       }
+       header {
+         background-color: #FF6600;
+         color: #fff;
+         padding: 10px;
+         text-align: center;
+       }
+       nav ul {
+         list-style: none;
+         padding: 0;
+       }
+       nav ul li {
+         display: inline-block;
+         margin-right: 20px;
+       }
+       nav ul li a {
+         color: #fff;
+         text-decoration: none;
+       }
+       .footer {
+         background-color: #f0f0f0;
+         padding: 10px;
+         text-align: center;
+         margin: 0 auto; /* Agrega esta línea para centrar horizontalmente */
+       }
+       main {
+         padding: 20px; /* Establece un relleno de 20px en todos los lados */
+         background-color: #f1f1f1; /* Color de fondo para la sección principal */
+       }
+       
+       /* Estilos de los productos */
+       .main-products {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 20px;
+       }
+       .home-dot-element {
+         display: block;
+         width: 200px;
+         height: 420px;
+         background-color: #ffffff;
+         border: 1px solid #ddd;
+         padding: 10px;
+         margin-bottom: 20px;
+         text-decoration: none;
+         color: #333;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+         overflow: hidden;
+         border-radius: 15px;
+       }
+       .img {
+         text-align: center;
+         width: 100%;
+         height: 200px;
+         overflow: hidden;
+       }
+       .offer-img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 15px;
+       }
+       .subject {
+         font-weight: bold;
+         font-size: 14px;
+         margin-bottom: 5px;
+         height: 40px;
+         overflow: hidden;
+         margin-top: 10px;
+       }
+       .price {
+         font-size: 16px;
+         font-weight: bold;
+         color: #FF6600;
+       }
+       .cantidad,
+       .delivery {
+         font-size: 12px;
+         font-weight: bold;
+       }
+       .add-to-cart-button {
+         background-color: #4CAF50;
+         color: white;
+         border: none;
+         padding: 10px 15px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin-top: 10px;
+         cursor: pointer;
+         border-radius: 50px;
+         width: 50px;
+         height: 50px;
+         line-height: 30px;
+       }
+     </style>
    </head>
    <body>
-      <div class="container">
-         <header>
-            <a href="emir-yuliana/index.html">
-               <div class="gradient-text-container">
-                  <h1 class="gradient-text">Tienda Virtual Batan</h1>
-               </div>
-            </a>
-         </header>
-         <section id="porfolio">
-            <div class="product-container">
-               
-                  <div class='product-card'>
-                  <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("productos/Teclado Gaming.png","_self");'>
-                  <img src='productos/Teclado Gaming.png' alt='Teclado Gaming'>
-                  </div>
-                  <h3>Teclado Gaming</h3>
-                  <p class='price'>Precio: <span>₡ 25,000.00</span></p>
-                  <button class='ver-detalles-button' onclick='abrirModal("Teclado Gaming", "Con luces multi RGB de ultima tecnologia, se vende al mayoreo de 500 unidades como minimo")'>Ver detalles</button>
-                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
-                  <form>
-                  <input type='hidden' name='descripcion' value='Teclado Gaming'>
-                  <input type='hidden' name='precio' value='25000.00'>
-                  <div id='paypal-button-container-0'></div>
-                  </form>
-                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
-                  </div>
-                  </div>
-                  
-                        
-                      
-                  <script>
-                  paypal.Buttons({
-                  createOrder: function(data, actions) {
-                  return actions.order.create({
-                    purchase_units: [{
-                      description: 'Teclado Gaming',
-                      amount: {
-                        currency_code: 'USD',
-                        value: '46.51'
-                      }
-                    }]
-                  });
-                  },
-                  onApprove: function(data, actions) {
-                  return actions.order.capture().then(function(details) {
-                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                  });
-                  }
-                  }).render('#paypal-button-container-0');
-                  // Agrega estilos para ajustar el ancho del contenedor del botón
-                  document.querySelector('#paypal-button-container-0').style.width = '300px';
-                  </script>
-                  
-                  <div class='product-card'>
-                  <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("productos/Kit Soldadura.jpg","_self");'>
-                  <img src='productos/Kit Soldadura.jpg' alt='Kit Soldadura'>
-                  </div>
-                  <h3>Kit Soldadura</h3>
-                  <p class='price'>Precio: <span>₡ 250,000.00</span></p>
-                  <button class='ver-detalles-button' onclick='abrirModal("Kit Soldadura", "Kit completo de herramientas para trabajar en electronia")'>Ver detalles</button>
-                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
-                  <form>
-                  <input type='hidden' name='descripcion' value='Kit Soldadura'>
-                  <input type='hidden' name='precio' value='250000.00'>
-                  <div id='paypal-button-container-1'></div>
-                  </form>
-                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
-                  </div>
-                  </div>
-                  
-                        
-                      
-                  <script>
-                  paypal.Buttons({
-                  createOrder: function(data, actions) {
-                  return actions.order.create({
-                    purchase_units: [{
-                      description: 'Kit Soldadura',
-                      amount: {
-                        currency_code: 'USD',
-                        value: '465.14'
-                      }
-                    }]
-                  });
-                  },
-                  onApprove: function(data, actions) {
-                  return actions.order.capture().then(function(details) {
-                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                  });
-                  }
-                  }).render('#paypal-button-container-1');
-                  // Agrega estilos para ajustar el ancho del contenedor del botón
-                  document.querySelector('#paypal-button-container-1').style.width = '300px';
-                  </script>
-                  
-                  <div class='product-card'>
-                  <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("productos/Audifonos Gamer.jpg","_self");'>
-                  <img src='productos/Audifonos Gamer.jpg' alt='Audifonos Gamer'>
-                  </div>
-                  <h3>Audifonos Gamer</h3>
-                  <p class='price'>Precio: <span>₡ 20,000.00</span></p>
-                  <button class='ver-detalles-button' onclick='abrirModal("Audifonos Gamer", "Precio Variable")'>Ver detalles</button>
-                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
-                  <form>
-                  <input type='hidden' name='descripcion' value='Audifonos Gamer'>
-                  <input type='hidden' name='precio' value='20000.00'>
-                  <div id='paypal-button-container-2'></div>
-                  </form>
-                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
-                  </div>
-                  </div>
-                  
-                        
-                      
-                  <script>
-                  paypal.Buttons({
-                  createOrder: function(data, actions) {
-                  return actions.order.create({
-                    purchase_units: [{
-                      description: 'Audifonos Gamer',
-                      amount: {
-                        currency_code: 'USD',
-                        value: '37.21'
-                      }
-                    }]
-                  });
-                  },
-                  onApprove: function(data, actions) {
-                  return actions.order.capture().then(function(details) {
-                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                  });
-                  }
-                  }).render('#paypal-button-container-2');
-                  // Agrega estilos para ajustar el ancho del contenedor del botón
-                  document.querySelector('#paypal-button-container-2').style.width = '300px';
-                  </script>
-                  
-                  <div class='product-card'>
-                  <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("productos/Altavoces para PC.jpg","_self");'>
-                  <img src='productos/Altavoces para PC.jpg' alt='Altavoces para PC'>
-                  </div>
-                  <h3>Altavoces para PC</h3>
-                  <p class='price'>Precio: <span>₡ 12,000.00</span></p>
-                  <button class='ver-detalles-button' onclick='abrirModal("Altavoces para PC", "Diferentes tamaños y precios")'>Ver detalles</button>
-                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
-                  <form>
-                  <input type='hidden' name='descripcion' value='Altavoces para PC'>
-                  <input type='hidden' name='precio' value='12000.00'>
-                  <div id='paypal-button-container-3'></div>
-                  </form>
-                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
-                  </div>
-                  </div>
-                  
-                        
-                      
-                  <script>
-                  paypal.Buttons({
-                  createOrder: function(data, actions) {
-                  return actions.order.create({
-                    purchase_units: [{
-                      description: 'Altavoces para PC',
-                      amount: {
-                        currency_code: 'USD',
-                        value: '22.33'
-                      }
-                    }]
-                  });
-                  },
-                  onApprove: function(data, actions) {
-                  return actions.order.capture().then(function(details) {
-                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                  });
-                  }
-                  }).render('#paypal-button-container-3');
-                  // Agrega estilos para ajustar el ancho del contenedor del botón
-                  document.querySelector('#paypal-button-container-3').style.width = '300px';
-                  </script>
-                  
-                  <div class='product-card'>
-                  <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("productos/Camaras Vision Nocturna.jpg","_self");'>
-                  <img src='productos/Camaras Vision Nocturna.jpg' alt='Camaras'>
-                  </div>
-                  <h3>Camaras</h3>
-                  <p class='price'>Precio: <span>₡ 25,000.00</span></p>
-                  <button class='ver-detalles-button' onclick='abrirModal("Camaras", "Diferentes Tamaños y Precios")'>Ver detalles</button>
-                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
-                  <form>
-                  <input type='hidden' name='descripcion' value='Camaras'>
-                  <input type='hidden' name='precio' value='25000.00'>
-                  <div id='paypal-button-container-4'></div>
-                  </form>
-                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
-                  </div>
-                  </div>
-                  
-                        
-                      
-                  <script>
-                  paypal.Buttons({
-                  createOrder: function(data, actions) {
-                  return actions.order.create({
-                    purchase_units: [{
-                      description: 'Camaras',
-                      amount: {
-                        currency_code: 'USD',
-                        value: '46.51'
-                      }
-                    }]
-                  });
-                  },
-                  onApprove: function(data, actions) {
-                  return actions.order.capture().then(function(details) {
-                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                  });
-                  }
-                  }).render('#paypal-button-container-4');
-                  // Agrega estilos para ajustar el ancho del contenedor del botón
-                  document.querySelector('#paypal-button-container-4').style.width = '300px';
-                  </script>
-                  
-                  <div class='product-card'>
-                  <div class='product-card-inner'>
-                  <div class='image-container' onclick='window.open("productos/Estuches y Temperados.jpg","_self");'>
-                  <img src='productos/Estuches y Temperados.jpg' alt='Estuches'>
-                  </div>
-                  <h3>Estuches</h3>
-                  <p class='price'>Precio: <span>₡ 2,000.00</span></p>
-                  <button class='ver-detalles-button' onclick='abrirModal("Estuches", "Diferentes precios")'>Ver detalles</button>
-                  <div class='button-spacing'></div><!-- Este es el espacio entre los botones -->
-                  <form>
-                  <input type='hidden' name='descripcion' value='Estuches'>
-                  <input type='hidden' name='precio' value='2000.00'>
-                  <div id='paypal-button-container-5'></div>
-                  </form>
-                  <a href='https://wa.me/50687895592' class='whatsapp-button'>Contactar WhatsApp</a>
-                  </div>
-                  </div>
-                  
-                        
-                      
-                  <script>
-                  paypal.Buttons({
-                  createOrder: function(data, actions) {
-                  return actions.order.create({
-                    purchase_units: [{
-                      description: 'Estuches',
-                      amount: {
-                        currency_code: 'USD',
-                        value: '3.72'
-                      }
-                    }]
-                  });
-                  },
-                  onApprove: function(data, actions) {
-                  return actions.order.capture().then(function(details) {
-                    alert('Pago realizado con éxito. ID de transacción: ' + details.id);
-                  });
-                  }
-                  }).render('#paypal-button-container-5');
-                  // Agrega estilos para ajustar el ancho del contenedor del botón
-                  document.querySelector('#paypal-button-container-5').style.width = '300px';
-                  </script>
-                              </div>
-         </section>
-      </div>
-      <script src="script.js"></script>
-      <!-- Dentro del <body> antes del cierre </body> -->
-      <!-- Modal -->
-      <!-- Modal -->
-      <div id="myModal" class="modal">
-         <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
-            <h2 id="modal-producto-nombre"></h2>
-            <p id="modal-producto-detalles"></p>
-         </div>
-      </div>
-      <script>
-         // Función para abrir el modal y mostrar los detalles del producto
-         function abrirModal(nombre, detalles) {
-           var modal = document.getElementById("myModal");
-           var modalProductoNombre = document.getElementById("modal-producto-nombre");
-           var modalProductoDetalles = document.getElementById("modal-producto-detalles");
-         
-           modalProductoNombre.textContent = nombre;
-           modalProductoDetalles.textContent = detalles;
-         
-           modal.style.display = "block";
-         }
-         
-         // Función para cerrar el modal al hacer clic en la "x"
-         function cerrarModal() {
-           var modal = document.getElementById("myModal");
-           modal.style.display = "none";
-         }
-         
-         // Cierra el modal si el usuario hace clic fuera del contenido del modal
-         window.onclick = function(event) {
-           var modal = document.getElementById("myModal");
-           if (event.target == modal) {
-             modal.style.display = "none";
-           }
-         };
-         
-      </script>
+     <header>
+       <!-- Contenido del encabezado... -->
+       <h1>Tienda Virtual Batan</h1>
+       <nav>
+         <ul>
+           <li><a href="emir-yuliana/index.html">Inicio</a></li>
+           <li><a href="editar.php">Editar</a></li>
+           <li><a href="eliminar.php">Eliminar</a></li>
+           <li><a href="subir_producto.html">Subir</a></li>
+           <li><a href="generador.php">Generador</a></li>
+           <li><a href="index.html">Index</a></li>
+         </ul>
+       </nav>
+     </header>
+     </header>
+     <main>
+       <section class="main-products"><div>No se encontraron productos.</div></section>
+     </main>
+     <footer>
+       <p style="text-align: center;">Todos los derechos reservados &copy; 2023 Tienda Virtual Batan</p>
+     </footer>
    </body>
-</html>
+   </html>
