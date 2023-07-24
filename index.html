@@ -114,6 +114,49 @@
          height: 50px;
          line-height: 30px;
        }
+       .sticky-container{
+        padding:0px;
+        margin:0px;
+        position:fixed;
+        right:-130px;
+        top:230px;
+        width:210px;
+        z-index: 1100;
+    }
+    .sticky li{
+        list-style-type:none;
+        background-color:#fff;
+        color:#efefef;
+        height:72px;
+        padding:0px;
+        margin:0px 0px 1px -26px;
+        -webkit-transition:all 0.25s ease-in-out;
+        -moz-transition:all 0.25s ease-in-out;
+        -o-transition:all 0.25s ease-in-out;
+        transition:all 0.25s ease-in-out;
+        cursor:pointer;
+    }
+    .sticky li:hover{
+        margin-left:-115px;
+    }
+    .sticky li img{
+        float:left;
+        margin:5px 4px;
+        margin-right:5px;
+    }
+    .sticky li p{
+        padding-top:5px;
+        margin:0px;
+        line-height:16px;
+        font-size:11px;
+    }
+    .sticky li p a{
+        text-decoration:none;
+        color:#2C3539;
+    }
+    .sticky li p a:hover{
+        text-decoration:underline;
+    }
      </style>
    </head>
    <body>
@@ -138,5 +181,13 @@
      <footer>
        <p style="text-align: center;">Todos los derechos reservados &copy; 2023 Tienda Virtual Batan</p>
      </footer>
+     <div class="sticky-container">
+    <ul class="sticky">
+        <li>
+            <img src="imagenes/whatsapp.png" width="62" height="62">
+            <p><a href="https://wa.me/50687895592" target="_self">Contactame<br>WhatsApp</a></p>
+        </li>
+    </ul>
+</div>
    </body>
    </html>
