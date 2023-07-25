@@ -1,454 +1,209 @@
 <!DOCTYPE html>
-<html lang="es-es">
-
-<head>
-  <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
-  <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
-  <meta property="og:image" content="imagenes/a.png">
-  <meta property="og:url" content="https://tiendavirtualbatan.com">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Tienda Virtual Batan</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #FF6600;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .footer {
-      background-color: #f0f0f0;
-      padding: 10px;
-      text-align: center;
-      margin: 0 auto;
-    }
-
-    .rights-text {
-      font-size: 10px;
-      color: #666;
-      margin-top: 10px;
-    }
-
-    main {
-      padding: 20px;
-      background-color: #f1f1f1;
-    }
-
-    .main-products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2px;
-    }
-
-    .home-dot-element {
-      display: block;
-      width: 163px;
-      height: 400px;
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      padding: 10px;
-      margin-bottom: 2px;
-      text-decoration: none;
-      color: #333;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      border-radius: 15px;
-    }
-
-    .img {
-      text-align: center;
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-    }
-
-    .offer-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-
-    .subject {
-      font-weight: bold;
-      font-size: 14px;
-      margin-bottom: 5px;
-      height: 40px;
-      overflow: hidden;
-      margin-top: 10px;
-    }
-
-    .price {
-      font-size: 14px;
-      font-weight: bold;
-      color: #FF6600;
-    }
-
-    .cantidad,
-    .delivery {
-      font-size: 10px;
-      font-weight: bold;
-    }
-
-    .add-to-cart-button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin-top: 10px;
-      cursor: pointer;
-      border-radius: 50px;
-      width: 50px;
-      height: 50px;
-      line-height: 30px;
-    }
-
-    .sticky-container {
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      right: -130px;
-      top: 230px;
-      width: 210px;
-      z-index: 1100;
+   <html lang="es-es">
+   <head>
+   <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
+   <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
+   <meta property="og:image" content="imagenes/a.png">
+   <meta property="og:url" content="https://tiendavirtualbatan.com">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Tienda Virtual Batan</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+     <style>
+       body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         line-height: 1.6;
+       }
+       header {
+         background-color: #FF6600;
+         color: #fff;
+         padding: 10px;
+         text-align: center;
+       }
+       nav ul {
+         list-style: none;
+         padding: 0;
+       }
+       nav ul li {
+         display: inline-block;
+         margin-right: 20px;
+       }
+       nav ul li a {
+         color: #fff;
+         text-decoration: none;
+       }
+       .footer {
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .rights-text {
+        font-size: 10px;
+        color: #666;
+        margin-top: 10px;
+      }
+       main {
+         padding: 20px;
+         background-color: #a9a7a7;
+       }
+       .main-products {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 2px;
+       }
+       .home-dot-element {
+         display: block;
+         width: 163px;
+         height: 400px;
+         background-color: #ffffff;
+         border: 1px solid #ddd;
+         padding: 10px;
+         margin-bottom: 2px;
+         text-decoration: none;
+         color: #333;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+         overflow: hidden;
+         border-radius: 15px;
+       }
+       .img {
+         text-align: center;
+         width: 100%;
+         height: 200px;
+         overflow: hidden;
+       }
+       .offer-img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 15px;
+       }
+       .subject {
+         font-weight: bold;
+         font-size: 14px;
+         margin-bottom: 5px;
+         height: 40px;
+         overflow: hidden;
+         margin-top: 10px;
+       }
+       .price {
+         font-size: 14px;
+         font-weight: bold;
+         color: #FF6600;
+       }
+       .cantidad,
+       .delivery {
+         font-size: 10px;
+         font-weight: bold;
+       }
+       .add-to-cart-button {
+         background-color: #4CAF50;
+         color: white;
+         border: none;
+         padding: 10px 15px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin-top: 10px;
+         cursor: pointer;
+         border-radius: 50px;
+         width: 50px;
+         height: 50px;
+         line-height: 30px;
+       }
+       .sticky-container {
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        right: -130px;
+        top: 230px;
+        width: 210px;
+        z-index: 1100;
     }
 
     .sticky li {
-      list-style-type: none;
-      background-color: #fff;
-      color: #efefef;
-      height: 72px;
-      padding: 0;
-      margin: 0 0 1px -26px;
-      transition: all 0.25s ease-in-out;
-      cursor: pointer;
-      border-radius: 15px;
+        list-style-type: none;
+        background-color: #fff0;
+        color: #efefef;
+        height: 72px;
+        padding: 0;
+        margin: 0 0 1px -26px;
+        transition: all 0.25s ease-in-out;
+        cursor: pointer;
+        border-radius: 15px;
     }
-
     .sticky li img {
-      float: left;
-      margin: 5px 4px;
-      margin-right: 5px;
+        float: left;
+        margin: 5px 4px;
+        margin-right: 5px;
     }
 
     .sticky li p {
-      padding-top: 5px;
-      margin: 0;
-      line-height: 16px;
-      font-size: 11px;
+        padding-top: 5px;
+        margin: 0;
+        line-height: 16px;
+        font-size: 11px;
     }
 
     .sticky li p a {
-      text-decoration: none;
-      color: #2C3539;
+        text-decoration: none;
+        color: #2C3539;
     }
 
     .sticky li p a:hover {
-      text-decoration: underline;
+        text-decoration: underline;
     }
-  </style>
-</head>
+     </style>
+   </head>
+   <body>
+     <header>
+       <h1>Tienda Virtual Batan</h1>
+       <nav>
+         <ul>
+           <li><a href="emir-yuliana/index.html">Inicio</a></li>
+           <li><a href="editar.php">Editar</a></li>
+           <li><a href="eliminar.php">Eliminar</a></li>
+           <li><a href="subir_producto.html">Subir</a></li>
+           <li><a href="generador.php">Generador</a></li>
+           <li><a href="index.html">Index</a></li>
+         </ul>
+       </nav>
+     </header>
+     </header>
+     <main>
+       <section class="main-products"><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Camaras_Vision_Nocturna_64be57d18cbe4.jpg"><div class="img"><img class="bimg offer-img" src="imagenes/Camaras_Vision_Nocturna_64be57d18cbe4.jpg" alt="Camaras Vision Nocturna"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Camaras Vision Nocturna">Camaras Vision Nocturna</div><div class="price">Precio: ₡25.000,00<br>Price:  $44.64 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 5</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 4</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Camaras Vision Nocturna"><input type="hidden" name="amount" value="44.64"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Mouse_RGB_64be65d161573.png"><div class="img"><img class="bimg offer-img" src="imagenes/Mouse_RGB_64be65d161573.png" alt="Mouse RGB"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Mouse RGB">Mouse RGB</div><div class="price">Precio: ₡7.000,00<br>Price:  $12.50 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 10</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 6</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Mouse RGB"><input type="hidden" name="amount" value="12.50"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Juegos_Herramientas_64be6603b143f.jpg"><div class="img"><img class="bimg offer-img" src="imagenes/Juegos_Herramientas_64be6603b143f.jpg" alt="Juegos Herramientas"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Juegos Herramientas">Juegos Herramientas</div><div class="price">Precio: ₡30.000,00<br>Price:  $53.57 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 2</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 4</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Juegos Herramientas"><input type="hidden" name="amount" value="53.57"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Mini_Short_64be664b0fe28.png"><div class="img"><img class="bimg offer-img" src="imagenes/Mini_Short_64be664b0fe28.png" alt="Mini Short"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Mini Short">Mini Short</div><div class="price">Precio: ₡14.000,00<br>Price:  $25.00 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 5</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 6</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Mini Short"><input type="hidden" name="amount" value="25.00"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Mini_Short_64be666a7571d.png"><div class="img"><img class="bimg offer-img" src="imagenes/Mini_Short_64be666a7571d.png" alt="Mini Short"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Mini Short">Mini Short</div><div class="price">Precio: ₡14.000,00<br>Price:  $25.00 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 2</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 4</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Mini Short"><input type="hidden" name="amount" value="25.00"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Tangas_64be66901f1f5.png"><div class="img"><img class="bimg offer-img" src="imagenes/Tangas_64be66901f1f5.png" alt="Tangas"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Tangas">Tangas</div><div class="price">Precio: ₡7.500,00<br>Price:  $13.39 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 10</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 5</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Tangas"><input type="hidden" name="amount" value="13.39"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Poster_Pared_64be6823283ce.jpg"><div class="img"><img class="bimg offer-img" src="imagenes/Poster_Pared_64be6823283ce.jpg" alt="Poster Pared"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Poster Pared">Poster Pared</div><div class="price">Precio: ₡16.000,00<br>Price:  $28.57 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 4</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 12</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Poster Pared"><input type="hidden" name="amount" value="28.57"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Mini_Short_64be68707c294.jpg"><div class="img"><img class="bimg offer-img" src="imagenes/Mini_Short_64be68707c294.jpg" alt="Mini Short"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Mini Short">Mini Short</div><div class="price">Precio: ₡14.000,00<br>Price:  $25.00 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 4</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 6</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Mini Short"><input type="hidden" name="amount" value="25.00"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Samsung_A71_64be68a1248b4.jpg"><div class="img"><img class="bimg offer-img" src="imagenes/Samsung_A71_64be68a1248b4.jpg" alt="Samsung A71"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Samsung A71">Samsung A71</div><div class="price">Precio: ₡60.000,00<br>Price:  $107.14 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 2</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 1</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Samsung A71"><input type="hidden" name="amount" value="107.14"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Manos_Libres_64be68e334965.jpg"><div class="img"><img class="bimg offer-img" src="imagenes/Manos_Libres_64be68e334965.jpg" alt="Manos Libres"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Manos Libres">Manos Libres</div><div class="price">Precio: ₡3.000,00<br>Price:  $5.36 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 10</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 2</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Manos Libres"><input type="hidden" name="amount" value="5.36"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Diseños_64be6a2e67a4b.webp"><div class="img"><img class="bimg offer-img" src="imagenes/Diseños_64be6a2e67a4b.webp" alt="Diseños"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Diseños">Diseños</div><div class="price">Precio: ₡2.000,00<br>Price:  $3.57 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 10</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 2</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Diseños"><input type="hidden" name="amount" value="3.57"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Cascos_de_Niños_64be6c51b1ea2.jpeg"><div class="img"><img class="bimg offer-img" src="imagenes/Cascos_de_Niños_64be6c51b1ea2.jpeg" alt="Cascos de Niños"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Cascos de Niños">Cascos de Niños</div><div class="price">Precio: ₡10.000,00<br>Price:  $17.86 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 2</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 1</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Cascos de Niños"><input type="hidden" name="amount" value="17.86"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Flores_64be6cfd57234.jpg"><div class="img"><img class="bimg offer-img" src="imagenes/Flores_64be6cfd57234.jpg" alt="Flores"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Flores">Flores</div><div class="price">Precio: ₡2.500,00<br>Price:  $4.46 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 50</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 2</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Flores"><input type="hidden" name="amount" value="4.46"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div></section>
+     </main>
+     <footer>
+  <!-- Otros elementos del footer aquí -->
+  <p class="rights-text" style="text-align: center;">Todos los derechos reservados © 2023 Tienda Virtual Batan</p>
+</footer>
 
-<body>
-  <header>
-    <h1>Tienda Virtual Batan</h1>
-    <nav>
-      <ul>
-        <li><a href="emir-yuliana/index.html">Inicio</a></li>
-        <li><a href="editar.php">Editar</a></li>
-        <li><a href="eliminar.php">Eliminar</a></li>
-        <li><a href="subir_producto.html">Subir</a></li>
-        <li><a href="generador.php">Generador</a></li>
-        <li><a href="index.html">Index</a></li>
-      </ul>
-    </nav>
-  </header>
-  </header>
-  <main>
-    <section class="main-products">
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Camaras_Vision_Nocturna_64be57d18cbe4.jpg">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Camaras_Vision_Nocturna_64be57d18cbe4.jpg"
-              alt="Camaras Vision Nocturna"></div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Camaras Vision Nocturna">Camaras Vision
-              Nocturna</div>
-            <div class="price">Precio: ₡25.000,00<br>Price: $44.64 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 5</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 4</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name"
-                value="Camaras Vision Nocturna"><input type="hidden" name="amount" value="44.64"><input type="hidden"
-                name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button
-                type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Mouse_RGB_64be65d161573.png">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Mouse_RGB_64be65d161573.png" alt="Mouse RGB"></div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Mouse RGB">Mouse RGB</div>
-            <div class="price">Precio: ₡7.000,00<br>Price: $12.50 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 10</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 6</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Mouse RGB"><input
-                type="hidden" name="amount" value="12.50"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Juegos_Herramientas_64be6603b143f.jpg">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Juegos_Herramientas_64be6603b143f.jpg"
-              alt="Juegos Herramientas"></div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Juegos Herramientas">Juegos Herramientas
-            </div>
-            <div class="price">Precio: ₡30.000,00<br>Price: $53.57 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 2</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 4</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name"
-                value="Juegos Herramientas"><input type="hidden" name="amount" value="53.57"><input type="hidden"
-                name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button
-                type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Mini_Short_64be664b0fe28.png">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Mini_Short_64be664b0fe28.png" alt="Mini Short">
-          </div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Mini Short">Mini Short</div>
-            <div class="price">Precio: ₡14.000,00<br>Price: $25.00 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 5</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 6</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Mini Short"><input
-                type="hidden" name="amount" value="25.00"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Mini_Short_64be666a7571d.png">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Mini_Short_64be666a7571d.png" alt="Mini Short">
-          </div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Mini Short">Mini Short</div>
-            <div class="price">Precio: ₡14.000,00<br>Price: $25.00 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 2</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 4</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Mini Short"><input
-                type="hidden" name="amount" value="25.00"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Tangas_64be66901f1f5.png">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Tangas_64be66901f1f5.png" alt="Tangas"></div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Tangas">Tangas</div>
-            <div class="price">Precio: ₡7.500,00<br>Price: $13.39 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 10</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 5</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Tangas"><input
-                type="hidden" name="amount" value="13.39"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Poster_Pared_64be6823283ce.jpg">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Poster_Pared_64be6823283ce.jpg" alt="Poster Pared">
-          </div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Poster Pared">Poster Pared</div>
-            <div class="price">Precio: ₡16.000,00<br>Price: $28.57 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 4</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 12</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Poster Pared"><input
-                type="hidden" name="amount" value="28.57"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Mini_Short_64be68707c294.jpg">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Mini_Short_64be68707c294.jpg" alt="Mini Short">
-          </div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Mini Short">Mini Short</div>
-            <div class="price">Precio: ₡14.000,00<br>Price: $25.00 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 4</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 6</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Mini Short"><input
-                type="hidden" name="amount" value="25.00"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Samsung_A71_64be68a1248b4.jpg">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Samsung_A71_64be68a1248b4.jpg" alt="Samsung A71">
-          </div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Samsung A71">Samsung A71</div>
-            <div class="price">Precio: ₡60.000,00<br>Price: $107.14 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 2</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 1</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Samsung A71"><input
-                type="hidden" name="amount" value="107.14"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Manos_Libres_64be68e334965.jpg">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Manos_Libres_64be68e334965.jpg" alt="Manos Libres">
-          </div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Manos Libres">Manos Libres</div>
-            <div class="price">Precio: ₡3.000,00<br>Price: $5.36 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 10</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 2</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Manos Libres"><input
-                type="hidden" name="amount" value="5.36"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Diseños_64be6a2e67a4b.webp">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Diseños_64be6a2e67a4b.webp" alt="Diseños"></div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Diseños">Diseños</div>
-            <div class="price">Precio: ₡2.000,00<br>Price: $3.57 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 10</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 2</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Diseños"><input
-                type="hidden" name="amount" value="3.57"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Cascos_de_Niños_64be6c51b1ea2.jpeg">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Cascos_de_Niños_64be6c51b1ea2.jpeg"
-              alt="Cascos de Niños"></div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Cascos de Niños">Cascos de Niños</div>
-            <div class="price">Precio: ₡10.000,00<br>Price: $17.86 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 2</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 1</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name"
-                value="Cascos de Niños"><input type="hidden" name="amount" value="17.86"><input type="hidden"
-                name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button
-                type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-      <div class="product-container"><a class="home-dot-element home-product" data-spm="0" vdata-appeared="true"
-          target="_self" href="imagenes/Flores_64be6cfd57234.jpg">
-          <div class="img"><img class="bimg offer-img" src="imagenes/Flores_64be6cfd57234.jpg" alt="Flores"></div>
-          <div class="product-fields">
-            <div class="subject fz-normal home-util-ellipsis line2" title="Flores">Flores</div>
-            <div class="price">Precio: ₡2.500,00<br>Price: $4.46 USD</br></div>
-            <div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 50</div>
-            <div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 2</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input
-                type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business"
-                value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Flores"><input
-                type="hidden" name="amount" value="4.46"><input type="hidden" name="currency_code" value="USD"><input
-                type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i
-                  class="fas fa-shopping-cart"></i></button></form>
-          </div>
-        </a></div>
-    </section>
-  </main>
-  <footer>
-    <!-- Otros elementos del footer aquí -->
-    <p class="rights-text" style="text-align: center;">Todos los derechos reservados © 2023 Tienda Virtual Batan</p>
-  </footer>
-
-  <div class="sticky-container">
-    <ul class="sticky">
-      <li>
-        <p><a href="https://wa.me/50687895592" target="_self"><img src="imagenes/whatsapp.png" width="52"
-              height="52"></a></p>
-      </li>
-      <li>
-        <p><a href="https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg" target="_self"><img
-              src="imagenes/youtube.png" width="52" height="52"></a></p>
-      </li>
-      <li>
-        <p><a href="https://www.instagram.com/yuliana.emir/" target="_self"><img src="imagenes/instagram.png" width="52"
-              height="52"></a></p>
-      </li>
-      <li>
-        <p><a href="https://www.facebook.com/tiendavirtualbataan/" target="_self"><img src="imagenes/facebook.png"
-              width="52" height="52"></a></p>
-      </li>
-      <li>
-        <p><a href="https://twitter.com/emiryuliana" target="_self"><img src="imagenes/twiter.gif" width="52"
-              height="52"></a></p>
-      </li>
-      <li>
+<div class="sticky-container">
+<ul class="sticky">
+    <li>        
+        <p><a href="https://wa.me/50687895592" target="_self"><img src="imagenes/whatsapp.png" width="52" height="52"></a></p>
+    </li>
+    <li>        
+        <p><a href="https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg" target="_self"><img src="imagenes/youtube.png" width="52" height="52"></a></p>
+    </li>
+    <li>        
+        <p><a href="https://www.instagram.com/yuliana.emir/" target="_self"><img src="imagenes/instagram.png" width="52" height="52"></a></p>
+    </li>
+    <li>        
+        <p><a href="https://www.facebook.com/tiendavirtualbataan/" target="_self"><img src="imagenes/facebook.png" width="52" height="52"></a></p>
+    </li>
+    <li>        
+        <p><a href="https://twitter.com/emiryuliana" target="_self"><img src="imagenes/twiter.gif" width="52" height="52"></a></p>
+    </li>
+    <li>        
         <p><a href="emiryuliana/index.html" target="_self"><img src="imagenes/logo.png" width="52" height="52"></a></p>
-      </li>
-    </ul>
-  </div>
-</body>
-
-</html>
+    </li>
+</ul>
+</div>
+   </body>
+   </html>
