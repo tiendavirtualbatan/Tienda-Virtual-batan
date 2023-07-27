@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-   <html lang="es-es">
-   <head>
-   <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
+<html lang="es-es">
+
+<head>
+    <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
    <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
    <meta property="og:image" content="sistema/a.png">
    <meta property="og:url" content="https://tiendavirtualbatan.com">
@@ -9,114 +10,106 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <title>Tienda Virtual Batan</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-     <style>
-       body {
-         font-family: Arial, sans-serif;
-         margin: 0;
-         padding: 0;
-         line-height: 1.6;
-       }
-       header {
-         background-color: #FF6600;
-         color: #fff;
-         padding: 10px;
-         text-align: center;
-       }
-       nav ul {
-         list-style: none;
-         padding: 0;
-       }
-       nav ul li {
-         display: inline-block;
-         margin-right: 20px;
-       }
-       nav ul li a {
-         color: #fff;
-         text-decoration: none;
-       }
-       .footer {
-        background-color: #f0f0f0;
-        padding: 10px;
-        text-align: center;
-        margin: 0 auto;
-      }
-      .rights-text {
-        font-size: 10px;
-        color: #666;
-        margin-top: 10px;
-      }
-       main {
-         padding: 20px;
-         background-color: #a9a7a7;
-       }
-       .main-products {
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: center;
-         gap: 2px;
-       }
-       .home-dot-element {
-         display: block;
-         width: 163px;
-         height: 400px;
-         background-color: #ffffff;
-         border: 1px solid #ddd;
-         padding: 10px;
-         margin-bottom: 2px;
-         text-decoration: none;
-         color: #333;
-         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-         overflow: hidden;
-         border-radius: 15px;
-       }
-       .img {
-         text-align: center;
-         width: 100%;
-         height: 200px;
-         overflow: hidden;
-       }
-       .offer-img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         border-radius: 15px;
-       }
-       .subject {
-         font-weight: bold;
-         font-size: 14px;
-         margin-bottom: 5px;
-         height: 40px;
-         overflow: hidden;
-         margin-top: 10px;
-       }
-       .price {
-         font-size: 14px;
-         font-weight: bold;
-         color: #FF6600;
-       }
-       .cantidad,
-       .delivery {
-         font-size: 10px;
-         font-weight: bold;
-       }
-       .add-to-cart-button {
-         background-color: #4CAF50;
-         color: white;
-         border: none;
-         padding: 10px 15px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 16px;
-         margin-top: 10px;
-         cursor: pointer;
-         border-radius: 50px;
-         width: 50px;
-         height: 50px;
-         line-height: 30px;
-       }
-       .sticky-container {
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Tienda Virtual Batan</title>
+<style>
+        /* Estilos CSS aqu&iacute; (mantener los estilos actuales) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            background-color: #FF6600;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .product {
+            width: 162px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+
+        .product-details {
+            text-align: center;
+        }
+        .product-details a {
+            text-decoration: none;
+            color: green; /* Aqu&iacute; puedes cambiar el color a tu preferencia */
+            font-weight: bold;
+        }
+        /* Estilo solo para la palabra "Tienda" dentro de .product-details */
+        .product-details span.tienda {
+            color: #ff0080; /* Cambiar el color aqu&iacute; */
+            font-weight: bold;
+        }
+
+        .product-details h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product-details p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #FF6600;
+        }
+
+        .product-details span {
+            display: block;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Estilos para el contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 6vh;
+        }
+
+        /* Estilos para el elemento label y el men&uacute; desplegable select */
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para eliminar el subrayado en los enlaces */
+        .product-details a {
+            text-decoration: none;
+        }
+
+        .sticky-container {
         padding: 0;
         margin: 0;
         position: fixed;
@@ -158,32 +151,81 @@
     .sticky li p a:hover {
         text-decoration: underline;
     }
-     </style>
-   </head>
-   <body>
-     <header>
-       <h1>Tienda Virtual Batan</h1>
-       <nav>
-         <ul>
-           <li><a href="emir-yuliana/index.html">Inicio</a></li>
-           <li><a href="editar.php">Editar</a></li>
-           <li><a href="eliminar.php">Eliminar</a></li>
-           <li><a href="subir_producto.html">Subir</a></li>
-           <li><a href="generador.php">Generador</a></li>
-           <li><a href="index.html">Index</a></li>
-         </ul>
-       </nav>
-     </header>
-     </header>
-     <main>
-       <section class="main-products"><div class="product-container"><a class="home-dot-element home-product" data-spm="0"  vdata-appeared="true" target="_self" href="imagenes/Cascos_Niño_y_Niña_64c1d7b9085e5.jpeg"><div class="img"><img class="bimg offer-img" src="imagenes/Cascos_Niño_y_Niña_64c1d7b9085e5.jpeg" alt="Cascos Niño y Niña"></div><div class="product-fields"><div class="subject fz-normal home-util-ellipsis line2" title="Cascos Niño y Niña">Cascos Niño y Niña</div><div class="price">Precio: ₡10.000,00<br>Price:  $17.86 USD</br></div><div class="cantidad fz-normal">Cantidad Disponible: <span class="required">*</span> 1</div><div class="delivery fz-normal">Envío en Dias: <span class="required">*</span> 1</div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="paypal-form"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tiendavirtualbatan@gmail.com"><input type="hidden" name="item_name" value="Cascos Niño y Niña"><input type="hidden" name="amount" value="17.86"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="landing_page" value="billing"><button type="submit" class="add-to-cart-button"><i class="fas fa-shopping-cart"></i></button></form></div></a></div></section>
-     </main>
-     <footer>
-  <!-- Otros elementos del footer aquí -->
-  <p class="rights-text" style="text-align: center;">Todos los derechos reservados © 2023 Tienda Virtual Batan</p>
-</footer>
+</style>
+</head>
 
-<div class="sticky-container">
+<body>
+    <h1>Tienda Virtual Batan</h1>
+    <div class="container">
+        <div class="form-group">
+            <!-- Agregar el siguiente cuadro de b&uacute;squeda en la parte superior de la p&aacute;gina -->
+            <input type="text" id="buscador" placeholder="Buscar productos por nombre">
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product" data-categoria="Celular">
+<img src="imagenes/FB_IMG_1690051727324.jpg" alt="Samsung A71"><div class="product-details">
+<h3>Samsung A71</h3>
+<p>&#8353;45,000.00</p>
+<span>Cantidad: 1</span><span>Env&iacute;o: 2</span><span>Categor&iacute;a: Celular</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Batan</span></span>
+</div>
+</div>
+<div class="product" data-categoria="Moto">
+<img src="imagenes/Dise%C3%B1os_64c247614b833.jpeg" alt="Cascos"><div class="product-details">
+<h3>Cascos</h3>
+<p>&#8353;10,000.00</p>
+<span>Cantidad: 2</span><span>Env&iacute;o: 1</span><span>Categor&iacute;a: Moto</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Emir</span></span>
+</div>
+</div>
+<div class="product" data-categoria="Accesorios">
+<img src="imagenes/Dise%C3%B1os_64c247f06c316.jpg" alt="Bandeja Sim Caterpillar S32"><div class="product-details">
+<h3>Bandeja Sim Caterpillar S32</h3>
+<p>&#8353;15,000.00</p>
+<span>Cantidad: 1</span><span>Env&iacute;o: 2</span><span>Categor&iacute;a: Accesorios</span><span>WhatsApp: <a href="https://wa.me/50683544170">83544170</a></span><span>Tienda: <span class="tienda">Yaki</span></span>
+</div>
+</div>
+<div class="product" data-categoria="Herramientas">
+<img src="imagenes/Dise%C3%B1os_64c24a8ea4838.jpg" alt="Juego De Heramientas"><div class="product-details">
+<h3>Juego De Heramientas</h3>
+<p>&#8353;30,000.00</p>
+<span>Cantidad: 10</span><span>Env&iacute;o: 5</span><span>Categor&iacute;a: Herramientas</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span>
+</div>
+</div>    </div>
+    <script>
+        // C&oacute;digo JavaScript para filtrar productos por nombre en tiempo real
+        document.getElementById('buscador').addEventListener('keyup', function () {
+            var searchTerm = this.value.toLowerCase();
+            var products = document.getElementsByClassName('product');
+
+            for (var i = 0; i < products.length; i++) {
+                var productName = products[i].getElementsByClassName('product-details')[0]
+                    .getElementsByTagName('h3')[0].innerText.toLowerCase();
+
+                if (productName.includes(searchTerm)) {
+                    products[i].style.display = 'block';
+                } else {
+                    products[i].style.display = 'none';
+                }
+            }
+        });
+
+        // C&oacute;digo JavaScript para abrir WhatsApp con la informaci&oacute;n del producto al hacer clic en el n&uacute;mero de tel&eacute;fono
+        var phoneLinks = document.querySelectorAll('.product-details a');
+
+        phoneLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                var phoneNumber = link.textContent;
+                var productName = link.closest('.product').querySelector('h3').textContent;
+                var productPrice = link.closest('.product').querySelector('p').textContent;
+                var productInfo = '&iexcl;Hola! Estoy interesado/a en el producto "' + productName + '" con precio de ' + productPrice + '.';
+                var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(productInfo);
+                window.open(whatsappLink);
+            });
+        });
+    </script>
+    <div class="sticky-container">
 <ul class="sticky">
     <li>        
         <p><a href="https://wa.me/50687895592" target="_self"><img src="sistema/whatsapp.png" width="52" height="52"></a></p>
@@ -205,5 +247,6 @@
     </li>
 </ul>
 </div>
-   </body>
-   </html>
+</body>
+
+</html>
