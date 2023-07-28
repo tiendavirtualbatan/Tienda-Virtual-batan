@@ -220,7 +220,7 @@ phoneLinks.forEach(function (link) {
         var productName = link.closest('.product').querySelector('h3').textContent;
         var productPrice = link.closest('.product').querySelector('p').textContent;
         var productInfo = '&iexcl;Hola! Estoy interesado/a en el producto "' + productName + '" con precio de ' + productPrice + '.';
-        var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(productInfo);
+        var whatsappLink = 'https://wa.me/506' + phoneNumber + '?text=' + encodeURIComponent(productInfo);
         window.open(whatsappLink);
     });
 });
