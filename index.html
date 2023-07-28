@@ -34,12 +34,13 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
+            gap: 5px;
             padding: 10px;
         }
 
         .product {
             width: 162px;
+            height: 474px;
             background-color: #fff;
             border: 1px solid #ddd;
             padding: 10px;
@@ -219,7 +220,7 @@ phoneLinks.forEach(function (link) {
         var phoneNumber = link.textContent;
         var productName = link.closest('.product').querySelector('h3').textContent;
         var productPrice = link.closest('.product').querySelector('p').textContent;
-        var productInfo = '&iexcl;Hola! Estoy interesado/a en el producto "' + productName + '" con precio de ' + productPrice + '.';
+        var productInfo = 'Hola... Estoy interesado/a en el producto "' + productName + '" con precio de ' + productPrice + '.';
         var whatsappLink = 'https://wa.me/506' + phoneNumber + '?text=' + encodeURIComponent(productInfo);
         window.open(whatsappLink);
     });
