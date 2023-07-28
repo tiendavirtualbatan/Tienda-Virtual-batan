@@ -9,7 +9,6 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-   <title>Tienda Virtual Batan</title>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Tienda Virtual Batan</title>
 <style>
@@ -20,6 +19,36 @@
             padding: 0;
             line-height: 1.6;
             background-color: #f0f0f0;
+        }
+        header {
+            background-color: #FF6600;
+            color: #fff;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ff9800;
         }
 
         h1 {
@@ -156,7 +185,16 @@
 </head>
 
 <body>
-    <h1>Tienda Virtual Batan</h1>
+<header>
+        <h1>Tienda Virtual Batan</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="paginas/desbloquear_windows.html">Web</a></li>
+                <li><a href="https://tiendavirtualbatan.com">Sitio web oficial</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <div class="form-group">
             <!-- Agregar el siguiente cuadro de b&uacute;squeda en la parte superior de la p&aacute;gina -->
