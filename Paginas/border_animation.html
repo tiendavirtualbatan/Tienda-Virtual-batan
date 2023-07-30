@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Border Animation</title>
     <style>
+/*
         body {
             margin: 0;
             padding: 0;
@@ -52,14 +53,10 @@
         .block:after {
             filter: blur(50px);
         }
-
-        /* Media Query para hacer el bloque responsive */
         @media (max-width: 960px) {
             .block {
                 width: 90%;
-                /* Ajusta el ancho del bloque al 90% del contenedor */
                 margin: 30px auto;
-                /* Ajusta los márgenes para espaciarlo en pantallas más pequeñas */
             }
         }
 
@@ -70,26 +67,66 @@
             gap: 5px;
             padding: 10px;
             max-width: 800px;
-            /* Utilizamos un ancho máximo en lugar de un ancho fijo */
             margin-left: auto;
             margin-right: auto;
         }
-
-        /* Estilo para las imágenes dentro del contenedor */
         .product-container img {
             max-width: 90%;
-            /* Establecemos un ancho máximo del 100% para las imágenes */
             height: auto;
-            /* Para mantener la proporción original de la imagen */
-        }
+            }
+*/
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
 
+.block {
+	position: relative;
+	margin: 300px auto 0;
+	width: 500px;
+	height: 250px;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}
     </style>
 </head>
 
 <body>
     <div class="block">
+        <div class="product-container">
 
-        </block>
+        </div>
+    </block>
 </body>
 
 </html>
