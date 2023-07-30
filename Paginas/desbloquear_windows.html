@@ -2,686 +2,455 @@
 <html lang="es-es">
 
 <head>
-  <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
-  <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
-  <meta property="og:image" content="sistema/a.png">
-  <meta property="og:url" content="https://tiendavirtualbatan.com">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Tienda Virtual Batan</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <title>Tienda Virtual Batan</title>
-  <style>
-    /* Estilos CSS aqu&iacute; (mantener los estilos actuales) */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f0f0f0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #00000000;
+        }
 
-    h1 {
-      background-color: #FF6600;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      margin: 0;
-    }
+        .block {
+            position: relative;
+            margin: 50px auto 20px;
+            width: 900px;
+            height: auto;
+            background: linear-gradient(0deg, #ffffff, #ffffff);
+        }
 
-    .product-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 5px;
-      padding: 10px;
-      width: 800px;
-      /* Puedes ajustar el ancho según tus necesidades */
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .block:before,
+        .block:after {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+                    #0000ff, #00ff00, #ffff00, #ff0000);
+            background-size: 400%;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            z-index: -1;
+            animation: steam 20s linear infinite;
+        }
 
-    /*! CSS Used from: Embedded */
-    *,
-    ::after,
-    ::before {
-      box-sizing: border-box;
-    }
+        @keyframes steam {
+            0% {
+                background-position: 0 0;
+            }
 
-    img {
-      max-width: 100%;
-    }
+            50% {
+                background-position: 400% 0;
+            }
 
-    .clearfix::after {
-      content: "";
-    }
+            100% {
+                background-position: 0 0;
+            }
+        }
 
-    h1 {
-      margin: 0.67em 0;
-    }
+        .block:after {
+            filter: blur(50px);
+        }
 
-    p {
-      margin-top: 0;
-    }
+        /* Media Query para hacer el bloque responsive */
+        @media (max-width: 960px) {
+            .block {
+                width: 90%;
+                /* Ajusta el ancho del bloque al 90% del contenedor */
+                margin: 30px auto;
+                /* Ajusta los márgenes para espaciarlo en pantallas más pequeñas */
+            }
+        }
 
-    img {
-      border-style: none;
-    }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            padding: 10px;
+            max-width: 800px;
+            /* Utilizamos un ancho máximo en lugar de un ancho fijo */
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    a {
-      color: #2196f3;
-      text-decoration: none;
-      background-color: transparent;
-    }
+        /* Estilo para las imágenes dentro del contenedor */
+        .product-container img {
+            max-width: 90%;
+            /* Establecemos un ancho máximo del 100% para las imágenes */
+            height: auto;
+            /* Para mantener la proporción original de la imagen */
+        }
 
-    a:hover {
-      color: #1565c0;
-    }
+        h1,
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.2;
+            color: inherit;
+            display: block;
+        }
 
-    a:active,
-    a:focus,
-    a:hover {
-      text-decoration: none;
-      outline-width: 0;
-    }
+        h1 {
+            font-size: 2.5rem;
+        }
 
-    a:not([href]):not([tabindex]),
-    a:not([href]):not([tabindex]):focus,
-    a:not([href]):not([tabindex]):hover {
-      color: inherit;
-      text-decoration: none;
-    }
+        h2 {
+            font-size: 2rem;
+        }
 
-    a:not([href]):not([tabindex]):focus {
-      outline: 0;
-    }
+        a {
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+        }
 
-    h1,
-    h2 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-family: inherit;
-      font-weight: 500;
-      line-height: 1.2;
-      color: inherit;
-      display: block;
-    }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+        }
 
-    h1 {
-      font-size: 2.5rem;
-    }
+        iframe {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+        }
 
-    h2 {
-      font-size: 2rem;
-    }
+        p {
+            margin-bottom: 0;
+        }
 
-    a {
-      -ms-touch-action: manipulation;
-      touch-action: manipulation;
-    }
-
-    img {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    iframe {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-    }
-
-    p {
-      margin-bottom: 0;
-    }
-
-    .clearfix::after {
-      display: block;
-      clear: both;
-    }
-
-    @media print {
-
-      *,
-      ::after,
-      ::before {
-        text-shadow: none;
-        box-shadow: none;
-        background: 0 0;
-      }
-
-      iframe {
-        display: none;
-      }
-
-      article {
-        width: 100%;
-        color: #000;
-        padding: 0;
-        margin: 0;
-      }
-
-      article a {
-        font-weight: 700;
-        text-decoration: none;
-      }
-
-      article a[href^="http"]:after {
-        content: " (" attr(href) ")";
-      }
-
-      img {
-        page-break-inside: avoid;
-      }
-
-      h2,
-      p {
-        orphans: 3;
-        widows: 3;
-      }
-
-      h2 {
-        page-break-after: avoid;
-      }
-    }
-
-    a {
-      font-weight: 400;
-      transition: color 0.3s;
-    }
-
-    ::selection {
-      color: #ffffff;
-    }
-
-    .widget {
-      width: 100%;
-    }
-
-    /*! CSS Used from: Embedded */
-    .post-body {
-      font-size: 14px;
-    }
-
-    @media (min-width: 576px) {
-      .post-body {
-        font-size: 16px;
-      }
-    }
-
-    .post-body h1,
-    .post-body h2 {
-      margin: 0 0 1.5rem;
-      font-weight: 500;
-    }
-
-    /*! CSS Used from: Embedded */
-    a[style^="margin-left"] {
-      margin-right: 0 !important;
-      margin-left: 0 !important;
-    }
-
-    img[data-original-height],
-    img[data-original-width] {
-      height: auto;
-    }
-
-    .BLOG_video_class {
-      max-width: 100%;
-    }
-
-    a,
-    a:hover {
-      color: #3123b3;
-    }
-
-    ::selection {
-      background-color: #3123b3;
-    }
-
-    h1,
-    h2 {
-      color: #262626;
-    }
-
-    .skin-color-text {
-      color: #757575;
-    }
-
-    .post-body {
-      color: #757575;
-    }
-
-    .main .widget {
-      background-color: rgba(0, 0, 0, 0);
-    }
-
-    @media (min-width: 992px) {
-      .main .widget {
-        padding: 0;
-      }
-    }
-
-    /* Estilo para el h1 dentro de la clase "sin-fondo" */
-    .sin-fondo h1 {
-      text-align: center;
-      background-color: transparent;
-      font-family: arial;
-      /* Agrega otros estilos que desees para el título aquí si es necesario */
-    }
-
-    /* Estilos para el contenedor principal */
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 6vh;
-    }
-
-    /* Estilos para el elemento label y el men&uacute; desplegable select */
-    .form-group {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    /* Estilo para eliminar el subrayado en los enlaces */
-    .product-details a {
-      text-decoration: none;
-    }
-
-    .sticky-container {
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      right: -130px;
-      top: 230px;
-      width: 210px;
-      z-index: 1100;
-    }
-
-    .sticky li {
-      list-style-type: none;
-      background-color: #fff0;
-      color: #efefef;
-      height: 72px;
-      padding: 0;
-      margin: 0 0 1px -26px;
-      transition: all 0.25s ease-in-out;
-      cursor: pointer;
-      border-radius: 15px;
-    }
-
-    .sticky li img {
-      float: left;
-      margin: 5px 4px;
-      margin-right: 5px;
-    }
-
-    .sticky li p {
-      padding-top: 5px;
-      margin: 0;
-      line-height: 16px;
-      font-size: 11px;
-    }
-
-    .sticky li p a {
-      text-decoration: none;
-      color: #2C3539;
-    }
-
-    .sticky li p a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .sin-fondo h1 {
+            text-align: center;
+            background-color: transparent;
+            font-family: arial;
+            /* Agrega otros estilos que desees para el título aquí si es necesario */
+        }
+    </style>
 </head>
 
 <body>
-  <h1>Tienda Virtual Batan</h1>
-  <div class="container">
-    <div class="form-group">
-    </div>
-  </div>
+    <div class="block">
+        <div class="product-container">
+            <div class="section" id="Blog">
+                <div class="widget Blog" data-version="2" id="Blog1">
+                    <article class="article">
 
-  <div class="product-container">
-    <div class="section" id="Blog">
-      <div class="widget Blog" data-version="2" id="Blog1">
-        <article class="article">
+                        <div class="sin-fondo" id="1527200844298188282">
+                            <h1 style="text-align: center;"><span style="font-family: arial;">&nbsp;QUITAR
+                                    CONTRASEÑA OLVIDADA DE INICIO DE SESIÓN DE WINDOWS</span></h1>
+                            <div><span style="font-family: arial;"><br></span></div>
+                            <div>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiql9KhsUQNDSojJkzElFqJY7-B2OMaB36ewamQsjJQzzVo7lw_jjVPP4Bb-fYAoh43lV7n-r4rvwoUeL_ndndFuueaHVoe19TeSgA5nKl9YqqF-vMw2x0XunfhPBNUUSouobnt4det4thr7NtDEDQMd-kceJIQn4FYkejRF_NdcLkcYKcZOWgCfNX6NCI/s1125/1.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="632" data-original-width="1125" height="360"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiql9KhsUQNDSojJkzElFqJY7-B2OMaB36ewamQsjJQzzVo7lw_jjVPP4Bb-fYAoh43lV7n-r4rvwoUeL_ndndFuueaHVoe19TeSgA5nKl9YqqF-vMw2x0XunfhPBNUUSouobnt4det4thr7NtDEDQMd-kceJIQn4FYkejRF_NdcLkcYKcZOWgCfNX6NCI/w640-h360/1.JPG"
+                                            width="640"></a></div><br><span style="font-family: arial;"><br></span>
+                            </div>
+                            <div><span style="font-family: arial;"><br></span></div>
+                            <div>
+                                <h2 style="text-align: left;"><span style="font-family: arial;">Hola
+                                        amigos, aquí les tengo un pequeño tutorial con video para
+                                        quitar contraseña de tu Windows sin formatear con una
+                                        herramienta que todo Técnico debería de tener en sus
+                                        manos&nbsp;Hiren’s BootCD PE&nbsp;</span></h2><span><a name="more"></a></span>
+                                <div><br></div>
+                                <p style="text-align: left;"><span style="font-family: arial;">Lo
+                                        primero que tenemos que hacer es descargar Hiren’s BootCD PE
+                                        para eso nos vamos a dirigir a su página principal para que
+                                        lo descarguen abajo les dejo el link de su página web</span></p><br>
+                            </div>
+                            <div><span style="font-family: arial;"><br></span></div>
+                            <div>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://www.hirensbootcd.org/"
+                                        style="margin-left: 1em; margin-right: 1em;" target="_blank"><img border="0"
+                                            data-original-height="368" data-original-width="1280" height="58"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijZmDRdO8HhIbgfnm8onRiDlyvxHPrmQKMxXM-Nu5FvFMPS8IVUuOp5lpkvk01t5Ho-kaXca9RQvdA6ssCxtlvUvNl46hz8ncN6MnnPXgcLFLUXO8F_GOqnvvFjsut8mKMwkYOqDuqvyfnmNPJ7XaCklVZQcGg-npwFC8x6cgupDSV2Qt7DlGJEQioy5A/w200-h58/Download-Button-Icon-PNG-HD-Quality%20(1).png"
+                                            width="200"></a></div><br>
+                                <h2 style="text-align: left;"><span style="font-family: arial;">¿Te
+                                        preguntaras que es Hiren’s BootCD PE?</span></h2>
+                            </div>
+                            <div style="text-align: left;">
+                                <p style="text-align: left;"><span style="font-family: arial;">Hiren’s
+                                        BootCD PE está basado en Windows 10 PE X64 y contiene una
+                                        cantidad de herramientas gratuitas, pero las mejores para
+                                        que puedas solucionar cualquier problema que se te presente
+                                        en tu computadora y está desarrollada para computadoras de
+                                        la nueva era, es compatible con arranque UEFI y requiere
+                                        mínimo 2 GB de RAM.<br>&nbsp;<br>Las Herramientas que
+                                        contiene&nbsp;Hiren’s BootCD PE puedes solucionar muchos
+                                        problemas que se te pueden presentar en tu computadora y no
+                                        contienen ningún Software pirateado, solo contiene software
+                                        gratuito.</span></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjh28CZBqR6RJGOMTrsuvaXDv3qnTjiowXncGhBvyg1cEbek2dUgl6j_MH-_HuFbtNUdqc_rVyMImWLOH-v0N_6LvweAxuPc3aYAzFMBmz2Yz4nOkcXrx4apZmFF7oX-5CidaOpm6Y12U2s0waSNphUmRTc2x9U1GpYvUCaXxLdFw-q_VkIzbIsOyJHiHI/s226/2.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="55" data-original-width="226" height="78"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjh28CZBqR6RJGOMTrsuvaXDv3qnTjiowXncGhBvyg1cEbek2dUgl6j_MH-_HuFbtNUdqc_rVyMImWLOH-v0N_6LvweAxuPc3aYAzFMBmz2Yz4nOkcXrx4apZmFF7oX-5CidaOpm6Y12U2s0waSNphUmRTc2x9U1GpYvUCaXxLdFw-q_VkIzbIsOyJHiHI/w320-h78/2.JPG"
+                                            width="320"></a></div>
+                                <p class="MsoNormal" style="text-align: left;"><span style="font-family: arial;">Una vez
+                                        descargado la ISO
+                                        de&nbsp;Hiren’s BootCD PE tenemos que descargar y utilizar
+                                        Rufus esta aplicación no va a hacer útil para hacer
+                                        booteable nuestro pendrive y pueda inicar&nbsp;Hiren’s
+                                        BootCD PE desde el pendrive&nbsp;</span></p>
+                                <p style="white-space: normal;"></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMYxvrREYLRzudhzP1-efSMLrjkWQkk1sf4wAylKnnrb21yaIZglSHeelmK3K3F16a6coRNRiPRA5vApZv7E_Lw9CqFxnvWyBezYXcUmS-bFN4y9IgKddr-5t5mTe_1VUiDcfMT9NSGgDKvrOPe24RmujPyH0v7Fmmc__GcPrkzs25Zct3YWngRF2YVs4/s512/unnamed.png"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="512" data-original-width="512" height="200"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMYxvrREYLRzudhzP1-efSMLrjkWQkk1sf4wAylKnnrb21yaIZglSHeelmK3K3F16a6coRNRiPRA5vApZv7E_Lw9CqFxnvWyBezYXcUmS-bFN4y9IgKddr-5t5mTe_1VUiDcfMT9NSGgDKvrOPe24RmujPyH0v7Fmmc__GcPrkzs25Zct3YWngRF2YVs4/w200-h200/unnamed.png"
+                                            width="200"></a></div><span style="font-family: arial;">
+                                    <p class="MsoNormal"><span style="font-family: arial;"><br></span></p>
+                                </span>
+                                <p style="text-align: left;"></p>
+                                <h2 style="text-align: left;"><span style="font-family: arial;">¿Qué
+                                        es Rufus?</span></h2>
+                                <p></p>
+                                <p style="text-align: left;"><span style="font-family: arial;">Rufus
+                                        es una pequeña aplicación que nos permite crear de forma
+                                        segura un medio arranque boot en nuestras unidades USB de
+                                        arranque, aquí te dejo el link para que descargue
+                                        Rufus&nbsp;</span></p>
+                                <p></p>
+                                <p class="MsoNormal"><br></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://rufus.ie/es/" style="margin-left: 1em; margin-right: 1em;"
+                                        target="_blank"><img border="0" data-original-height="368"
+                                            data-original-width="1280" height="58"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijZmDRdO8HhIbgfnm8onRiDlyvxHPrmQKMxXM-Nu5FvFMPS8IVUuOp5lpkvk01t5Ho-kaXca9RQvdA6ssCxtlvUvNl46hz8ncN6MnnPXgcLFLUXO8F_GOqnvvFjsut8mKMwkYOqDuqvyfnmNPJ7XaCklVZQcGg-npwFC8x6cgupDSV2Qt7DlGJEQioy5A/w200-h58/Download-Button-Icon-PNG-HD-Quality%20(1).png"
+                                            width="200"></a></div><br>
+                                <p class="MsoNormal"><br></p>
+                                <p style="text-align: left;"><span style="font-family: arial;">Ya
+                                        que tengas la ISO de&nbsp;Hiren’s BootCD PE y Rufus vamos a
+                                        hacer booteable nuestro Pendrive.<br><br></span></p>
+                                <p style="text-align: left;"><span style="font-family: arial;">Tenemos
+                                        que tener una memoria USB Como mínimo de 8 GB&nbsp;</span></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhej-EZ5UcSDNeO19jGanc8Brm7WFWbLe7xw52Z-Z0Y55G8ySMpE6EWGApb9Zqk7X_JSHekQSCGKYDqPdzGslGbMmPC5W2bfF_C0ni3WpWr5pjuthMtcbMnxUKWuGT2QhGR4dqH_uCOShTQViKfHVIc7-h1T9a3SCdJg_3PTIOtlIAdhPPlS-HYxFK_ZqY/s1280/sandisk-cruzer.png"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="1280" data-original-width="1280" height="200"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhej-EZ5UcSDNeO19jGanc8Brm7WFWbLe7xw52Z-Z0Y55G8ySMpE6EWGApb9Zqk7X_JSHekQSCGKYDqPdzGslGbMmPC5W2bfF_C0ni3WpWr5pjuthMtcbMnxUKWuGT2QhGR4dqH_uCOShTQViKfHVIc7-h1T9a3SCdJg_3PTIOtlIAdhPPlS-HYxFK_ZqY/w200-h200/sandisk-cruzer.png"
+                                            width="200"></a></div><br>
+                                <p class="MsoNormal"><span style="font-family: arial;">Conectamos
+                                        nuestra memoria USB en tu Ordenador y ejecuta Rufus y
+                                        selecciona el dispositivo USB que deseas configurar para
+                                        instalar&nbsp;Hiren’s BootCD PE</span></p>
+                                <p class="MsoNormal"><br></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Rbc_cKhinyKZdRcLChi8EzQEIBhq8PhaWPKDe6AX0GBdN3M9tRqM0ZfS3NkUYUXy88S7xUDPk8MEkBYR5g1FXZW65B5VhB6mBZdBzKEYMYBclCKQ11exrzge2tyHkLNOcPw05muhi4uDYokGlZg3tjFXkkXiuIRzjWxejiBMjLWOpbPcpiKmALSVjdg/s600/zrufus2023.PNG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="600" data-original-width="484" height="400"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Rbc_cKhinyKZdRcLChi8EzQEIBhq8PhaWPKDe6AX0GBdN3M9tRqM0ZfS3NkUYUXy88S7xUDPk8MEkBYR5g1FXZW65B5VhB6mBZdBzKEYMYBclCKQ11exrzge2tyHkLNOcPw05muhi4uDYokGlZg3tjFXkkXiuIRzjWxejiBMjLWOpbPcpiKmALSVjdg/w323-h400/zrufus2023.PNG"
+                                            width="323"></a></div><br><span style="font-family: arial;"><br></span>
+                                <p></p>
+                                <p><span style="font-family: arial;">En el campo
+                                        "Elección de arranque", selecciona "Imagen ISO" y haz clic
+                                        en el icono de disco para buscar y seleccionar la imagen ISO
+                                        de&nbsp;Hiren’s BootCD PE&nbsp;descargada previamente.</span><span
+                                        style="font-family: arial;">Y en el
+                                        campo
+                                        "Opciones de Imagen" vas a seleccionar Instalación de
+                                        Windows Estándar</span></p>
+                                <p><span style="font-family: arial;">En el menú desplegable de
+                                        "Formato del dispositivo", selecciona
+                                        "Sistema de archivos: NTFS" si tu imagen ISO es mayor de 4GB
+                                        y "Sistema de archivos: FAT32" si es menor a 4GB. En el
+                                        campo de "Etiqueta del volumen" puedes colocarle el nombre
+                                        que desees.<br><br></span></p>
+                                <p><span style="font-family: arial;">Haz clic en "Comenzar" y
+                                        espera a que se complete el proceso de creación del USB
+                                        de&nbsp;Hiren’s BootCD PE<br><br></span></p>
+                                <p><span style="font-family: arial;">Una vez que el proceso haya
+                                        finalizado, podrás utilizar tu unidad USB para
+                                        iniciar&nbsp;Hiren’s BootCD PE&nbsp;en cualquier ordenador
+                                        compatible.<br><br></span></p>
+                                <p><span style="font-family: arial;">Conecta tu Pendrive en tu
+                                        computadora, pero tenemos que configurar para que inicie
+                                        desde nuestro pendrive, al momento de iniciar el equipo
+                                        tenemos que seleccionar Generalmente las teclas (F2 o DEL)
+                                        Para ingresar a la configuración de la BIOS y seleccionar
+                                        como arranque principal nuestro pendrive.&nbsp;</span></p>
+                                <div><span style="font-family: arial;"><br></span></div>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgdhy5-BzhxpTXIj6Co9A_LH086WSBbcJOC-Eiv5KLJKNk-yKrkm6nubAZKljhqYSy5X2Ne-foo_NI7BVcJCQGAxyVWXLdYc1vzMNBZefaOjMsbw9RAn71LBc3qaO59HTcAXmcG7JXz6ShsIRZL1R651Hm7M0-wbsmgRtAigLNU4GZiigsvfq6x2-d_hc/s912/3.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><span
+                                            style="font-family: arial;"><img border="0" data-original-height="428"
+                                                data-original-width="912" height="301"
+                                                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgdhy5-BzhxpTXIj6Co9A_LH086WSBbcJOC-Eiv5KLJKNk-yKrkm6nubAZKljhqYSy5X2Ne-foo_NI7BVcJCQGAxyVWXLdYc1vzMNBZefaOjMsbw9RAn71LBc3qaO59HTcAXmcG7JXz6ShsIRZL1R651Hm7M0-wbsmgRtAigLNU4GZiigsvfq6x2-d_hc/w640-h301/3.JPG"
+                                                width="640"></span></a></div><br><span
+                                    face="&quot;Arial&quot;,sans-serif"><br></span>
+                                <p></p>
+                                <p style="text-align: left;"><span style="font-family: arial;">Si
+                                        todo está perfecto tiene que iniciar perfectamente
+                                        nuestro&nbsp;Hiren’s BootCD PE y como pueden ver es muy
+                                        similar a Windows.&nbsp;</span></p>
+                                <p class="MsoNormal"><br></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigGbiVB6ZL4Gmr_2dRssignYr_xOvIiwHI2mhZ7-WWEx7TJgGVH6C1GtdgP5jPr6mqzOE_OEu_ZR2XDdKjEAuown3Ywq8RK-HYbb5u2Jw_HMYMYlMdmzqgQDI-ikcyO7lHhkkx_yRA0B8F526VNDYjZw5F9Bsya1ajb2du57hTxvTCtqsqwsNG1gPvQHY/s921/4.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="424" data-original-width="921" height="294"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigGbiVB6ZL4Gmr_2dRssignYr_xOvIiwHI2mhZ7-WWEx7TJgGVH6C1GtdgP5jPr6mqzOE_OEu_ZR2XDdKjEAuown3Ywq8RK-HYbb5u2Jw_HMYMYlMdmzqgQDI-ikcyO7lHhkkx_yRA0B8F526VNDYjZw5F9Bsya1ajb2du57hTxvTCtqsqwsNG1gPvQHY/w640-h294/4.JPG"
+                                            width="640"></a></div><br><span face="Arial, sans-serif"><br></span>
+                                <p></p>
+                                <p style="text-align: left;"><span style="font-family: arial;">En
+                                        el escritorio vamos a buscar una carpeta que se llama
+                                        Utilidades&nbsp;</span></p>
+                                <p class="MsoNormal"><br></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm_dwxNDf8D5GX0w1ZSwHKaMBVSEey3Jrh0yGfNugrs96Yr_2-GtPrHEutftkbdt0brflgyPBUIqHehVauNtflCS-E2oNjDgQ1ZVGDEwdgDT5itBfZLIBoi5ZPNqpSYbAk1V7b1IZle4RVlxCPbJrHWKKSXGMsZsqrkS7HlNm67s9f3S2zn-hsAzYId0Q/s921/5.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="424" data-original-width="921" height="294"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm_dwxNDf8D5GX0w1ZSwHKaMBVSEey3Jrh0yGfNugrs96Yr_2-GtPrHEutftkbdt0brflgyPBUIqHehVauNtflCS-E2oNjDgQ1ZVGDEwdgDT5itBfZLIBoi5ZPNqpSYbAk1V7b1IZle4RVlxCPbJrHWKKSXGMsZsqrkS7HlNm67s9f3S2zn-hsAzYId0Q/w640-h294/5.JPG"
+                                            width="640"></a></div><br><span face="Arial, sans-serif"><br></span>
+                                <p></p>
+                                <p style="text-align: left;"><span style="font-family: arial;">Luego
+                                        damos clic en la carpeta que dice Security y veremos lo
+                                        siguiente.</span></p>
+                                <p class="MsoNormal"><br></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2kHMsBXsmRgbNf_BjLaqKRYYH_HhAGFTK1nP_zInKqb0e5X6M6Nm4rgzGQX_7elvhO0wj1uYw8IPyrxcBFGm_4OwaS8UKJUsOzCE7-O1HvG0d63WK8uLKhRYVAIq_aulmmlCBudRLlN1kFUvY2ndqRJaQnvH02khWD636WMHCK4ugYN2kN_JzIebc1YY/s920/8.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="422" data-original-width="920" height="294"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2kHMsBXsmRgbNf_BjLaqKRYYH_HhAGFTK1nP_zInKqb0e5X6M6Nm4rgzGQX_7elvhO0wj1uYw8IPyrxcBFGm_4OwaS8UKJUsOzCE7-O1HvG0d63WK8uLKhRYVAIq_aulmmlCBudRLlN1kFUvY2ndqRJaQnvH02khWD636WMHCK4ugYN2kN_JzIebc1YY/w640-h294/8.JPG"
+                                            width="640"></a></div><br><span face="Arial, sans-serif"><br></span>
+                                <p></p>
+                                <p class="MsoNormal"><span style="font-family: arial;">Y abrimos
+                                        la carpeta Passwords y este será su contenido.&nbsp;</span></p>
+                                <p class="MsoNormal"><span face="Arial, sans-serif"><br></span></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjygwgpcNPfKP6yHHC2BnIr5DdPwP7WadzNx3MXr8iP6q5hF-h9HHJnUvx11zQxGmB9g4duf8vRvHJ_ItMisuRM0ZxcwxUoBawaPEDqsA9PbjbmOaqCDaim9i-uLIKksNXPilk6fJHHxQ-VOHTyEjXwRFGzDVQuMyydRAbQyvFYAFSyLPgF8ZVfqxXCHM0/s914/9.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="429" data-original-width="914" height="300"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjygwgpcNPfKP6yHHC2BnIr5DdPwP7WadzNx3MXr8iP6q5hF-h9HHJnUvx11zQxGmB9g4duf8vRvHJ_ItMisuRM0ZxcwxUoBawaPEDqsA9PbjbmOaqCDaim9i-uLIKksNXPilk6fJHHxQ-VOHTyEjXwRFGzDVQuMyydRAbQyvFYAFSyLPgF8ZVfqxXCHM0/w640-h300/9.JPG"
+                                            width="640"></a></div><br><span face="Arial, sans-serif"><br></span>
+                                <p></p>
+                                <p class="MsoNormal"><span style="font-family: arial;">Vamos a
+                                        ejecutar la utilidad&nbsp;Lazesoft Windows Recovery</span></p>
+                                <p class="MsoNormal"><span face="Arial, sans-serif"><br></span></p>
+                                <p class="MsoNormal"><span face="&quot;Arial&quot;,sans-serif">
+                                        <o:p></o:p>
+                                    </span></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnZtIF_CeX7uIQYq2KXOTE5LxebifFrA73O3tEdx5Xv6mUKPXieEMA0O3txHc4lTBxvFpm69zXGt0uuIJJmUgPgGvjwV56hLgJ_4LSAQu5MnsSRm18pgsJbmfoGZvkjUma3iI5WoLYnCv_tzhNuBrl_YWYMi9EzFByzkl5rkpEl56JPdBQdDADs2G8zLU/s916/10.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="424" data-original-width="916" height="296"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnZtIF_CeX7uIQYq2KXOTE5LxebifFrA73O3tEdx5Xv6mUKPXieEMA0O3txHc4lTBxvFpm69zXGt0uuIJJmUgPgGvjwV56hLgJ_4LSAQu5MnsSRm18pgsJbmfoGZvkjUma3iI5WoLYnCv_tzhNuBrl_YWYMi9EzFByzkl5rkpEl56JPdBQdDADs2G8zLU/w640-h296/10.JPG"
+                                            width="640"></a></div><br>
+                                <p class="MsoNormal"><span style="font-family: arial;">La vamos
+                                        a dejar en la opción reset Windows password y luego presiona
+                                        next&nbsp;</span></p>
+                                <p class="MsoNormal"><span style="font-family: arial;"><br></span></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVAn2cCpohOckNfe2vebhj4T_Q16C4jfIAHKBh5l7NpybAcOSsi8IvqgIH7kOKlODjhQARfnslzR-cpibk-gqQSAknEk7hLsgAUP9MDG8X8MrksWIOHychR1CZRFbwZfeF8dsOEqX-hH-glMYu26qgEuIKYQD05e_3yG7GKJ_zfLc-qG80LGKO0Jp1L5U/s917/11.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="426" data-original-width="917" height="298"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVAn2cCpohOckNfe2vebhj4T_Q16C4jfIAHKBh5l7NpybAcOSsi8IvqgIH7kOKlODjhQARfnslzR-cpibk-gqQSAknEk7hLsgAUP9MDG8X8MrksWIOHychR1CZRFbwZfeF8dsOEqX-hH-glMYu26qgEuIKYQD05e_3yG7GKJ_zfLc-qG80LGKO0Jp1L5U/w640-h298/11.JPG"
+                                            width="640"></a></div><br><span style="font-family: arial;"><br></span>
+                                <p></p>
+                                <p class="MsoNormal"><span style="font-family: arial;">Se nos va
+                                        a abrir esta ventana y seleccionamos "YES"</span></p>
+                                <p class="MsoNormal"><span style="font-family: arial;"><br></span></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil6gfSQV8BI_F6YxA069msp_RXheAQAzJUoQ8vSgvyQCvGvOcsG0EzI-NGKFfQmP2LlgvvHwkxuRizdQWGfiQhrNdpgjZyLcUf8CM6uCm33O3MCsJqNxrLJ5TkGdYOAmjYwFpqIUqmu3CAuAPPjHK8pqyfXJGAduNLl9pMd_a0_vFviHN7hKD4VedXlbM/s927/12.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="420" data-original-width="927" height="290"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil6gfSQV8BI_F6YxA069msp_RXheAQAzJUoQ8vSgvyQCvGvOcsG0EzI-NGKFfQmP2LlgvvHwkxuRizdQWGfiQhrNdpgjZyLcUf8CM6uCm33O3MCsJqNxrLJ5TkGdYOAmjYwFpqIUqmu3CAuAPPjHK8pqyfXJGAduNLl9pMd_a0_vFviHN7hKD4VedXlbM/w640-h290/12.JPG"
+                                            width="640"></a></div>
+                                <p class="MsoNormal"><br></p><span style="font-family: arial;">Selecciona
+                                    ahora Reset local password</span>
+                                <p></p>
+                                <p class="MsoNormal"><br></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjH6EzmKk6_nLejW1vPKAcrFm2wf9tZHbHG0x_b8my0FvyCgluSPC48-Zxsmfv0lyEScZHAcIRclNdcnkPvUGsGnGUVPF91mqjg1nJUIctPT6bn_AbtDACF3xtAhfvw6VbpCcnl-x6ZIgAwFoQW0FJjTwjkndHxwrHqtok-7R0qmDByfXy2gYGwNOSpeUw/s921/13.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="423" data-original-width="921" height="294"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjH6EzmKk6_nLejW1vPKAcrFm2wf9tZHbHG0x_b8my0FvyCgluSPC48-Zxsmfv0lyEScZHAcIRclNdcnkPvUGsGnGUVPF91mqjg1nJUIctPT6bn_AbtDACF3xtAhfvw6VbpCcnl-x6ZIgAwFoQW0FJjTwjkndHxwrHqtok-7R0qmDByfXy2gYGwNOSpeUw/w640-h294/13.JPG"
+                                            width="640"></a></div><br>
+                                <p class="MsoNormal"><span style="font-family: arial;">Selecciona
+                                        el Usuario que deseas desbloquear y presiona next
 
-          <div class="sin-fondo" id="1527200844298188282">
-            <h1 style="text-align: center;"><span style="font-family: arial;">&nbsp;QUITAR
-                CONTRASEÑA OLVIDADA DE INICIO DE SESIÓN DE WINDOWS</span></h1>
-            <div><span style="font-family: arial;"><br></span></div>
-            <div>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiql9KhsUQNDSojJkzElFqJY7-B2OMaB36ewamQsjJQzzVo7lw_jjVPP4Bb-fYAoh43lV7n-r4rvwoUeL_ndndFuueaHVoe19TeSgA5nKl9YqqF-vMw2x0XunfhPBNUUSouobnt4det4thr7NtDEDQMd-kceJIQn4FYkejRF_NdcLkcYKcZOWgCfNX6NCI/s1125/1.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="632"
-                    data-original-width="1125" height="360"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiql9KhsUQNDSojJkzElFqJY7-B2OMaB36ewamQsjJQzzVo7lw_jjVPP4Bb-fYAoh43lV7n-r4rvwoUeL_ndndFuueaHVoe19TeSgA5nKl9YqqF-vMw2x0XunfhPBNUUSouobnt4det4thr7NtDEDQMd-kceJIQn4FYkejRF_NdcLkcYKcZOWgCfNX6NCI/w640-h360/1.JPG"
-                    width="640"></a></div><br><span style="font-family: arial;"><br></span>
+                                        <br></span></p>
+                                <p class="MsoNormal"><br></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0jRMjuIx7aN9cYFOpcB8pKwhJkVi_xTy9gNE06UiBK_ddm407tz0ZisztqrX_Wtv2HJV3KvCaJXxhTUe7EgdKf_dlLrWldvplzdIzOxCm8eoIhY1S8ozJiGsm6XNf5K698YhsJlTNSVHOA1NWYjP3JodnOwSUBgZJ64Alg-2zwEolVreZLqpdcVyC51U/s916/14.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="426" data-original-width="916" height="298"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0jRMjuIx7aN9cYFOpcB8pKwhJkVi_xTy9gNE06UiBK_ddm407tz0ZisztqrX_Wtv2HJV3KvCaJXxhTUe7EgdKf_dlLrWldvplzdIzOxCm8eoIhY1S8ozJiGsm6XNf5K698YhsJlTNSVHOA1NWYjP3JodnOwSUBgZJ64Alg-2zwEolVreZLqpdcVyC51U/w640-h298/14.JPG"
+                                            width="640"></a></div><br>
+                                <p style="text-align: left;"><span style="font-family: arial;">En
+                                        la siguiente ventana vamos a seleccionar Reset Unlocked y
+                                        debería de quitar nuestra contraseña de nuestro Windows,
+                                        cerramos a la aplicación y vamos a iniciar con Windows para
+                                        comprobar si quito la contraseña.
+
+                                    </span></p>
+                                <p class="MsoNormal" style="text-align: left;"><span
+                                        style="font-family: arial;">&nbsp;</span></p>
+                                <p class="MsoNormal"><br></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvmFofv7zRUvj2X9pOUt3iwWma_CKIxShPEgoyqitCKzfhkM9My6jmdD_BZKAF4jcXZX5oONGEkKKShGPzWVrEuRILawPv9LKJ_nzLyyrXBSiK7QAet0slUZLrIxDxtdH0c4FfPwVSXVSiOm0yEzkk5y-U0P58dfb2uF2yMXR6pX977PQihiB_g9XK1-M/s918/15.JPG"
+                                        style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                                            data-original-height="426" data-original-width="918" height="296"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvmFofv7zRUvj2X9pOUt3iwWma_CKIxShPEgoyqitCKzfhkM9My6jmdD_BZKAF4jcXZX5oONGEkKKShGPzWVrEuRILawPv9LKJ_nzLyyrXBSiK7QAet0slUZLrIxDxtdH0c4FfPwVSXVSiOm0yEzkk5y-U0P58dfb2uF2yMXR6pX977PQihiB_g9XK1-M/w640-h296/15.JPG"
+                                            width="640"></a></div><br>
+                                <p style="text-align: left;"><span style="font-family: arial;">Efectivamente,
+                                        ya ingresamos perfectamente a nuestro Windows sin la
+                                        necesidad de ingresar nuestra contraseña.&nbsp;<br><br></span></p>
+                                <p style="text-align: left;"><span style="font-family: arial;">Como
+                                        pueden ver gracias a&nbsp;Hiren’s BootCD PE es posible
+                                        restablecer nuestra contraseña de nuestro Windows y así
+                                        tener de nuevo acceso a nuestro sistema.&nbsp;<br><br></span></p>
+                                <p class="MsoNormal" style="text-align: left;">
+
+                                    <span style="font-family: arial;"><br></span>
+                                </p>
+                                <p class="MsoNormal"><br></p>
+                                <p class="MsoNormal"><br></p>
+                                <p class="MsoNormal"><span style="font-family: arial;">Descargar&nbsp;Hiren’s
+                                        BootCD PE</span></p>
+                                <p class="MsoNormal"><span face="Arial, sans-serif"><br></span></p>
+                                <p class="MsoNormal"></p>
+                                <div class="separator" style="clear: both; text-align: center;"><a
+                                        href="https://www.hirensbootcd.org/"
+                                        style="margin-left: 1em; margin-right: 1em;" target="_blank"><img border="0"
+                                            data-original-height="368" data-original-width="1280" height="58"
+                                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijZmDRdO8HhIbgfnm8onRiDlyvxHPrmQKMxXM-Nu5FvFMPS8IVUuOp5lpkvk01t5Ho-kaXca9RQvdA6ssCxtlvUvNl46hz8ncN6MnnPXgcLFLUXO8F_GOqnvvFjsut8mKMwkYOqDuqvyfnmNPJ7XaCklVZQcGg-npwFC8x6cgupDSV2Qt7DlGJEQioy5A/w200-h58/Download-Button-Icon-PNG-HD-Quality%20(1).png"
+                                            width="200"></a></div><br><span face="Arial, sans-serif"><br></span>
+                                <p></p>
+                                <p class="MsoNormal"><span face="Arial, sans-serif"><br></span><span
+                                        style="font-family: arial;"><br></span></p>
+                            </div>
+                            <div>
+                                <p class="MsoNormal">
+                                    <o:p></o:p>
+                                </p>
+                            </div>
+                            <p class="MsoNormal">
+                                <o:p></o:p>
+                            </p>
+                        </div>
+
+                    </article>
+                </div>
             </div>
-            <div><span style="font-family: arial;"><br></span></div>
-            <div>
-              <h2 style="text-align: left;"><span style="font-family: arial;">Hola
-                  amigos, aquí les tengo un pequeño tutorial con video para
-                  quitar contraseña de tu Windows sin formatear con una
-                  herramienta que todo Técnico debería de tener en sus
-                  manos&nbsp;Hiren’s BootCD PE&nbsp;</span></h2><span><a name="more"></a></span>
-              <div><br></div>
-              <p style="text-align: left;"><span style="font-family: arial;">Lo
-                  primero que tenemos que hacer es descargar Hiren’s BootCD PE
-                  para eso nos vamos a dirigir a su página principal para que
-                  lo descarguen abajo les dejo el link de su página web</span></p><br>
-            </div>
-            <div><span style="font-family: arial;"><br></span></div>
-            <div>
-              <div class="separator" style="clear: both; text-align: center;"><a href="https://www.hirensbootcd.org/"
-                  style="margin-left: 1em; margin-right: 1em;" target="_blank"><img border="0"
-                    data-original-height="368" data-original-width="1280" height="58"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijZmDRdO8HhIbgfnm8onRiDlyvxHPrmQKMxXM-Nu5FvFMPS8IVUuOp5lpkvk01t5Ho-kaXca9RQvdA6ssCxtlvUvNl46hz8ncN6MnnPXgcLFLUXO8F_GOqnvvFjsut8mKMwkYOqDuqvyfnmNPJ7XaCklVZQcGg-npwFC8x6cgupDSV2Qt7DlGJEQioy5A/w200-h58/Download-Button-Icon-PNG-HD-Quality%20(1).png"
-                    width="200"></a></div><br>
-              <h2 style="text-align: left;"><span style="font-family: arial;">¿Te
-                  preguntaras que es Hiren’s BootCD PE?</span></h2>
-            </div>
-            <div style="text-align: left;">
-              <p style="text-align: left;"><span style="font-family: arial;">Hiren’s
-                  BootCD PE está basado en Windows 10 PE X64 y contiene una
-                  cantidad de herramientas gratuitas, pero las mejores para
-                  que puedas solucionar cualquier problema que se te presente
-                  en tu computadora y está desarrollada para computadoras de
-                  la nueva era, es compatible con arranque UEFI y requiere
-                  mínimo 2 GB de RAM.<br>&nbsp;<br>Las Herramientas que
-                  contiene&nbsp;Hiren’s BootCD PE puedes solucionar muchos
-                  problemas que se te pueden presentar en tu computadora y no
-                  contienen ningún Software pirateado, solo contiene software
-                  gratuito.</span></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjh28CZBqR6RJGOMTrsuvaXDv3qnTjiowXncGhBvyg1cEbek2dUgl6j_MH-_HuFbtNUdqc_rVyMImWLOH-v0N_6LvweAxuPc3aYAzFMBmz2Yz4nOkcXrx4apZmFF7oX-5CidaOpm6Y12U2s0waSNphUmRTc2x9U1GpYvUCaXxLdFw-q_VkIzbIsOyJHiHI/s226/2.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="55"
-                    data-original-width="226" height="78"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjh28CZBqR6RJGOMTrsuvaXDv3qnTjiowXncGhBvyg1cEbek2dUgl6j_MH-_HuFbtNUdqc_rVyMImWLOH-v0N_6LvweAxuPc3aYAzFMBmz2Yz4nOkcXrx4apZmFF7oX-5CidaOpm6Y12U2s0waSNphUmRTc2x9U1GpYvUCaXxLdFw-q_VkIzbIsOyJHiHI/w320-h78/2.JPG"
-                    width="320"></a></div>
-              <p class="MsoNormal" style="text-align: left;"><span style="font-family: arial;">Una vez descargado la ISO
-                  de&nbsp;Hiren’s BootCD PE tenemos que descargar y utilizar
-                  Rufus esta aplicación no va a hacer útil para hacer
-                  booteable nuestro pendrive y pueda inicar&nbsp;Hiren’s
-                  BootCD PE desde el pendrive&nbsp;</span></p>
-              <p style="white-space: normal;"></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMYxvrREYLRzudhzP1-efSMLrjkWQkk1sf4wAylKnnrb21yaIZglSHeelmK3K3F16a6coRNRiPRA5vApZv7E_Lw9CqFxnvWyBezYXcUmS-bFN4y9IgKddr-5t5mTe_1VUiDcfMT9NSGgDKvrOPe24RmujPyH0v7Fmmc__GcPrkzs25Zct3YWngRF2YVs4/s512/unnamed.png"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="512"
-                    data-original-width="512" height="200"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMYxvrREYLRzudhzP1-efSMLrjkWQkk1sf4wAylKnnrb21yaIZglSHeelmK3K3F16a6coRNRiPRA5vApZv7E_Lw9CqFxnvWyBezYXcUmS-bFN4y9IgKddr-5t5mTe_1VUiDcfMT9NSGgDKvrOPe24RmujPyH0v7Fmmc__GcPrkzs25Zct3YWngRF2YVs4/w200-h200/unnamed.png"
-                    width="200"></a></div><span style="font-family: arial;">
-                <p class="MsoNormal"><span style="font-family: arial;"><br></span></p>
-              </span>
-              <p style="text-align: left;"></p>
-              <h2 style="text-align: left;"><span style="font-family: arial;">¿Qué
-                  es Rufus?</span></h2>
-              <p></p>
-              <p style="text-align: left;"><span style="font-family: arial;">Rufus
-                  es una pequeña aplicación que nos permite crear de forma
-                  segura un medio arranque boot en nuestras unidades USB de
-                  arranque, aquí te dejo el link para que descargue
-                  Rufus&nbsp;</span></p>
-              <p></p>
-              <p class="MsoNormal"><br></p>
-              <div class="separator" style="clear: both; text-align: center;"><a href="https://rufus.ie/es/"
-                  style="margin-left: 1em; margin-right: 1em;" target="_blank"><img border="0"
-                    data-original-height="368" data-original-width="1280" height="58"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijZmDRdO8HhIbgfnm8onRiDlyvxHPrmQKMxXM-Nu5FvFMPS8IVUuOp5lpkvk01t5Ho-kaXca9RQvdA6ssCxtlvUvNl46hz8ncN6MnnPXgcLFLUXO8F_GOqnvvFjsut8mKMwkYOqDuqvyfnmNPJ7XaCklVZQcGg-npwFC8x6cgupDSV2Qt7DlGJEQioy5A/w200-h58/Download-Button-Icon-PNG-HD-Quality%20(1).png"
-                    width="200"></a></div><br>
-              <p class="MsoNormal"><br></p>
-              <p style="text-align: left;"><span style="font-family: arial;">Ya
-                  que tengas la ISO de&nbsp;Hiren’s BootCD PE y Rufus vamos a
-                  hacer booteable nuestro Pendrive.<br><br></span></p>
-              <p style="text-align: left;"><span style="font-family: arial;">Tenemos
-                  que tener una memoria USB Como mínimo de 8 GB&nbsp;</span></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhej-EZ5UcSDNeO19jGanc8Brm7WFWbLe7xw52Z-Z0Y55G8ySMpE6EWGApb9Zqk7X_JSHekQSCGKYDqPdzGslGbMmPC5W2bfF_C0ni3WpWr5pjuthMtcbMnxUKWuGT2QhGR4dqH_uCOShTQViKfHVIc7-h1T9a3SCdJg_3PTIOtlIAdhPPlS-HYxFK_ZqY/s1280/sandisk-cruzer.png"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1280"
-                    data-original-width="1280" height="200"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhej-EZ5UcSDNeO19jGanc8Brm7WFWbLe7xw52Z-Z0Y55G8ySMpE6EWGApb9Zqk7X_JSHekQSCGKYDqPdzGslGbMmPC5W2bfF_C0ni3WpWr5pjuthMtcbMnxUKWuGT2QhGR4dqH_uCOShTQViKfHVIc7-h1T9a3SCdJg_3PTIOtlIAdhPPlS-HYxFK_ZqY/w200-h200/sandisk-cruzer.png"
-                    width="200"></a></div><br>
-              <p class="MsoNormal"><span style="font-family: arial;">Conectamos
-                  nuestra memoria USB en tu Ordenador y ejecuta Rufus y
-                  selecciona el dispositivo USB que deseas configurar para
-                  instalar&nbsp;Hiren’s BootCD PE</span></p>
-              <p class="MsoNormal"><br></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Rbc_cKhinyKZdRcLChi8EzQEIBhq8PhaWPKDe6AX0GBdN3M9tRqM0ZfS3NkUYUXy88S7xUDPk8MEkBYR5g1FXZW65B5VhB6mBZdBzKEYMYBclCKQ11exrzge2tyHkLNOcPw05muhi4uDYokGlZg3tjFXkkXiuIRzjWxejiBMjLWOpbPcpiKmALSVjdg/s600/zrufus2023.PNG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="600"
-                    data-original-width="484" height="400"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1Rbc_cKhinyKZdRcLChi8EzQEIBhq8PhaWPKDe6AX0GBdN3M9tRqM0ZfS3NkUYUXy88S7xUDPk8MEkBYR5g1FXZW65B5VhB6mBZdBzKEYMYBclCKQ11exrzge2tyHkLNOcPw05muhi4uDYokGlZg3tjFXkkXiuIRzjWxejiBMjLWOpbPcpiKmALSVjdg/w323-h400/zrufus2023.PNG"
-                    width="323"></a></div><br><span style="font-family: arial;"><br></span>
-              <p></p>
-              <p><span style="font-family: arial;">En el campo
-                  "Elección de arranque", selecciona "Imagen ISO" y haz clic
-                  en el icono de disco para buscar y seleccionar la imagen ISO
-                  de&nbsp;Hiren’s BootCD PE&nbsp;descargada previamente.</span><span style="font-family: arial;">Y en el
-                  campo
-                  "Opciones de Imagen" vas a seleccionar Instalación de
-                  Windows Estándar</span></p>
-              <p><span style="font-family: arial;">En el menú desplegable de
-                  "Formato del dispositivo", selecciona
-                  "Sistema de archivos: NTFS" si tu imagen ISO es mayor de 4GB
-                  y "Sistema de archivos: FAT32" si es menor a 4GB. En el
-                  campo de "Etiqueta del volumen" puedes colocarle el nombre
-                  que desees.<br><br></span></p>
-              <p><span style="font-family: arial;">Haz clic en "Comenzar" y
-                  espera a que se complete el proceso de creación del USB
-                  de&nbsp;Hiren’s BootCD PE<br><br></span></p>
-              <p><span style="font-family: arial;">Una vez que el proceso haya
-                  finalizado, podrás utilizar tu unidad USB para
-                  iniciar&nbsp;Hiren’s BootCD PE&nbsp;en cualquier ordenador
-                  compatible.<br><br></span></p>
-              <p><span style="font-family: arial;">Conecta tu Pendrive en tu
-                  computadora, pero tenemos que configurar para que inicie
-                  desde nuestro pendrive, al momento de iniciar el equipo
-                  tenemos que seleccionar Generalmente las teclas (F2 o DEL)
-                  Para ingresar a la configuración de la BIOS y seleccionar
-                  como arranque principal nuestro pendrive.&nbsp;</span></p>
-              <div><span style="font-family: arial;"><br></span></div>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgdhy5-BzhxpTXIj6Co9A_LH086WSBbcJOC-Eiv5KLJKNk-yKrkm6nubAZKljhqYSy5X2Ne-foo_NI7BVcJCQGAxyVWXLdYc1vzMNBZefaOjMsbw9RAn71LBc3qaO59HTcAXmcG7JXz6ShsIRZL1R651Hm7M0-wbsmgRtAigLNU4GZiigsvfq6x2-d_hc/s912/3.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><span style="font-family: arial;"><img border="0"
-                      data-original-height="428" data-original-width="912" height="301"
-                      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgdhy5-BzhxpTXIj6Co9A_LH086WSBbcJOC-Eiv5KLJKNk-yKrkm6nubAZKljhqYSy5X2Ne-foo_NI7BVcJCQGAxyVWXLdYc1vzMNBZefaOjMsbw9RAn71LBc3qaO59HTcAXmcG7JXz6ShsIRZL1R651Hm7M0-wbsmgRtAigLNU4GZiigsvfq6x2-d_hc/w640-h301/3.JPG"
-                      width="640"></span></a></div><br><span face="&quot;Arial&quot;,sans-serif"><br></span>
-              <p></p>
-              <p style="text-align: left;"><span style="font-family: arial;">Si
-                  todo está perfecto tiene que iniciar perfectamente
-                  nuestro&nbsp;Hiren’s BootCD PE y como pueden ver es muy
-                  similar a Windows.&nbsp;</span></p>
-              <p class="MsoNormal"><br></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigGbiVB6ZL4Gmr_2dRssignYr_xOvIiwHI2mhZ7-WWEx7TJgGVH6C1GtdgP5jPr6mqzOE_OEu_ZR2XDdKjEAuown3Ywq8RK-HYbb5u2Jw_HMYMYlMdmzqgQDI-ikcyO7lHhkkx_yRA0B8F526VNDYjZw5F9Bsya1ajb2du57hTxvTCtqsqwsNG1gPvQHY/s921/4.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="424"
-                    data-original-width="921" height="294"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigGbiVB6ZL4Gmr_2dRssignYr_xOvIiwHI2mhZ7-WWEx7TJgGVH6C1GtdgP5jPr6mqzOE_OEu_ZR2XDdKjEAuown3Ywq8RK-HYbb5u2Jw_HMYMYlMdmzqgQDI-ikcyO7lHhkkx_yRA0B8F526VNDYjZw5F9Bsya1ajb2du57hTxvTCtqsqwsNG1gPvQHY/w640-h294/4.JPG"
-                    width="640"></a></div><br><span face="Arial, sans-serif"><br></span>
-              <p></p>
-              <p style="text-align: left;"><span style="font-family: arial;">En
-                  el escritorio vamos a buscar una carpeta que se llama
-                  Utilidades&nbsp;</span></p>
-              <p class="MsoNormal"><br></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm_dwxNDf8D5GX0w1ZSwHKaMBVSEey3Jrh0yGfNugrs96Yr_2-GtPrHEutftkbdt0brflgyPBUIqHehVauNtflCS-E2oNjDgQ1ZVGDEwdgDT5itBfZLIBoi5ZPNqpSYbAk1V7b1IZle4RVlxCPbJrHWKKSXGMsZsqrkS7HlNm67s9f3S2zn-hsAzYId0Q/s921/5.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="424"
-                    data-original-width="921" height="294"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm_dwxNDf8D5GX0w1ZSwHKaMBVSEey3Jrh0yGfNugrs96Yr_2-GtPrHEutftkbdt0brflgyPBUIqHehVauNtflCS-E2oNjDgQ1ZVGDEwdgDT5itBfZLIBoi5ZPNqpSYbAk1V7b1IZle4RVlxCPbJrHWKKSXGMsZsqrkS7HlNm67s9f3S2zn-hsAzYId0Q/w640-h294/5.JPG"
-                    width="640"></a></div><br><span face="Arial, sans-serif"><br></span>
-              <p></p>
-              <p style="text-align: left;"><span style="font-family: arial;">Luego
-                  damos clic en la carpeta que dice Security y veremos lo
-                  siguiente.</span></p>
-              <p class="MsoNormal"><br></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2kHMsBXsmRgbNf_BjLaqKRYYH_HhAGFTK1nP_zInKqb0e5X6M6Nm4rgzGQX_7elvhO0wj1uYw8IPyrxcBFGm_4OwaS8UKJUsOzCE7-O1HvG0d63WK8uLKhRYVAIq_aulmmlCBudRLlN1kFUvY2ndqRJaQnvH02khWD636WMHCK4ugYN2kN_JzIebc1YY/s920/8.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="422"
-                    data-original-width="920" height="294"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2kHMsBXsmRgbNf_BjLaqKRYYH_HhAGFTK1nP_zInKqb0e5X6M6Nm4rgzGQX_7elvhO0wj1uYw8IPyrxcBFGm_4OwaS8UKJUsOzCE7-O1HvG0d63WK8uLKhRYVAIq_aulmmlCBudRLlN1kFUvY2ndqRJaQnvH02khWD636WMHCK4ugYN2kN_JzIebc1YY/w640-h294/8.JPG"
-                    width="640"></a></div><br><span face="Arial, sans-serif"><br></span>
-              <p></p>
-              <p class="MsoNormal"><span style="font-family: arial;">Y abrimos
-                  la carpeta Passwords y este será su contenido.&nbsp;</span></p>
-              <p class="MsoNormal"><span face="Arial, sans-serif"><br></span></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjygwgpcNPfKP6yHHC2BnIr5DdPwP7WadzNx3MXr8iP6q5hF-h9HHJnUvx11zQxGmB9g4duf8vRvHJ_ItMisuRM0ZxcwxUoBawaPEDqsA9PbjbmOaqCDaim9i-uLIKksNXPilk6fJHHxQ-VOHTyEjXwRFGzDVQuMyydRAbQyvFYAFSyLPgF8ZVfqxXCHM0/s914/9.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="429"
-                    data-original-width="914" height="300"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjygwgpcNPfKP6yHHC2BnIr5DdPwP7WadzNx3MXr8iP6q5hF-h9HHJnUvx11zQxGmB9g4duf8vRvHJ_ItMisuRM0ZxcwxUoBawaPEDqsA9PbjbmOaqCDaim9i-uLIKksNXPilk6fJHHxQ-VOHTyEjXwRFGzDVQuMyydRAbQyvFYAFSyLPgF8ZVfqxXCHM0/w640-h300/9.JPG"
-                    width="640"></a></div><br><span face="Arial, sans-serif"><br></span>
-              <p></p>
-              <p class="MsoNormal"><span style="font-family: arial;">Vamos a
-                  ejecutar la utilidad&nbsp;Lazesoft Windows Recovery</span></p>
-              <p class="MsoNormal"><span face="Arial, sans-serif"><br></span></p>
-              <p class="MsoNormal"><span face="&quot;Arial&quot;,sans-serif" >
-                  <o:p></o:p>
-                </span></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnZtIF_CeX7uIQYq2KXOTE5LxebifFrA73O3tEdx5Xv6mUKPXieEMA0O3txHc4lTBxvFpm69zXGt0uuIJJmUgPgGvjwV56hLgJ_4LSAQu5MnsSRm18pgsJbmfoGZvkjUma3iI5WoLYnCv_tzhNuBrl_YWYMi9EzFByzkl5rkpEl56JPdBQdDADs2G8zLU/s916/10.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="424"
-                    data-original-width="916" height="296"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnZtIF_CeX7uIQYq2KXOTE5LxebifFrA73O3tEdx5Xv6mUKPXieEMA0O3txHc4lTBxvFpm69zXGt0uuIJJmUgPgGvjwV56hLgJ_4LSAQu5MnsSRm18pgsJbmfoGZvkjUma3iI5WoLYnCv_tzhNuBrl_YWYMi9EzFByzkl5rkpEl56JPdBQdDADs2G8zLU/w640-h296/10.JPG"
-                    width="640"></a></div><br>
-              <p class="MsoNormal"><span style="font-family: arial;">La vamos
-                  a dejar en la opción reset Windows password y luego presiona
-                  next&nbsp;</span></p>
-              <p class="MsoNormal"><span style="font-family: arial;"><br></span></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVAn2cCpohOckNfe2vebhj4T_Q16C4jfIAHKBh5l7NpybAcOSsi8IvqgIH7kOKlODjhQARfnslzR-cpibk-gqQSAknEk7hLsgAUP9MDG8X8MrksWIOHychR1CZRFbwZfeF8dsOEqX-hH-glMYu26qgEuIKYQD05e_3yG7GKJ_zfLc-qG80LGKO0Jp1L5U/s917/11.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="426"
-                    data-original-width="917" height="298"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVAn2cCpohOckNfe2vebhj4T_Q16C4jfIAHKBh5l7NpybAcOSsi8IvqgIH7kOKlODjhQARfnslzR-cpibk-gqQSAknEk7hLsgAUP9MDG8X8MrksWIOHychR1CZRFbwZfeF8dsOEqX-hH-glMYu26qgEuIKYQD05e_3yG7GKJ_zfLc-qG80LGKO0Jp1L5U/w640-h298/11.JPG"
-                    width="640"></a></div><br><span style="font-family: arial;"><br></span>
-              <p></p>
-              <p class="MsoNormal"><span style="font-family: arial;">Se nos va
-                  a abrir esta ventana y seleccionamos "YES"</span></p>
-              <p class="MsoNormal"><span style="font-family: arial;"><br></span></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil6gfSQV8BI_F6YxA069msp_RXheAQAzJUoQ8vSgvyQCvGvOcsG0EzI-NGKFfQmP2LlgvvHwkxuRizdQWGfiQhrNdpgjZyLcUf8CM6uCm33O3MCsJqNxrLJ5TkGdYOAmjYwFpqIUqmu3CAuAPPjHK8pqyfXJGAduNLl9pMd_a0_vFviHN7hKD4VedXlbM/s927/12.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="420"
-                    data-original-width="927" height="290"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil6gfSQV8BI_F6YxA069msp_RXheAQAzJUoQ8vSgvyQCvGvOcsG0EzI-NGKFfQmP2LlgvvHwkxuRizdQWGfiQhrNdpgjZyLcUf8CM6uCm33O3MCsJqNxrLJ5TkGdYOAmjYwFpqIUqmu3CAuAPPjHK8pqyfXJGAduNLl9pMd_a0_vFviHN7hKD4VedXlbM/w640-h290/12.JPG"
-                    width="640"></a></div>
-              <p class="MsoNormal"><br></p><span style="font-family: arial;">Selecciona
-                ahora Reset local password</span>
-              <p></p>
-              <p class="MsoNormal"><br></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjH6EzmKk6_nLejW1vPKAcrFm2wf9tZHbHG0x_b8my0FvyCgluSPC48-Zxsmfv0lyEScZHAcIRclNdcnkPvUGsGnGUVPF91mqjg1nJUIctPT6bn_AbtDACF3xtAhfvw6VbpCcnl-x6ZIgAwFoQW0FJjTwjkndHxwrHqtok-7R0qmDByfXy2gYGwNOSpeUw/s921/13.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="423"
-                    data-original-width="921" height="294"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjH6EzmKk6_nLejW1vPKAcrFm2wf9tZHbHG0x_b8my0FvyCgluSPC48-Zxsmfv0lyEScZHAcIRclNdcnkPvUGsGnGUVPF91mqjg1nJUIctPT6bn_AbtDACF3xtAhfvw6VbpCcnl-x6ZIgAwFoQW0FJjTwjkndHxwrHqtok-7R0qmDByfXy2gYGwNOSpeUw/w640-h294/13.JPG"
-                    width="640"></a></div><br>
-              <p class="MsoNormal"><span style="font-family: arial;">Selecciona
-                  el Usuario que deseas desbloquear y presiona next
-
-                  <br></span></p>
-              <p class="MsoNormal"><br></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0jRMjuIx7aN9cYFOpcB8pKwhJkVi_xTy9gNE06UiBK_ddm407tz0ZisztqrX_Wtv2HJV3KvCaJXxhTUe7EgdKf_dlLrWldvplzdIzOxCm8eoIhY1S8ozJiGsm6XNf5K698YhsJlTNSVHOA1NWYjP3JodnOwSUBgZJ64Alg-2zwEolVreZLqpdcVyC51U/s916/14.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="426"
-                    data-original-width="916" height="298"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0jRMjuIx7aN9cYFOpcB8pKwhJkVi_xTy9gNE06UiBK_ddm407tz0ZisztqrX_Wtv2HJV3KvCaJXxhTUe7EgdKf_dlLrWldvplzdIzOxCm8eoIhY1S8ozJiGsm6XNf5K698YhsJlTNSVHOA1NWYjP3JodnOwSUBgZJ64Alg-2zwEolVreZLqpdcVyC51U/w640-h298/14.JPG"
-                    width="640"></a></div><br>
-              <p style="text-align: left;"><span style="font-family: arial;">En
-                  la siguiente ventana vamos a seleccionar Reset Unlocked y
-                  debería de quitar nuestra contraseña de nuestro Windows,
-                  cerramos a la aplicación y vamos a iniciar con Windows para
-                  comprobar si quito la contraseña.
-
-                </span></p>
-              <p class="MsoNormal" style="text-align: left;"><span style="font-family: arial;">&nbsp;</span></p>
-              <p class="MsoNormal"><br></p>
-              <div class="separator" style="clear: both; text-align: center;"><a
-                  href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvmFofv7zRUvj2X9pOUt3iwWma_CKIxShPEgoyqitCKzfhkM9My6jmdD_BZKAF4jcXZX5oONGEkKKShGPzWVrEuRILawPv9LKJ_nzLyyrXBSiK7QAet0slUZLrIxDxtdH0c4FfPwVSXVSiOm0yEzkk5y-U0P58dfb2uF2yMXR6pX977PQihiB_g9XK1-M/s918/15.JPG"
-                  style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="426"
-                    data-original-width="918" height="296"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvmFofv7zRUvj2X9pOUt3iwWma_CKIxShPEgoyqitCKzfhkM9My6jmdD_BZKAF4jcXZX5oONGEkKKShGPzWVrEuRILawPv9LKJ_nzLyyrXBSiK7QAet0slUZLrIxDxtdH0c4FfPwVSXVSiOm0yEzkk5y-U0P58dfb2uF2yMXR6pX977PQihiB_g9XK1-M/w640-h296/15.JPG"
-                    width="640"></a></div><br>
-              <p style="text-align: left;"><span style="font-family: arial;">Efectivamente,
-                  ya ingresamos perfectamente a nuestro Windows sin la
-                  necesidad de ingresar nuestra contraseña.&nbsp;<br><br></span></p>
-              <p style="text-align: left;"><span style="font-family: arial;">Como
-                  pueden ver gracias a&nbsp;Hiren’s BootCD PE es posible
-                  restablecer nuestra contraseña de nuestro Windows y así
-                  tener de nuevo acceso a nuestro sistema.&nbsp;<br><br></span></p>
-              <p class="MsoNormal" style="text-align: left;">
-
-                <span style="font-family: arial;"><br></span>
-              </p>
-              <p class="MsoNormal"><br></p>
-              <p class="MsoNormal"><br></p>
-              <p class="MsoNormal"><span style="font-family: arial;">Descargar&nbsp;Hiren’s
-                  BootCD PE</span></p>
-              <p class="MsoNormal"><span face="Arial, sans-serif"><br></span></p>
-              <p class="MsoNormal"></p>
-              <div class="separator" style="clear: both; text-align: center;"><a href="https://www.hirensbootcd.org/"
-                  style="margin-left: 1em; margin-right: 1em;" target="_blank"><img border="0"
-                    data-original-height="368" data-original-width="1280" height="58"
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijZmDRdO8HhIbgfnm8onRiDlyvxHPrmQKMxXM-Nu5FvFMPS8IVUuOp5lpkvk01t5Ho-kaXca9RQvdA6ssCxtlvUvNl46hz8ncN6MnnPXgcLFLUXO8F_GOqnvvFjsut8mKMwkYOqDuqvyfnmNPJ7XaCklVZQcGg-npwFC8x6cgupDSV2Qt7DlGJEQioy5A/w200-h58/Download-Button-Icon-PNG-HD-Quality%20(1).png"
-                    width="200"></a></div><br><span face="Arial, sans-serif"><br></span>
-              <p></p>
-              <p class="MsoNormal"><span face="Arial, sans-serif"><br></span><span
-                  style="font-family: arial;"><br></span></p>
-            </div>
-            <div>
-              <p class="MsoNormal">
-                <o:p></o:p>
-              </p>
-            </div>
-            <p class="MsoNormal">
-              <o:p></o:p>
-            </p>
-          </div>
-
-        </article>
-      </div>
-    </div>
-  </div>
-
-  <div class="sticky-container">
-    <ul class="sticky">
-      <li>
-        <p><a href="https://wa.me/50687895592" target="_self"><img src="sistema/whatsapp.png" width="52"
-              height="52"></a></p>
-      </li>
-      <li>
-        <p><a href="https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg" target="_self"><img
-              src="sistema/youtube.png" width="52" height="52"></a></p>
-      </li>
-      <li>
-        <p><a href="https://www.instagram.com/yuliana.emir/" target="_self"><img src="sistema/instagram.png" width="52"
-              height="52"></a></p>
-      </li>
-      <li>
-        <p><a href="https://www.facebook.com/tiendavirtualbataan/" target="_self"><img src="sistema/facebook.png"
-              width="52" height="52"></a></p>
-      </li>
-      <li>
-        <p><a href="https://twitter.com/emiryuliana" target="_self"><img src="sistema/twiter.gif" width="52"
-              height="52"></a></p>
-      </li>
-      <li>
-        <p><a href="emiryuliana/index.html" target="_self"><img src="sistema/logo.png" width="52" height="52"></a></p>
-      </li>
-    </ul>
-  </div>
+        </div>
+        </block>
 </body>
 
 </html>
