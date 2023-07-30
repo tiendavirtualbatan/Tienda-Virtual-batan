@@ -120,7 +120,24 @@
       <input type="hidden" name="_captcha" value="false">
     </form>
   </div>
+  <script>
+    // Función para validar que solo se ingresen números en el campo de precio
+    function validarPrecio(input) {
+        input.value = input.value.replace(/[^0-9]/g, '');
+    }
 
+    // Función para validar que solo se ingresen números en el campo de teléfono
+    function validarTelefono(input) {
+        input.value = input.value.replace(/[^0-9]/g, '');
+    }
+
+    // Función para capitalizar la primera letra de cada palabra en el campo de texto
+    function capitalizarPalabras(input) {
+        input.value = input.value.toLowerCase().replace(/\b\w/g, function (word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        });
+    }
+</script>
 
 </body>
 
