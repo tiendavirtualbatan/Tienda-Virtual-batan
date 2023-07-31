@@ -1,23 +1,79 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Formulario de Productos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Formulario Productos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
 
-  <style>
-    /* Estilos generales */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-    }
+        .block {
+            position: relative;
+            margin: 50px auto 20px;
+            width: 900px;
+            height: auto;
+            background: linear-gradient(0deg, #75747462, #a6a5a537);
+        }
+
+        .block:before,
+        .block:after {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+                    #0000ff, #00ff00, #ffff00, #ff0000);
+            background-size: 400%;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            z-index: -1;
+            animation: steam 20s linear infinite;
+        }
+
+        @keyframes steam {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .block:after {
+            filter: blur(50px);
+        }
+        @media (max-width: 960px) {
+            .block {
+                width: 90%;
+                margin: 30px auto;
+            }
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            padding: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .product-container img {
+            max-width: 90%;
+            height: auto;
+            }
+
 
     .contenedor {
       max-width: 400px;
@@ -75,70 +131,73 @@
     .contenedor:hover button {
       transform: translateY(-10px);
     }
-  </style>
-
+    </style>
 </head>
 
 <body>
-  <div class="contenedor">
+    <div class="block">
+        <div class="product-container">
+            <div class="contenedor">
 
-    <form action="https://formsubmit.co/tiendavirtualbatan@gmail.com" method="post" enctype="multipart/form-data"
-      autocomplete="off">
-      <label for="nombre">Nombre del Producto:</label>
-      <input type="text" id="nombre" name="nombre" oninput="capitalizarPalabras(this)" required>
+                <form action="https://formsubmit.co/tiendavirtualbatan@gmail.com" method="post" enctype="multipart/form-data"
+                  autocomplete="off">
+                  <label for="nombre">Nombre del Producto:</label>
+                  <input type="text" id="nombre" name="nombre" oninput="capitalizarPalabras(this)" required>
+            
+                  <label for="precio">Precio del Producto:</label>
+                  <input type="text" id="precio" name="precio" pattern="[0-9]+" inputmode="numeric" title="Ingrese solo números"
+                    maxlength="10" oninput="validarPrecio(this)" required>
+            
+                  <label for="cantidad">Cantidad:</label>
+                  <input type="number" id="cantidad" name="cantidad" required>
+            
+                  <label for="envio">Envío:</label>
+                  <input type="text" id="envio" name="envio" oninput="capitalizarPalabras(this)" required>
+            
+                  <label for="categoria">Categoría:</label>
+                  <input type="text" id="categoria" name="categoria" oninput="capitalizarPalabras(this)" required>
+            
+                  <label for="telefono">Teléfono:</label>
+                  <input type="tel" id="telefono" name="telefono" pattern="[0-9]+" inputmode="tel" title="Ingrese solo números"
+                    maxlength="10" oninput="validarTelefono(this)" required>
+            
+                  <label for="cedula">Cédula:</label>
+                  <input type="text" id="cedula" name="cedula" oninput="capitalizarPalabras(this)" required>
+            
+                  <label for="tienda">Tienda:</label>
+                  <input type="text" id="tienda" name="tienda" oninput="capitalizarPalabras(this)" required>
+            
+                  <div class="input-group-prepend"><span class="input-group-text">Adjunte Archivo</span></div>
+                  <br>
+                  <div class="custom-file"><input type="file" name="my_file" id="my_file" class="custom-file-input" multiple></div>
+            
+                  <button type="submit">Enviar</button>
+            
+                  <input type="hidden" name="_next" value="https://tiendavirtualbatan.com">
+                  <input type="hidden" name="_captcha" value="false">
+                </form>
+              </div>
+              <script>
+                // Función para validar que solo se ingresen números en el campo de precio
+                function validarPrecio(input) {
+                    input.value = input.value.replace(/[^0-9]/g, '');
+                }
+            
+                // Función para validar que solo se ingresen números en el campo de teléfono
+                function validarTelefono(input) {
+                    input.value = input.value.replace(/[^0-9]/g, '');
+                }
+            
+                // Función para capitalizar la primera letra de cada palabra en el campo de texto
+                function capitalizarPalabras(input) {
+                    input.value = input.value.toLowerCase().replace(/\b\w/g, function (word) {
+                        return word.charAt(0).toUpperCase() + word.slice(1);
+                    });
+                }
+            </script>
 
-      <label for="precio">Precio del Producto:</label>
-      <input type="text" id="precio" name="precio" pattern="[0-9]+" inputmode="numeric" title="Ingrese solo números"
-        maxlength="10" oninput="validarPrecio(this)" required>
-
-      <label for="cantidad">Cantidad:</label>
-      <input type="number" id="cantidad" name="cantidad" required>
-
-      <label for="envio">Envío:</label>
-      <input type="text" id="envio" name="envio" oninput="capitalizarPalabras(this)" required>
-
-      <label for="categoria">Categoría:</label>
-      <input type="text" id="categoria" name="categoria" oninput="capitalizarPalabras(this)" required>
-
-      <label for="telefono">Teléfono:</label>
-      <input type="tel" id="telefono" name="telefono" pattern="[0-9]+" inputmode="tel" title="Ingrese solo números"
-        maxlength="10" oninput="validarTelefono(this)" required>
-
-      <label for="cedula">Cédula:</label>
-      <input type="text" id="cedula" name="cedula" oninput="capitalizarPalabras(this)" required>
-
-      <label for="tienda">Tienda:</label>
-      <input type="text" id="tienda" name="tienda" oninput="capitalizarPalabras(this)" required>
-
-      <div class="input-group-prepend"><span class="input-group-text">Adjunte Archivo</span></div>
-      <br>
-      <div class="custom-file"><input type="file" name="my_file" id="my_file" class="custom-file-input" multiple></div>
-
-      <button type="submit">Enviar</button>
-
-      <input type="hidden" name="_next" value="https://tiendavirtualbatan.com">
-      <input type="hidden" name="_captcha" value="false">
-    </form>
-  </div>
-  <script>
-    // Función para validar que solo se ingresen números en el campo de precio
-    function validarPrecio(input) {
-        input.value = input.value.replace(/[^0-9]/g, '');
-    }
-
-    // Función para validar que solo se ingresen números en el campo de teléfono
-    function validarTelefono(input) {
-        input.value = input.value.replace(/[^0-9]/g, '');
-    }
-
-    // Función para capitalizar la primera letra de cada palabra en el campo de texto
-    function capitalizarPalabras(input) {
-        input.value = input.value.toLowerCase().replace(/\b\w/g, function (word) {
-            return word.charAt(0).toUpperCase() + word.slice(1);
-        });
-    }
-</script>
-
+        </div>
+    </block>
 </body>
 
 </html>
