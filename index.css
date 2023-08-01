@@ -6,7 +6,9 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-image: radial-gradient(circle, rgba(30, 161, 249, 0.7), rgba(255, 255, 255, 0.7));
+    /* Gradiente radial con fondo opaco */
+
 }
 
 /* Estilos para el encabezado */
@@ -103,16 +105,21 @@ header nav a:hover {
 }
 
 /* Estilos para cada producto */
+/* Estilos para cada producto */
 .product {
     width: 162px;
     height: auto;
-    background-color: #fff;
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(255, 255, 255));
+    /* Gradiente radial con fondo opaco */
     border: 1px solid #f91ea1;
     padding: 10px;
     border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(255, 252, 252, 0.7);
+    /* Sombra con fondo opaco */
     overflow: hidden;
 }
+
+
 
 .product img {
     width: 100%;

@@ -1,5 +1,5 @@
 // Código JavaScript para filtrar productos por nombre en tiempo real
-document.getElementById('buscador').addEventListener('keyup', function() {
+document.getElementById('buscador').addEventListener('keyup', function () {
     var searchTerm = this.value.toLowerCase();
     var products = document.getElementsByClassName('product');
 
@@ -18,8 +18,8 @@ document.getElementById('buscador').addEventListener('keyup', function() {
 // Código JavaScript para abrir WhatsApp con la información del producto al hacer clic en el número de teléfono
 var phoneLinks = document.querySelectorAll('.product-details a');
 
-phoneLinks.forEach(function(link) {
-    link.addEventListener('click', function(event) {
+phoneLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
         event.preventDefault();
         var phoneNumber = link.textContent;
         var productName = link.closest('.product').querySelector('h3').textContent;
