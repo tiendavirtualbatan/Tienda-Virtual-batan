@@ -63,8 +63,8 @@ header nav a:hover {
 
 /* Estilos para el ícono de navegación en modo responsive */
 #icono-nav {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     overflow: hidden;
     display: none;
@@ -78,7 +78,7 @@ header nav a:hover {
 }
 
 /* Media query para modo responsive */
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 900px) {
     /* Ocultar el menú principal */
     header nav {
         position: initial;
@@ -186,13 +186,21 @@ header nav a:hover {
 }
 
 /* Estilos para el contenedor principal */
-.container {
+.container1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10vh;
-}
+    flex-grow: 1;
+    margin-top: -67px; /* Asegura que no haya espacio en la parte superior */
+  }
+  
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 /* Estilos para el elemento label y el menú desplegable select */
 .form-group {
