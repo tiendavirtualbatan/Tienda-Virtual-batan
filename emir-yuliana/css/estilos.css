@@ -20,10 +20,6 @@ h1 {
 	/* Cambia el valor a uno más alto, como 700 o 800 */
 }
 
-h1 {
-	font-size: 50px;
-}
-
 
 h2 {
 	font-weight: bold;
@@ -78,6 +74,12 @@ h6 {
 	overflow: hidden;
 	padding: 60px 0;
 }
+
+
+h1 {
+	font-size: 50px;
+}
+
 
 /* Header */
 header::before {
