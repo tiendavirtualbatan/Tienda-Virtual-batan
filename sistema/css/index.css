@@ -226,6 +226,27 @@ header nav a:hover {
     text-decoration: none;
 }
 
+/* Estilo para el botón "Más detalles" */
+.show-details {
+    display: block;
+    margin: 10px auto; /* Centrar horizontalmente y agregar margen */
+    padding: 8px 0px;
+    background-color: #007b03;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none; /* Quitar subrayado del enlace */
+    text-align: center; /* Centrar el contenido del botón */
+    width: 150px; /* Ajusta el ancho del botón según tus necesidades */
+    transition: background-color 0.3s;
+}
+
+.show-details:hover {
+    background-color: #0056b3; /* Cambiar el color de fondo al pasar el mouse */
+}
+
 /* Estilos para los íconos de redes sociales fijos en la página */
 .sticky-container {
     padding: 0;
