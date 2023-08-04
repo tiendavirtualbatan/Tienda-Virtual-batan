@@ -39,6 +39,7 @@
             <h1 class="gradient-text">Tienda Virtual Batan</h1>
             <!-- Menú de navegación con enlaces -->
             <nav id="nav">
+               <a href="Paginas/curriculum.html" onclick="seleccionar()">Curriculum</a>
                <a href="index.html" onclick="seleccionar()">Inicio</a>
                <a href="https://samfw.com/" onclick="seleccionar()"><span class="display-2 text-white"><img
                   src="https://samfw.com/assets/img/logo_spin.gif" alt="SamFw" height="30"> SamFw</span></a>
