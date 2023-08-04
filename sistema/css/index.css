@@ -1,0 +1,272 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: radial-gradient(circle, rgba(30, 161, 249, 0.7), rgba(255, 255, 255, 0.7));
+    /* Gradiente radial con fondo opaco */
+}
+
+/* Estilos para el encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f91ea1;
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin: 30px 0;
+    width: 90%;
+    margin-top: 70px;
+}
+
+/* Animación de arcoíris para texto */
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Estilos para el texto con gradiente arcoíris */
+.gradient-text {
+    background-image: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 800% 100%;
+    animation: rainbowAnimation 5s linear infinite;
+}
+
+/* Estilos para los enlaces del menú */
+header nav a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+/* Estilos al pasar el ratón sobre los enlaces del menú */
+header nav a:hover {
+    color: #fe9018;
+}
+
+/* Estilos para el menú en modo responsive */
+.nav-responsive {
+    display: none;
+    font-size: 25px;
+    color: #a8a8a8;
+}
+
+/* Estilos para el ícono de navegación en modo responsive */
+#icono-nav {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+}
+
+/* Estilos para la imagen del ícono de navegación en modo responsive */
+#icono-nav img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Media query para modo responsive */
+@media only screen and (max-width: 1550px) {
+    /* Ocultar el menú principal */
+    header nav {
+        position: initial;
+        display: none;
+        transform: translate(0);
+    }
+
+    /* Mostrar el menú en modo responsive */
+    .nav-responsive {
+        display: block;
+    }
+
+    /* Estilos para el menú responsive */
+    nav.responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f91ea1;
+        z-index: 99;
+    }
+
+    /* Estilos para los enlaces del menú responsive */
+    nav.responsive a {
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    /* Mostrar el ícono de navegación en modo responsive */
+    #icono-nav {
+        display: inline-block;
+    }
+}
+
+/* Estilos para el contenedor de productos */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+/* Estilos para cada producto */
+.product {
+    width: 162px;
+    height: auto;
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(255, 255, 255));
+    border: 1px solid #f91ea1;
+    padding: 6px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(255, 252, 252, 0.7);
+    overflow: hidden;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #f91ea1;
+}
+
+.product-details {
+    text-align: center;
+}
+
+.product-details a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+}
+
+/* Estilo solo para la palabra "Tienda" dentro de .product-details */
+.product-details span.tienda {
+    color: #ff0080;
+    font-weight: bold;
+}
+
+.product-details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.product-details span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+/* Estilos para el elemento label y el menú desplegable select */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el campo de búsqueda */
+#buscador {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #f91ea1;
+    border-radius: 10px;
+    outline: none;
+    width: 300px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#buscador::placeholder {
+    color: #f91ea1;
+    font-style: italic;
+}
+
+#buscador:focus {
+    border-color: #ff0080;
+}
+
+/* Estilo para eliminar el subrayado en los enlaces */
+.product-details a {
+    text-decoration: none;
+}
+
+/* Estilos para los íconos de redes sociales fijos en la página */
+.sticky-container {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    right: -130px;
+    top: 230px;
+    width: 210px;
+    z-index: 1100;
+}
+
+.sticky li {
+    list-style-type: none;
+    background-color: #fff0;
+    color: #efefef;
+    height: 72px;
+    padding: 0;
+    margin: 0 0 1px -26px;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.sticky li img {
+    float: left;
+    margin: 5px 24px;
+    margin-right: 5px;
+}
+
+.sticky li p {
+    padding-top: 5px;
+    margin: 0;
+    line-height: 16px;
+    font-size: 11px;
+}
+
+.sticky li p a {
+    text-decoration: none;
+    color: #2C3539;
+}
+
+.sticky li p a:hover {
+    text-decoration: underline;
+}
