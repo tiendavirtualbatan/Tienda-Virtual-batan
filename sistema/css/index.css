@@ -26,6 +26,7 @@ header {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 100% 50%;
     }
@@ -79,6 +80,7 @@ header nav a:hover {
 
 /* Media query para modo responsive */
 @media only screen and (max-width: 900px) {
+
     /* Ocultar el menú principal */
     header nav {
         position: initial;
@@ -113,7 +115,7 @@ header nav a:hover {
         font-size: 30px;
         font-weight: bold;
     }
-    
+
     /* Mostrar el ícono de navegación en modo responsive */
     #icono-nav {
         display: inline-block;
@@ -192,15 +194,16 @@ header nav a:hover {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    margin-top: -67px; /* Asegura que no haya espacio en la parte superior */
-  }
-  
-  .container2 {
+    margin-top: -67px;
+    /* Asegura que no haya espacio en la parte superior */
+}
+
+.container2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+}
 
 /* Estilos para el elemento label y el menú desplegable select */
 .form-group {
@@ -237,7 +240,8 @@ header nav a:hover {
 /* Estilo para el botón "Más detalles" */
 .show-details {
     display: block;
-    margin: 10px auto; /* Centrar horizontalmente y agregar margen */
+    margin: 10px auto;
+    /* Centrar horizontalmente y agregar margen */
     padding: 8px 0px;
     background-color: #007b03;
     color: #fff;
@@ -245,14 +249,18 @@ header nav a:hover {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    text-decoration: none; /* Quitar subrayado del enlace */
-    text-align: center; /* Centrar el contenido del botón */
-    width: 150px; /* Ajusta el ancho del botón según tus necesidades */
+    text-decoration: none;
+    /* Quitar subrayado del enlace */
+    text-align: center;
+    /* Centrar el contenido del botón */
+    width: 150px;
+    /* Ajusta el ancho del botón según tus necesidades */
     transition: background-color 0.3s;
 }
 
 .show-details:hover {
-    background-color: #0056b3; /* Cambiar el color de fondo al pasar el mouse */
+    background-color: #0056b3;
+    /* Cambiar el color de fondo al pasar el mouse */
 }
 
 /* Estilos para los íconos de redes sociales fijos en la página */
