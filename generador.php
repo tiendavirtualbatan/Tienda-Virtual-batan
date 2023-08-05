@@ -49,6 +49,8 @@
                <a href="https://hack4u.io/" onclick="seleccionar()"><img
                   src="sistema/imagenes/Hack4u_FondoBlanco-300x63.png" alt="Hack4u_FondoBlanco" height="30"></a>
                <a href="emir-yuliana/index.html" onclick="seleccionar()">Técnico</a>
+               <a href="https://frp.chuyenmobile.net/" onclick="seleccionar()">Frp.ChuyenMobile.Net</a>
+               
             </nav>
             <!-- Icono del menú responsive para dispositivos móviles -->
             <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
