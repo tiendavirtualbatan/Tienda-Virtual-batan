@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones en Filas</title>
+    <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: radial-gradient(circle, rgba(30, 161, 249, 0.7), rgba(255, 255, 255, 0.7));
+            /* Gradiente radial con fondo opaco */
+        }
+
+        /* Estilos para el contenedor principal */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Estilos para los botones */
+        .btn {
+            display: inline-block;
+            width: 300px;
+            height: 40px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #f91ea1;
+            color: #fff;
+            text-align: center;
+            font-size: 26px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none; /* Quitar subrayado de enlaces */
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        /* Cambiar el color de fondo al pasar el mouse */
+        .btn:hover {
+            background-color: #fe9018;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://samfw.com/" class="btn"><span class="display-2 text-white"><img src="https://samfw.com/assets/img/logo_spin.gif" alt="SamFw" height="30"> SamFw</span></a>
+        <a href="https://samfirmtool.com/" class="btn">Samfirm Tool</a>
+        <a href="https://frp.gsmneo.com/" class="btn">GSMneo</a>
+        <a href="https://hack4u.io/" class="btn"><img class="hfe-site-logo-img elementor-animation-" src="https://hack4u.io/wp-content/uploads/2022/03/Hack4u_FondoBlanco-300x63.png" alt="Hack4u_FondoBlanco" height="30"></a>
+        <a href="https://frp.chuyenmobile.net/" class="btn">Frp.ChuyenMobile.Net</a>
+    </div>
+</body>
+</html>
