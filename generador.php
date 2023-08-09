@@ -18,57 +18,59 @@
    ?>
 <!DOCTYPE html>
 <html lang="es-es">
-   <head>
-      <!-- Meta etiquetas para información de la página -->
-      <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
-      <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
-      <meta property="og:image" content="sistema/a.png">
-      <meta property="og:url" content="https://tiendavirtualbatan.com">
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-      <!-- Enlace al archivo de estilos CSS -->
-      <link rel="stylesheet" href="sistema/css/index.css" />
-      <title>Tienda Virtual Batan</title>
-   </head>
-   <body>
-      <div class="container1">
-         <!-- Encabezado y menú de navegación -->
-         <header>
+
+<head>
+    <!-- Meta etiquetas para información de la página -->
+    <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
+    <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
+    <meta property="og:image" content="sistema/a.png">
+    <meta property="og:url" content="https://tiendavirtualbatan.com">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="sistema/css/index.css" />
+    <title>Tienda Virtual Batan</title>
+</head>
+
+<body>
+    <div class="container1">
+        <!-- Encabezado y menú de navegación -->
+        <header>
             <!-- Título principal de la página -->
             <h1 class="gradient-text">Tienda Virtual Batan</h1>
             <!-- Menú de navegación con enlaces -->
             <nav id="nav">
-               <a href="Paginas/curriculum.html" onclick="seleccionar()">Curriculum</a>
-               <a href="index.html" onclick="seleccionar()">Inicio</a>
-               <a href="https://samfw.com/" onclick="seleccionar()"><span class="display-2 text-white"><img
-                  src="https://samfw.com/assets/img/logo_spin.gif" alt="SamFw" height="30"> SamFw</span></a>
-               <a href="https://samfirmtool.com/" onclick="seleccionar()">Samfirm Tool</a>
-               <a href="https://frp.gsmneo.com/" onclick="seleccionar()">GSMneo</a>
-               <a href="Paginas/formulario_productos.html" onclick="seleccionar()">Cargar Productos</a>
-               <a href="https://hack4u.io/" onclick="seleccionar()"><img
-                  src="sistema/imagenes/Hack4u_FondoBlanco-300x63.png" alt="Hack4u_FondoBlanco" height="30"></a>
-               <a href="emir-yuliana/index.html" onclick="seleccionar()">Técnico</a>
-               <a href="https://frp.chuyenmobile.net/" onclick="seleccionar()">Frp.ChuyenMobile.Net</a>
-               
+                <a href="Paginas/curriculum.html" onclick="seleccionar()">Curriculum</a>
+                <a href="index.html" onclick="seleccionar()">Inicio</a>
+                <a href="https://samfw.com/" onclick="seleccionar()"><span class="display-2 text-white"><img
+                            src="https://samfw.com/assets/img/logo_spin.gif" alt="SamFw" height="30"> SamFw</span></a>
+                <a href="https://samfirmtool.com/" onclick="seleccionar()">Samfirm Tool</a>
+                <a href="https://frp.gsmneo.com/" onclick="seleccionar()">GSMneo</a>
+                <a href="Paginas/formulario_productos.html" onclick="seleccionar()">Cargar Productos</a>
+                <a href="https://hack4u.io/" onclick="seleccionar()"><img
+                        src="sistema/imagenes/Hack4u_FondoBlanco-300x63.png" alt="Hack4u_FondoBlanco" height="30"></a>
+                <a href="emir-yuliana/index.html" onclick="seleccionar()">Técnico</a>
+                <a href="https://frp.chuyenmobile.net/" onclick="seleccionar()">Frp.ChuyenMobile.Net</a>
+
             </nav>
             <!-- Icono del menú responsive para dispositivos móviles -->
             <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
-               <!-- Imagen del ícono de hamburguesa -->
-               <img src="sistema/imagenes/ini.png" alt="Ícono de hamburguesa">
+                <!-- Imagen del ícono de hamburguesa -->
+                <img src="sistema/imagenes/ini.png" alt="Ícono de hamburguesa">
             </div>
-         </header>
-      </div>
-      <!-- Contenedor principal -->
-      <div class="container2">
-         <div class="form-group">
+        </header>
+    </div>
+    <!-- Contenedor principal -->
+    <div class="container2">
+        <div class="form-group">
             <!-- Cuadro de búsqueda -->
             <input type="text" id="buscador" placeholder="Buscar productos por nombre">
-         </div>
-      </div>
-      <!-- Aquí se mostrarán los productos dinámicamente mediante código JavaScript -->
-      <div class="product-container">
-         <?php
+        </div>
+    </div>
+    <!-- Aquí se mostrarán los productos dinámicamente mediante código JavaScript -->
+    <div class="product-container">
+        <?php
             // Verifica si hay resultados en la consulta
             if ($result->num_rows > 0) {
                 // Recorre cada fila de resultados
@@ -121,65 +123,82 @@
             // Cierra la conexión a la base de datos
             $conexion->close();
             ?>
-         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-         <script>
-            $(document).ready(function() {
-                $(".show-details").click(function(event) {
-                    event.preventDefault(); // Evita la acción predeterminada del enlace
-            
-                    var productDetails = $(this).next(".product-details");
-            
-                    // Encuentra todos los detalles del producto, excepto el que se está abriendo
-                    var otherDetails = $(".product-details").not(productDetails);
-            
-                    // Cierra los detalles de los productos que estaban abiertos
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $(".show-details").click(function(event) {
+                event.preventDefault(); // Evita la acción predeterminada del enlace
+
+                var productDetails = $(this).next(".product-details");
+
+                // Encuentra todos los detalles del producto, excepto el que se está abriendo
+                var otherDetails = $(".product-details").not(productDetails);
+
+                // Si el detalle actual está visible, ocúltalo; si no, muestra y oculta los demás detalles
+                if (productDetails.is(":visible")) {
+                    productDetails.hide();
+                } else {
                     otherDetails.hide();
-            
-                    // Alternar la visibilidad del detalle actual
-                    productDetails.toggle();
-            
-                    // Cerrar el detalle automáticamente después de 5 segundos (5000 milisegundos)
-                    if (productDetails.is(":visible")) {
-                        setTimeout(function() {
-                            productDetails.hide();
-                        }, 5000);
+                    productDetails.show();
+                }
+            });
+
+            // Cierra los detalles de los productos cuando se hace clic fuera de ellos
+            $(document).on("click", function(event) {
+                if (!$(event.target).closest(".show-details, .product-details").length) {
+                    $(".product-details").hide();
+                }
+            });
+
+            // Cierra los detalles de los productos cuando el usuario desplaza
+            $(window).on("scroll", function() {
+                $(".product-details").each(function() {
+                    var detailPosition = $(this).offset().top;
+                    var windowPosition = $(window).scrollTop() + ($(window).height() * 0.2);
+
+                    if (detailPosition > windowPosition || detailPosition + $(this).height() <
+                        $(window).scrollTop()) {
+                        $(this).hide();
                     }
                 });
             });
-         </script>
-      </div>
-      <!-- Contenedor de íconos de redes sociales fijos -->
-      <div class="sticky-container">
-         <ul class="sticky">
+        });
+        </script>
+
+    </div>
+    <!-- Contenedor de íconos de redes sociales fijos -->
+    <div class="sticky-container">
+        <ul class="sticky">
             <li>
-               <p><a href="https://wa.me/50687895592" target="_self"><img src="sistema/imagenes/whatsapp.png"
-                  width="35" height="35"></a></p>
+                <p><a href="https://wa.me/50687895592" target="_self"><img src="sistema/imagenes/whatsapp.png"
+                            width="35" height="35"></a></p>
             </li>
             <li>
-               <p><a href="https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg" target="_self"><img
-                  src="sistema/imagenes/youtube.png" width="35" height="35"></a></p>
+                <p><a href="https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg" target="_self"><img
+                            src="sistema/imagenes/youtube.png" width="35" height="35"></a></p>
             </li>
             <li>
-               <p><a href="https://www.instagram.com/yuliana.emir/" target="_self"><img
-                  src="sistema/imagenes/instagram.png" width="35" height="35"></a></p>
+                <p><a href="https://www.instagram.com/yuliana.emir/" target="_self"><img
+                            src="sistema/imagenes/instagram.png" width="35" height="35"></a></p>
             </li>
             <li>
-               <p><a href="https://www.facebook.com/tiendavirtualbataan/" target="_self"><img
-                  src="sistema/imagenes/facebook.png" width="35" height="35"></a></p>
+                <p><a href="https://www.facebook.com/tiendavirtualbataan/" target="_self"><img
+                            src="sistema/imagenes/facebook.png" width="35" height="35"></a></p>
             </li>
             <li>
-               <p><a href="https://twitter.com/emiryuliana" target="_self"><img src="sistema/imagenes/twiter.gif"
-                  width="35" height="35"></a></p>
+                <p><a href="https://twitter.com/emiryuliana" target="_self"><img src="sistema/imagenes/twiter.gif"
+                            width="35" height="35"></a></p>
             </li>
             <li>
-               <p><a href="emiryuliana/index.html" target="_self"><img src="sistema/imagenes/logo.png" width="35"
-                  height="35"></a></p>
+                <p><a href="emiryuliana/index.html" target="_self"><img src="sistema/imagenes/logo.png" width="35"
+                            height="35"></a></p>
             </li>
-         </ul>
-      </div>
-      <!-- Archivo JavaScript para manipulación de la página -->
-      <script src="sistema/js/index.js"></script>
-   </body>
+        </ul>
+    </div>
+    <!-- Archivo JavaScript para manipulación de la página -->
+    <script src="sistema/js/index.js"></script>
+</body>
+
 </html>
 <?php
    // Finalizar almacenamiento en buffer y guardar el contenido en una variable
