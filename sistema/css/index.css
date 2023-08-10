@@ -8,10 +8,6 @@ body {
     /* Gradiente radial con fondo opaco */
 }
 
-body {
-     overflow-x: hidden;
-}
-
 /* Estilos para el encabezado */
 header {
     display: flex;
