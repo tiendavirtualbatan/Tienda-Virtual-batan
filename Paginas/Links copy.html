@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones en Filas</title>
+    <style>
+        /*! CSS Used from: https://rubyonrails.org/assets/css/style.css */
+        div,
+        a,
+        img {
+            background: transparent;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            margin: 0;
+            min-width: 0;
+            padding: 0;
+            vertical-align: baseline;
+        }
+
+        img {
+            display: block;
+        }
+
+        :focus {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        body a {
+            color: #D30001;
+            text-decoration: none;
+            transition: color 0.25s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+
+        body img {
+            display: inline-block;
+            height: 40px;
+            max-width: 100%;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .container {
+            clear: both;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1440px;
+            position: relative;
+        }
+
+        .container:after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+
+        .common-padding--bottom-small {
+            padding-bottom: 40px;
+        }
+
+        @media (min-width: 1024px) {
+            .common-padding--bottom-small {
+                padding-bottom: 60px;
+            }
+        }
+
+        .trusted {
+            font-size: 15px;
+            line-height: 0;
+            position: relative;
+        }
+
+        .trusted .container {
+            max-width: 1080px;
+        }
+
+        .trusted__blocks {
+            margin: -5px 30px;
+            position: relative;
+            text-align: center;
+            width: calc(100% - 60px);
+            z-index: 1;
+        }
+
+        .trusted__block {
+            display: inline-block;
+            margin: 5px;
+            position: relative;
+            width: calc(50% - 10px);
+        }
+
+        .trusted__block a {
+            background: #F0E7E9;
+            border-radius: 8px;
+            box-shadow: 0 0 0 3px rgba(211, 0, 1, 0);
+            display: block;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+            transition: background 0.25s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.25s cubic-bezier(0.33, 1, 0.68, 1), transform 0.25s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+
+        .trusted__block a img {
+            width: auto;
+        }
+
+        .trusted__block a:hover {
+            background: #FFF;
+            box-shadow: 0 0 0 3px #D30001;
+            transform: translateY(-3px);
+        }
+
+        @media (min-width: 667px) {
+            .trusted__block {
+                width: calc(33.33% - 10px);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .trusted__blocks {
+                margin: -10px 60px;
+                width: calc(100% - 120px);
+            }
+
+            .trusted__block {
+                margin: 10px;
+                width: calc(25% - 20px);
+            }
+        }
+
+        /* Estilos para los íconos de redes sociales fijos en la página */
+        .sticky-container {
+            padding: 0;
+            margin: 0;
+            position: fixed;
+            right: 30px;
+            top: 10px;
+            width: 75px;
+            z-index: 1100;
+        }
+
+        .sticky li {
+            list-style-type: none;
+            background-color: #fff0;
+            color: #efefef;
+            height: 72px;
+            padding: 0;
+            margin: 0 0 1px -26px;
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        .sticky li img {
+            float: left;
+            margin: 6px 27px;
+            margin-right: 5px;
+            width: 40px;
+        }
+
+        .sticky li p {
+            padding-top: 5px;
+            margin: 0;
+            line-height: 16px;
+            font-size: 11px;
+        }
+
+        .sticky li p a {
+            text-decoration: none;
+            color: #2C3539;
+        }
+
+        .sticky li p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="trusted common-padding--bottom-small">
+        <div class="container">
+            <div class="trusted__blocks">
+                <div class="trusted__block"><a href="https://basecamp.com" aria-label="Basecamp"><img
+                            src="https://rubyonrails.org/assets/images/logo-basecamp.svg" alt="Basecamp"></a></div>
+                <div class="trusted__block"><a href="https://hey.com" aria-label="HEY"><img
+                            src="https://rubyonrails.org/assets/images/logo-hey.svg" alt="HEY"></a></div>
+                <div class="trusted__block"><a href="https://github.com" aria-label="GitHub"><img
+                            src="https://rubyonrails.org/assets/images/logo-github.svg" alt="GitHub"></a></div>
+                <div class="trusted__block"><a href="https://shopify.com" aria-label="Shopify"><img
+                            src="https://rubyonrails.org/assets/images/logo-shopify.svg" alt="Shopify"></a></div>
+                <div class="trusted__block"><a href="https://twitch.tv" aria-label="Twitch"><img
+                            src="https://rubyonrails.org/assets/images/logo-twitch.svg" alt="Twitch"></a></div>
+                <div class="trusted__block"><a href="https://dribbble.com" aria-label="Dribbble"><img
+                            src="https://rubyonrails.org/assets/images/logo-dribbble.svg" alt="Dribbble"></a></div>
+                <div class="trusted__block"><a href="https://hulu.com" aria-label="Hulu"><img
+                            src="https://rubyonrails.org/assets/images/logo-hulu.svg" alt="Hulu"></a></div>
+                <div class="trusted__block"><a href="https://zendesk.com" aria-label="Zendesk"><img
+                            src="https://rubyonrails.org/assets/images/logo-zendesk.svg" alt="Zendesk"></a></div>
+                <div class="trusted__block"><a href="https://airbnb.com" aria-label="Airbnb"><img
+                            src="https://rubyonrails.org/assets/images/logo-airbnb.svg" alt="Airbnb"></a></div>
+                <div class="trusted__block"><a href="https://squareup.com" aria-label="Square"><img
+                            src="https://rubyonrails.org/assets/images/logo-square.svg" alt="Square"></a></div>
+                <div class="trusted__block"><a href="https://kickstarter.com" aria-label="Kickstarter"><img
+                            src="https://rubyonrails.org/assets/images/logo-kickstarter.svg" alt="Kickstarter"></a>
+                </div>
+                <div class="trusted__block"><a href="https://heroku.com" aria-label="Heroku"><img
+                            src="https://rubyonrails.org/assets/images/logo-heroku.svg" alt="Heroku"></a></div>
+                <div class="trusted__block"><a href="https://coinbase.com" aria-label="Coinbase"><img
+                            src="https://rubyonrails.org/assets/images/logo-coinbase.svg" alt="Coinbase"></a></div>
+                <div class="trusted__block"><a href="https://soundcloud.com" aria-label="Soundcloud"><img
+                            src="https://rubyonrails.org/assets/images/logo-soundcloud.svg" alt="Soundcloud"></a></div>
+                <div class="trusted__block"><a href="https://cookpad.com" aria-label="Cookpad"><img
+                            src="https://rubyonrails.org/assets/images/logo-cookpad.svg" alt="Cookpad"></a></div>
+                <div class="trusted__block"><a href="https://www.doximity.com" aria-label="Doximity"><img
+                            src="https://rubyonrails.org/assets/images/logo-doximity.svg" alt="Doximity"></a></div>
+                <div class="trusted__block"><a href="https://www.intercom.com" aria-label="Intercom"><img
+                            src="https://rubyonrails.org/assets/images/logo-intercom.svg" alt="Intercom"></a></div>
+                <div class="trusted__block"><a href="https://www.fleetio.com" aria-label="Fleetio"><img
+                            src="https://rubyonrails.org/assets/images/logo-fleetio.svg" alt="Fleetio"></a></div>
+                <div class="trusted__block"><a href="https://samfw.com/"><img src="https://samfw.com/assets/img/logo_spin.gif" alt="">SamFw</a></div>
+                <div class="trusted__block"><a href="https://samfirmtool.com/"><img src="" alt=""
+                            height="30">SamfirmTool</a></div>
+                <div class="trusted__block"><a href="https://frp.gsmneo.com"><img src="" alt=""
+                            height="30">GSMneoFRP</a></div>
+                <div class="trusted__block"><a href="https://hack4u.io/"><img
+                            src="../sistema/imagenes/Hack4u_FondoBlanco-300x63.png" alt="" height="30"></a></div>
+                <div class="trusted__block"><a href="https://frp.chuyenmobile.net/"><img src="" alt=""
+                            height="30">Frp.ChuyenMobile.Net</a></div>
+                <div class="trusted__block"><a href="https://samfirmtoolaio.com"><img src="" alt="">SamFirm Tool AIO</a>
+                </div>
+                <div class="trusted__block"><a href="https://estechschematics.com"><img src=""
+                            alt="">estech-schematics</a></div>
+                <div class="trusted__block"><a href="https://www.grupocrackboxvenezuela.com/"><img src=""
+                            alt="">crackboxvenezuela</a></div>
+                <div class="trusted__block"><a href="https://gsmusbdriver.com/"><img src="" alt="">Gsm Usb Driver</a>
+                </div>
+                <div class="trusted__block"><a href="https://androiddatahost.com/"><img src="" alt="">Android Data
+                        Host</a></div>
+                <div class="trusted__block"><a href="https://opengapps.org/"><img src="" alt="">opengapps</a></div>
+                <div class="trusted__block"><a href="https://lg-firmwares.com/"><img src="" alt="">lg-firmwares</a>
+                </div>
+                <div class="trusted__block"><a href="https://romprovider.com/"><img src="" alt="">Rom Provider</a></div>
+                <div class="trusted__block"><a href="https://ipsw.me/"><img src="" alt="">IPSW Downloads</a></div>
+                <div class="trusted__block"><a href="http://huawei-firmware.com/"><img src=""
+                            alt="">Huawei-Firmware.com</a></div>
+                <div class="trusted__block"><a href="https://www.devicespecifications.com/es"><img src="" alt="">device
+                        specifications</a></div>
+                <div class="trusted__block"><a href="https://www.techeligible.com/"><img src="" alt="">Techeligible</a>
+                </div>
+                <div class="trusted__block"><a href="https://hostingunlock.com/"><img
+                            src="https://hostingunlock.com/data/assets/logo/logo2.png" alt=""></a></div>
+                <div class="trusted__block"><a href="https://forum.xda-developers.com/"><img
+                            src="https://forum.xda-developers.com/data/assets/logo/xda-white-text.png" alt=""></a></div>
+                <div class="trusted__block"><a href="https://androidmtk.com/"><img src="" alt="">androidmtk</a></div>
+                <div class="trusted__block"><a href="https://androidmtk.com/download-nokia-stock-rom"><img src=""
+                            alt="">androidmtk Nokia</a></div>
+                <div class="trusted__block"><a href="https://firmwarefile.com/?s=nokia"><img src="" alt="">firmwarefile
+                        nokia</a></div>
+                <div class="trusted__block"><a href="https://aiounlocker.com/resellerpricing/remote"><img
+                            src="https://aiounlocker.com/images/gallery/aiounlockerpngg.png" alt=""></a></div>
+                <div class="trusted__block"><a href="https://lgstockrom.com/"><img src="" alt="">lgstockrom</a></div>
+                <div class="trusted__block"><a href="https://iremovalpro.com/"><img src="" alt="">iRemoval Pro</a></div>
+                <div class="trusted__block"><a href="https://www.bypassfrpfiles.com/"><img
+                            src="https://cdn.bypassfrpfiles.com/wp-content/uploads/2020/07/cropped-LogoMakr_0Jfbwt-31.svg"
+                            alt=""></a></div>
+                <div class="trusted__block"><a href="https://xiaomifirmware.com/"><img
+                            src="https://xiaomifirmware.com/wp-content/uploads/2016/09/xiaomi-desklogo-1.jpg"
+                            alt=""></a></div>
+                <div class="trusted__block"><a href="https://developer.samsung.com/"><img src="" alt="">samsung
+                        developer</a></div>
+                <div class="trusted__block"><a
+                        href="https://www.xiaomiadictos.com/como-evitar-el-mensaje-de-no-cubrir-la-zona-del-auricular-en-tu-xiaomi/"><img
+                            src="https://www.xiaomiadictos.com/wp-content/uploads/2019/06/xiaomiadictos-noticias-xiaomi.png"
+                            alt=""></a></div>
+                <div class="trusted__block"><a href="https://developer.android.com/?hl=es-419"><img
+                            src="https://www.gstatic.com/devrel-devsite/prod/v85f54088ef7777280c83d69d659572c5ef9931b8141761ffdab023f32799d208/android/images/lockup.svg"
+                            alt=""></a></div>
+                <div class="trusted__block"><a
+                        href="https://hcu-client.com/huawei-bootloader-unlock-via-testpoint/"><img
+                            src="https://hcu-client.com/wp-content/uploads/2016/04/cropped-hcu-client-logo.png"
+                            alt=""></a></div>
+                <div class="trusted__block"><a href="https://gsmserver.es/"><img
+                            src="https://gsmserver.es/image/logo/logo-gsm.svg" alt=""></a></div>
+                <div class="trusted__block"><a href="https://iphonewired.com/industry/313938/"><img src=""
+                            alt="">a20,a21,etc</a></div>
+                <div class="trusted__block"><a href="https://phonelumi.com/"><img
+                            src="https://phonelumi.com/wp-content/uploads/2019/12/logophonelumi2020.svg"
+                            alt="">schematics</a></div>
+                <div class="trusted__block"><a href="https://www.aligsmlab.com/"><img
+                            src="https://blogger.googleusercontent.com/img/a/AVvXsEiou-0z5MIATgEQx3VwRpNc-gmt4CTUXnIVUYPJgsBynix--kBSx01QrA10ufAQFsQOORsbY-ssNaAXWg7J6iaw8jB5Q2LDXEfeIpHrMI4SswwArfF1dkP5UF9DdC_tXGxv3_e8ZloUWuqTvvH7aNq4TLRPQFE8Hbw39gwjcxd1r6-29m5XTngjtAuaMQ=s320"
+                            alt=""></a></div>
+                <div class="trusted__block"><a href="https://psiphon.ca/"><img
+                            src="https://psiphon.ca/main/psiphonlogo.png" alt="">psiphon</a></div>
+                <div class="trusted__block"><a href=""><img src="" alt=""></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="sticky-container">
+        <ul class="sticky">
+            <li>
+                <p><a href="https://wa.me/50687895592" target="_self"><img src="../sistema/imagenes/whatsapp.png"
+                            width="35" height="35"></a></p>
+            </li>
+            <li>
+                <p><a href="https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg" target="_self"><img
+                            src="../sistema/imagenes/youtube.png" width="35" height="35"></a></p>
+            </li>
+            <li>
+                <p><a href="https://www.instagram.com/yuliana.emir/" target="_self"><img
+                            src="../sistema/imagenes/instagram.png" width="35" height="35"></a></p>
+            </li>
+            <li>
+                <p><a href="https://www.facebook.com/tiendavirtualbataan/" target="_self"><img
+                            src="../sistema/imagenes/facebook.png" width="35" height="35"></a></p>
+            </li>
+            <li>
+                <p><a href="https://twitter.com/emiryuliana" target="_self"><img src="../sistema/imagenes/twiter.gif"
+                            width="35" height="35"></a></p>
+            </li>
+            <li>
+                <p><a href="emiryuliana/index.html" target="_self"><img src="../sistema/imagenes/logo.png" width="35"
+                            height="35"></a></p>
+            </li>
+        </ul>
+    </div>
+</body>

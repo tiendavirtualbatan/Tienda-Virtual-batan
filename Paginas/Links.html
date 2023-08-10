@@ -1,194 +1,441 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es-es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botones en Filas</title>
-    <style>
-        /* Estilos para el cuerpo de la página */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-image: radial-gradient(circle, rgba(30, 161, 249, 0.7), rgba(255, 255, 255, 0.7));
-            /* Gradiente radial con fondo opaco */
-        }
-
-        /* Estilos para el contenedor principal */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        /* Estilos para los botones */
-        .btn {
-            display: inline-block;
-            width: 300px;
-            height: 40px;
-            margin: 10px;
-            padding: 10px;
-            background-color: #616061;
-            color: #fff;
-            text-align: center;
-            font-size: 26px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            /* Quitar subrayado de enlaces */
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-
-        /* Cambiar el color de fondo al pasar el mouse */
-        .btn:hover {
-            background-color: #fe9018;
-        }
-
-        /* Estilos para los íconos de redes sociales fijos en la página */
-        .sticky-container {
-            padding: 0;
-            margin: 0;
-            position: fixed;
-            right: -130px;
-            top: 230px;
-            width: 210px;
-            z-index: 1100;
-        }
-
-        .sticky li {
-            list-style-type: none;
-            background-color: #fff0;
-            color: #efefef;
-            height: 72px;
-            padding: 0;
-            margin: 0 0 1px -26px;
-            transition: all 0.25s ease-in-out;
-            cursor: pointer;
-            border-radius: 15px;
-        }
-
-        .sticky li img {
-            float: left;
-            margin: 5px 24px;
-            margin-right: 5px;
-        }
-
-        .sticky li p {
-            padding-top: 5px;
-            margin: 0;
-            line-height: 16px;
-            font-size: 11px;
-        }
-
-        .sticky li p a {
-            text-decoration: none;
-            color: #2C3539;
-        }
-
-        .sticky li p a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta content="ie=edge" http-equiv="x-ua-compatible" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/links.css" />
 </head>
 
+
 <body>
-    <div class="container">
-        <a href="https://samfw.com/" class="btn"><img src="https://samfw.com/assets/img/logo_spin.gif"
-                height="30">SamFw</a>
-        <a href="https://samfirmtool.com/" class="btn"><img src="" height="30">Samfirm Tool</a>
-        <a href="https://frp.gsmneo.com" class="btn"><img src="" height="30">GSMneo FRP</a>
-        <a href="https://hack4u.io/" class="btn"><img src="../sistema/imagenes/Hack4u_FondoBlanco-300x63.png"
-                height="30"></a>
-        <a href="https://frp.chuyenmobile.net/" class="btn"><img src=""
-                height="30">Frp.ChuyenMobile<span>.Net</span></a>
-        <a href="https://samfirmtoolaio.com" class="btn"><img src="" height="30">SamFirm Tool AIO</a>
-        <a href="https://estechschematics.com" class="btn"><img height="30"
-                src="https://estechschematics.com/wp-content/uploads/2022/12/estech-schematics-logo_white.png"></a>
-        <a href="https://www.grupocrackboxvenezuela.com/" class="btn"><img src="">crackboxvenezuela</a>
-        <a href="https://gsmusbdriver.com/" class="btn"><img src="">Gsm Usb Driver</a>
-        <a href="https://androiddatahost.com/" class="btn"><img src="">Android Data Host</a>
-        <a href="https://opengapps.org/" class="btn"><img src="https://opengapps.org/images/logo.svg" height="30"></a>
-        <a href="https://lg-firmwares.com/" class="btn"><img src="https://lg-firmwares.com/bundles/app/images/logo.svg"
-                height="30"></a>
-        <a href="https://romprovider.com/" class="btn"><img src="" height="30">Rom Provider</a>
-        <a href="https://ipsw.me/" class="btn"><img src="https://ipsw.me/assets/brand/ipsw_logo_200.png"
-                height="30">IPSW Downloads</a>
-        <a href="http://huawei-firmware.com/" class="btn"><img src="" height="30">Huawei-Firmware.com</a>
-        <a href="https://www.devicespecifications.com/es" class="btn"><img src="" height="30">device specifications</a>
-        <a href="https://www.techeligible.com/" class="btn"><img src="" height="30">Techeligible</a>
-        <a href="https://hostingunlock.com/" class="btn"><img src="https://hostingunlock.com/data/assets/logo/logo2.png"
-                height="30"></a>
-        <a href="https://forum.xda-developers.com/" class="btn"><img
-                src="https://forum.xda-developers.com/data/assets/logo/xda-white-text.png" height="30"></a>
-        <a href="https://androidmtk.com/" class="btn"><img src="" height="30">androidmtk</a>
-        <a href="https://androidmtk.com/download-nokia-stock-rom" class="btn"><img src="" height="30">androidmtk
-            Nokia</a>
-        <a href="https://firmwarefile.com/?s=nokia" class="btn"><img src="" height="30">firmwarefile nokia</a>
-        <a href="https://aiounlocker.com/resellerpricing/remote" class="btn"><img
-                src="https://aiounlocker.com/images/gallery/aiounlockerpngg.png" height="30"></a>
-        <a href="https://lgstockrom.com/" class="btn"><img src="" height="30">lgstockrom</a>
-        <a href="https://iremovalpro.com/" class="btn"><img src="" height="30">iRemoval Pro</a>
-        <a href="https://www.bypassfrpfiles.com/" class="btn"><img
-                src="https://cdn.bypassfrpfiles.com/wp-content/uploads/2020/07/cropped-LogoMakr_0Jfbwt-31.svg"
-                height="30"></a>
-        <a href="https://xiaomifirmware.com/" class="btn"><img
-                src="https://xiaomifirmware.com/wp-content/uploads/2016/09/xiaomi-desklogo-1.jpg" height="30"></a>
-        <a href="https://developer.samsung.com/" class="btn"><img src="" height="30">samsung developer</a>
-        <a href="https://www.xiaomiadictos.com/como-evitar-el-mensaje-de-no-cubrir-la-zona-del-auricular-en-tu-xiaomi/"
-            class="btn"><img
-                src="https://www.xiaomiadictos.com/wp-content/uploads/2019/06/xiaomiadictos-noticias-xiaomi.png"
-                height="30"></a>
-        <a href="https://developer.android.com/?hl=es-419" class="btn"><img
-                src="https://www.gstatic.com/devrel-devsite/prod/v85f54088ef7777280c83d69d659572c5ef9931b8141761ffdab023f32799d208/android/images/lockup.svg"
-                height="30"></a>
-        <a href="https://hcu-client.com/huawei-bootloader-unlock-via-testpoint/" class="btn"><img
-                src="https://hcu-client.com/wp-content/uploads/2016/04/cropped-hcu-client-logo.png" height="30"></a>
-        <a href="https://gsmserver.es/" class="btn"><img src="https://gsmserver.es/image/logo/logo-gsm.svg"
-                height="30"></a>
-        <a href="https://iphonewired.com/industry/313938/" class="btn"><img
-                src="https://iphonewired.com/wp-content/uploads/2020/10/logo-df.png" height="10">a20,a21,etc</a>
-        <a href="https://phonelumi.com/" class="btn"><img
-                src="https://phonelumi.com/wp-content/uploads/2019/12/logophonelumi2020.svg" height="30">schematics</a>
-        <a href="https://www.aligsmlab.com/" class="btn"><img
-                src="https://blogger.googleusercontent.com/img/a/AVvXsEiou-0z5MIATgEQx3VwRpNc-gmt4CTUXnIVUYPJgsBynix--kBSx01QrA10ufAQFsQOORsbY-ssNaAXWg7J6iaw8jB5Q2LDXEfeIpHrMI4SswwArfF1dkP5UF9DdC_tXGxv3_e8ZloUWuqTvvH7aNq4TLRPQFE8Hbw39gwjcxd1r6-29m5XTngjtAuaMQ=s320"
-                height="30"></a>
-        <a href="https://psiphon.ca/" class="btn"><img src="https://psiphon.ca/main/psiphonlogo.png"
-                height="30">psiphon</a>
-        <a href="" class="btn"><img src="" height="30"></a>
+  <nav class="nav">
+    <a class="nav__logo" href="javascript:void(0);alert('¡Hola! Estoy aquí')" aria-label="tiendavirtualbataan"></a>
+    <input class="nav__checkbox" id="nav__checkbox" type="checkbox" role="button" aria-label="menu" />
+    <label class="nav__toggle" for="nav__checkbox">
+      <span></span>
+    </label>
+    <div class="nav__options">
+      <div>
+        <ul>
+          <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')"><span>1</span></a></li>
+          <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')"><span>2</span></a></li>
+          <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')"><span>3</span></a></li>
+          <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')"><span>4</span></a></li>
+        </ul>
+        <ul>
+          <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')"><span>5</span></a></li>
+          <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')"><span>6</span></a></li>
+          <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')"><span>7</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="layout">
+    <div class="heading common-padding--bottom common-padding--top-small">
+      <div class="container">
+        <div class="heading__body">
+          <div class="heading__headline common-headline">
+            <h1>Servicio Tecnico</h1>
+            <h4>Computadoras <strong>Celulares</strong></h4>
+          </div>
+          <div class="heading__button">
+            <a href="javascript:void(0);alert('¡Hola! Estoy aquí')"
+              class="common-button common-button--version"><span>Bienvenidos &mdash; Sitio Apk</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="video common-background--grey common-shape--top-white-down-left">
+      <div class="container">
+        <div class="video__embed">
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/NnkAbnH-4LQ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+        </div>
+      </div>
+    </div>
+    <div class="heading common-gradient--grey-to-white common-padding--bottom-small common-padding--top">
+      <div class="container">
+        <div class="heading__body">
+          <div class="heading__headline common-headline">
+            <h1>Disponibles</h1>
+            <h4>Cada Link puede que te sirva</h4>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="sticky-container">
-        <ul class="sticky">
-            <li>
-                <p><a href="https://wa.me/50687895592" target="_self"><img src="../sistema/imagenes/whatsapp.png"
-                            width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg" target="_self"><img
-                            src="../sistema/imagenes/youtube.png" width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="https://www.instagram.com/yuliana.emir/" target="_self"><img
-                            src="../sistema/imagenes/instagram.png" width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="https://www.facebook.com/tiendavirtualbataan/" target="_self"><img
-                            src="../sistema/imagenes/facebook.png" width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="https://twitter.com/emiryuliana" target="_self"><img src="../sistema/imagenes/twiter.gif"
-                            width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="emiryuliana/index.html" target="_self"><img src="../sistema/imagenes/logo.png" width="35"
-                            height="35"></a></p>
-            </li>
-        </ul>
+    <div class="trusted common-padding--bottom-small">
+      <div class="container">
+        <div class="trusted__blocks">
+          <div class="trusted__block"><a href="https://basecamp.com" aria-label="Basecamp"><img
+                src="https://rubyonrails.org/assets/images/logo-basecamp.svg" alt="Basecamp"></a></div>
+          <div class="trusted__block"><a href="https://hey.com" aria-label="HEY"><img
+                src="https://rubyonrails.org/assets/images/logo-hey.svg" alt="HEY"></a></div>
+          <div class="trusted__block"><a href="https://github.com" aria-label="GitHub"><img
+                src="https://rubyonrails.org/assets/images/logo-github.svg" alt="GitHub"></a></div>
+          <div class="trusted__block"><a href="https://shopify.com" aria-label="Shopify"><img
+                src="https://rubyonrails.org/assets/images/logo-shopify.svg" alt="Shopify"></a></div>
+          <div class="trusted__block"><a href="https://twitch.tv" aria-label="Twitch"><img
+                src="https://rubyonrails.org/assets/images/logo-twitch.svg" alt="Twitch"></a></div>
+          <div class="trusted__block"><a href="https://dribbble.com" aria-label="Dribbble"><img
+                src="https://rubyonrails.org/assets/images/logo-dribbble.svg" alt="Dribbble"></a></div>
+          <div class="trusted__block"><a href="https://hulu.com" aria-label="Hulu"><img
+                src="https://rubyonrails.org/assets/images/logo-hulu.svg" alt="Hulu"></a></div>
+          <div class="trusted__block"><a href="https://zendesk.com" aria-label="Zendesk"><img
+                src="https://rubyonrails.org/assets/images/logo-zendesk.svg" alt="Zendesk"></a></div>
+          <div class="trusted__block"><a href="https://airbnb.com" aria-label="Airbnb"><img
+                src="https://rubyonrails.org/assets/images/logo-airbnb.svg" alt="Airbnb"></a></div>
+          <div class="trusted__block"><a href="https://squareup.com" aria-label="Square"><img
+                src="https://rubyonrails.org/assets/images/logo-square.svg" alt="Square"></a></div>
+          <div class="trusted__block"><a href="https://kickstarter.com" aria-label="Kickstarter"><img
+                src="https://rubyonrails.org/assets/images/logo-kickstarter.svg" alt="Kickstarter"></a>
+          </div>
+          <div class="trusted__block"><a href="https://heroku.com" aria-label="Heroku"><img
+                src="https://rubyonrails.org/assets/images/logo-heroku.svg" alt="Heroku"></a></div>
+          <div class="trusted__block"><a href="https://coinbase.com" aria-label="Coinbase"><img
+                src="https://rubyonrails.org/assets/images/logo-coinbase.svg" alt="Coinbase"></a></div>
+          <div class="trusted__block"><a href="https://soundcloud.com" aria-label="Soundcloud"><img
+                src="https://rubyonrails.org/assets/images/logo-soundcloud.svg" alt="Soundcloud"></a></div>
+          <div class="trusted__block"><a href="https://cookpad.com" aria-label="Cookpad"><img
+                src="https://rubyonrails.org/assets/images/logo-cookpad.svg" alt="Cookpad"></a></div>
+          <div class="trusted__block"><a href="https://www.doximity.com" aria-label="Doximity"><img
+                src="https://rubyonrails.org/assets/images/logo-doximity.svg" alt="Doximity"></a></div>
+          <div class="trusted__block"><a href="https://www.intercom.com" aria-label="Intercom"><img
+                src="https://rubyonrails.org/assets/images/logo-intercom.svg" alt="Intercom"></a></div>
+          <div class="trusted__block"><a href="https://www.fleetio.com" aria-label="Fleetio"><img
+                src="https://rubyonrails.org/assets/images/logo-fleetio.svg" alt="Fleetio"></a></div>
+          <div class="trusted__block"><a href="https://samfw.com/"><img src="https://samfw.com/assets/img/logo_spin.gif"
+                alt="">SamFw</a></div>
+          <div class="trusted__block"><a href="https://samfirmtool.com/"><img src="" alt="" height="30">SamfirmTool</a>
+          </div>
+          <div class="trusted__block"><a href="https://frp.gsmneo.com"><img src="" alt="" height="30">GSMneoFRP</a>
+          </div>
+          <div class="trusted__block"><a href="https://hack4u.io/"><img
+                src="../sistema/imagenes/Hack4u_FondoBlanco-300x63.png" alt="" height="30"></a></div>
+          <div class="trusted__block"><a href="https://frp.chuyenmobile.net/"><img src="" alt=""
+                height="30">Frp.ChuyenMobile.Net</a></div>
+          <div class="trusted__block"><a href="https://samfirmtoolaio.com"><img src="" alt="">SamFirm Tool AIO</a>
+          </div>
+          <div class="trusted__block"><a href="https://estechschematics.com"><img src="" alt="">estech-schematics</a>
+          </div>
+          <div class="trusted__block"><a href="https://www.grupocrackboxvenezuela.com/"><img src=""
+                alt="">crackboxvenezuela</a></div>
+          <div class="trusted__block"><a href="https://gsmusbdriver.com/"><img src="" alt="">Gsm Usb Driver</a>
+          </div>
+          <div class="trusted__block"><a href="https://androiddatahost.com/"><img src="" alt="">Android Data
+              Host</a></div>
+          <div class="trusted__block"><a href="https://opengapps.org/"><img src="" alt="">opengapps</a></div>
+          <div class="trusted__block"><a href="https://lg-firmwares.com/"><img src="" alt="">lg-firmwares</a>
+          </div>
+          <div class="trusted__block"><a href="https://romprovider.com/"><img src="" alt="">Rom Provider</a></div>
+          <div class="trusted__block"><a href="https://ipsw.me/"><img src="" alt="">IPSW Downloads</a></div>
+          <div class="trusted__block"><a href="http://huawei-firmware.com/"><img src="" alt="">Huawei-Firmware.com</a>
+          </div>
+          <div class="trusted__block"><a href="https://www.devicespecifications.com/es"><img src="" alt="">device
+              specifications</a></div>
+          <div class="trusted__block"><a href="https://www.techeligible.com/"><img src="" alt="">Techeligible</a>
+          </div>
+          <div class="trusted__block"><a href="https://hostingunlock.com/"><img
+                src="https://hostingunlock.com/data/assets/logo/logo2.png" alt=""></a></div>
+          <div class="trusted__block"><a href="https://forum.xda-developers.com/"><img
+                src="https://forum.xda-developers.com/data/assets/logo/xda-white-text.png" alt=""></a></div>
+          <div class="trusted__block"><a href="https://androidmtk.com/"><img src="" alt="">androidmtk</a></div>
+          <div class="trusted__block"><a href="https://androidmtk.com/download-nokia-stock-rom"><img src=""
+                alt="">androidmtk Nokia</a></div>
+          <div class="trusted__block"><a href="https://firmwarefile.com/?s=nokia"><img src="" alt="">firmwarefile
+              nokia</a></div>
+          <div class="trusted__block"><a href="https://aiounlocker.com/resellerpricing/remote"><img
+                src="https://aiounlocker.com/images/gallery/aiounlockerpngg.png" alt=""></a></div>
+          <div class="trusted__block"><a href="https://lgstockrom.com/"><img src="" alt="">lgstockrom</a></div>
+          <div class="trusted__block"><a href="https://iremovalpro.com/"><img src="" alt="">iRemoval Pro</a></div>
+          <div class="trusted__block"><a href="https://www.bypassfrpfiles.com/"><img
+                src="https://cdn.bypassfrpfiles.com/wp-content/uploads/2020/07/cropped-LogoMakr_0Jfbwt-31.svg"
+                alt=""></a></div>
+          <div class="trusted__block"><a href="https://xiaomifirmware.com/"><img
+                src="https://xiaomifirmware.com/wp-content/uploads/2016/09/xiaomi-desklogo-1.jpg" alt=""></a></div>
+          <div class="trusted__block"><a href="https://developer.samsung.com/"><img src="" alt="">samsung
+              developer</a></div>
+          <div class="trusted__block"><a
+              href="https://www.xiaomiadictos.com/como-evitar-el-mensaje-de-no-cubrir-la-zona-del-auricular-en-tu-xiaomi/"><img
+                src="https://www.xiaomiadictos.com/wp-content/uploads/2019/06/xiaomiadictos-noticias-xiaomi.png"
+                alt=""></a></div>
+          <div class="trusted__block"><a href="https://developer.android.com/?hl=es-419"><img
+                src="https://www.gstatic.com/devrel-devsite/prod/v85f54088ef7777280c83d69d659572c5ef9931b8141761ffdab023f32799d208/android/images/lockup.svg"
+                alt=""></a></div>
+          <div class="trusted__block"><a href="https://hcu-client.com/huawei-bootloader-unlock-via-testpoint/"><img
+                src="https://hcu-client.com/wp-content/uploads/2016/04/cropped-hcu-client-logo.png" alt=""></a></div>
+          <div class="trusted__block"><a href="https://gsmserver.es/"><img
+                src="https://gsmserver.es/image/logo/logo-gsm.svg" alt=""></a></div>
+          <div class="trusted__block"><a href="https://iphonewired.com/industry/313938/"><img src=""
+                alt="">a20,a21,etc</a></div>
+          <div class="trusted__block"><a href="https://phonelumi.com/"><img
+                src="https://phonelumi.com/wp-content/uploads/2019/12/logophonelumi2020.svg" alt="">schematics</a></div>
+          <div class="trusted__block"><a href="https://www.aligsmlab.com/"><img
+                src="https://blogger.googleusercontent.com/img/a/AVvXsEiou-0z5MIATgEQx3VwRpNc-gmt4CTUXnIVUYPJgsBynix--kBSx01QrA10ufAQFsQOORsbY-ssNaAXWg7J6iaw8jB5Q2LDXEfeIpHrMI4SswwArfF1dkP5UF9DdC_tXGxv3_e8ZloUWuqTvvH7aNq4TLRPQFE8Hbw39gwjcxd1r6-29m5XTngjtAuaMQ=s320"
+                alt=""></a></div>
+          <div class="trusted__block"><a href="https://psiphon.ca/"><img src="https://psiphon.ca/main/psiphonlogo.png"
+                alt="">psiphon</a></div>
+          <div class="trusted__block"><a href=""><img src="" alt=""></a></div>
+        </div>
+      </div>
     </div>
+
+    <div class="text text--align-center common-padding--bottom">
+      <div class="container">
+        <div class="text__body">
+          <div class="text__content common-content common-content--size-large">
+            <p><strong>Mas links</strong> proximamente</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="heading common-background--grey common-border--top common-padding--bottom common-padding--top">
+      <div class="container">
+        <div class="heading__body">
+          <div class="heading__headline common-headline">
+            <h1>Nuevos Temas</h1>
+            <h4>Proximamente <a href="javascript:void(0);alert('¡Hola! Estoy aquí')">Nuevos Cursos</a>, Nuevas Opciones
+            </h4>
+          </div>
+          <div class="heading__button">
+            <a href="javascript:void(0);alert('¡Hola! Estoy aquí')"
+              class="common-button common-button--text common-button--icon-arrow"><span>Nuevos codigos</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="heading heading--frame-white common-padding--bottom common-shape--top-grey-down-left">
+      <div class="container">
+        <div class="heading__body">
+          <div class="heading__headline common-headline">
+            <h1>Pronto tendremos nuestro propio Hosting</h1>
+            <h4><strong>Con precios comodos</strong> Factibles y muy seguro</h4>
+          </div>
+          <div class="heading__content heading__content--has-headline common-content common-content--size-large">
+            <p>Representación de plantillas HTML, actualización de bases de datos, envío y recepción de correos
+              electrónicos, mantenimiento de páginas activas a través de WebSockets, puesta en cola de trabajos para
+              trabajos asincrónicos, almacenamiento de cargas en la nube y provisión de sólidas protecciones de
+              seguridad para ataques comunes. Rails lo hace todo y mucho más.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="example common-background--grey common-padding--bottom common-shape--top-white-down-right">
+      <div class="container">
+        <div class="example__body">
+          <div class="example__block example__block--align-left">
+            <div class="example__code common-code">
+              <h6>app/models/article.rb</h6>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Article</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">belongs_to</span> <span class="ss">:author</span><span class="p">,</span> <span class="ss">default: </span><span class="o">-&gt;</span> <span class="p">{</span> <span class="no">Current</span><span class="p">.</span><span class="nf">user</span> <span class="p">}</span>
+  <span class="n">has_many</span>   <span class="ss">:comments</span>
+
+  <span class="n">has_one_attached</span> <span class="ss">:cover_image</span>
+  <span class="n">has_rich_text</span> <span class="ss">:content</span><span class="p">,</span> <span class="ss">encrypted: </span><span class="kp">true</span>
+  <span class="n">enum</span> <span class="ss">status: </span><span class="sx">%i[ drafted published ]</span>
+
+  <span class="n">scope</span> <span class="ss">:recent</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">order</span><span class="p">(</span><span class="ss">created_at: :desc</span><span class="p">).</span><span class="nf">limit</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="p">}</span>
+
+  <span class="n">after_save_commit</span> <span class="ss">:deliver_later</span><span class="p">,</span> <span class="ss">if: :published?</span>
+
+  <span class="k">def</span> <span class="nf">byline</span>
+    <span class="s2">"Written by </span><span class="si">#{</span><span class="n">author</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2"> on </span><span class="si">#{</span><span class="n">created_at</span><span class="p">.</span><span class="nf">to_s</span><span class="p">(</span><span class="ss">:short</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">deliver_later</span>
+    <span class="no">Article</span><span class="o">::</span><span class="no">DeliveryJob</span><span class="p">.</span><span class="nf">perform_later</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+              </figure>
+            </div>
+
+            <div class="example__content common-content">
+              <h3>Active Records facilita el modelado.</h3>
+              <p>Las bases de datos cobran vida con la lógica empresarial encapsulada en objetos enriquecidos. Modelando asociaciones entre tablas, brindando devoluciones de llamada cuando se guardan, encriptando datos confidenciales sin problemas y expresando consultas SQL de manera hermosa.</p>
+            </div>
+          </div>
+
+          <div class="example__block example__block--align-left">
+            <div class="example__code common-code">
+              <h6>app/controllers/articles_controller.rb</h6>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ArticlesController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">index</span>
+    <span class="vi">@articles</span> <span class="o">=</span> <span class="no">Article</span><span class="p">.</span><span class="nf">recent</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">show</span>
+    <span class="vi">@article</span> <span class="o">=</span> <span class="no">Article</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
+    <span class="n">fresh_when</span> <span class="ss">etag: </span><span class="vi">@article</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">create</span>
+    <span class="n">article</span> <span class="o">=</span> <span class="no">Article</span><span class="p">.</span><span class="nf">create!</span><span class="p">(</span><span class="n">article_params</span><span class="p">)</span>
+    <span class="n">redirect_to</span> <span class="n">article</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+    <span class="k">def</span> <span class="nf">article_params</span>
+      <span class="n">params</span><span class="p">.</span><span class="nf">require</span><span class="p">(</span><span class="ss">:article</span><span class="p">).</span><span class="nf">permit</span><span class="p">(</span><span class="ss">:title</span><span class="p">,</span> <span class="ss">:content</span><span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">end</span></code></pre>
+              </figure>
+            </div>
+
+            <div class="example__content common-content">
+              <h3>Los controladores de acción manejan todas las solicitudes.</h3>
+              <p>Los controladores exponen el modelo de dominio a la web, procesan los parámetros entrantes, establecen encabezados de almacenamiento en caché y representan plantillas, respondiendo con HTML o JSON.</p>
+            </div>
+          </div>
+
+          <div class="example__block example__block--align-left">
+            <div class="example__code common-code">
+              <h6>app/views/articles/show.html.erb</h6>
+              <figure class="highlight">
+                <pre><code class="language-erb" data-lang="erb"><span class="nt">&lt;h1&gt;</span><span class="cp">&lt;%=</span> <span class="vi">@article</span><span class="p">.</span><span class="nf">title</span> <span class="cp">%&gt;</span><span class="nt">&lt;/h1&gt;</span>
+
+<span class="cp">&lt;%=</span> <span class="n">image_tag</span> <span class="vi">@article</span><span class="p">.</span><span class="nf">cover_image</span><span class="p">.</span><span class="nf">url</span> <span class="cp">%&gt;</span>
+
+<span class="nt">&lt;p&gt;</span><span class="cp">&lt;%=</span> <span class="vi">@article</span><span class="p">.</span><span class="nf">content</span> <span class="cp">%&gt;</span><span class="nt">&lt;/p&gt;</span>
+
+<span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"Edit"</span><span class="p">,</span> <span class="n">edit_article_path</span><span class="p">(</span><span class="vi">@article</span><span class="p">)</span> <span class="k">if</span> <span class="no">Current</span><span class="p">.</span><span class="nf">user</span><span class="p">.</span><span class="nf">admin?</span> <span class="cp">%&gt;</span></code></pre>
+              </figure>
+            </div>
+            <div class="example__content common-content">
+              <h3>Las vistas de acción combinan Ruby y HTML.</h3>
+              <p>Las plantillas pueden usar toda la versatilidad de Ruby, el código excesivo se extrae en ayudantes y el modelo de dominio se usa directamente y se entrelaza con el HTML.</p>
+            </div>
+          </div>
+          <div class="example__block example__block--align-left">
+            <div class="example__code common-code">
+              <h6>config/routes.rb</h6>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
+  <span class="n">resources</span> <span class="ss">:articles</span> <span class="k">do</span>    <span class="c1"># /articles, /articles/1</span>
+    <span class="n">resources</span> <span class="ss">:comments</span>     <span class="c1"># /articles/1/comments, /comments/1</span>
+  <span class="k">end</span>
+  <span class="n">root</span> <span class="ss">to: </span><span class="s2">"articles#index"</span> <span class="c1"># /</span>
+<span class="k">end</span></code></pre>
+              </figure>
+            </div>
+            <div class="example__content common-content">
+              <h3>URL de ruta de envío de acción.</h3>
+              <p>Configure cómo se conectan las URL a los controladores utilizando el idioma del dominio de enrutamiento. Las rutas exponen el paquete de acciones que van juntas como un recurso: indexar, mostrar, nuevo, crear, editar, actualizar, destruir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="heading heading--frame-white common-background--grey common-shape--bottom-white-up-left">
+      <div class="container">
+        <div class="heading__body">
+          <div class="heading__headline common-headline">
+            <h1>Optimizado</h1>
+          </div>
+          <div class="heading__content heading__content--has-headline common-content common-content--size-large">
+            <p>Uniremos y cultivaremos una tribu fuerte en torno a un <strong>amplio conjunto de pensamientos heréticos</strong> sobre la naturaleza de la programación y los programadores. Comprender estos pensamientos lo ayudará a comprender el diseño del marco.</p>
+          </div>
+          <div class="heading__button">
+            <a href="javascript:void(0);alert('¡Hola! Estoy aquí')" class="common-button common-button--text common-button--icon-arrow"><span>Ingrese aqui</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="heading common-padding--bottom-small common-padding--top">
+      <div class="container">
+        <div class="heading__body">
+          <div class="heading__headline common-headline">
+            <h1>Empecemos.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cards common-padding--bottom-small">
+      <div class="container">
+        <div class="cards__container">
+          <div class="card">
+            <a href="javascript:void(0);alert('¡Hola! Estoy aquí')">
+              <div class="card__body">
+                <div class="card__label">
+                  <h6>Aprendiendo</h6>
+                </div>
+                <div class="card__headline">
+                  <h3>Lea las guías.</h3>
+                </div>
+                <div class="card__content">
+                  <p>Aprenda lo que pueden hacer los marcos y cómo encajan entre sí.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="javascript:void(0);alert('¡Hola! Estoy aquí')">
+              <div class="card__body">
+                <div class="card__label">
+                  <h6>contribuyendo</h6>
+                </div>
+                <div class="card__headline">
+                  <h3>Contribuir en GitHub.</h3>
+                </div>
+                <div class="card__content">
+                  <p>Presente informes de errores y realice solicitudes de extracción.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="javascript:void(0);alert('¡Hola! Estoy aquí')">
+              <div class="card__body">
+                <div class="card__label">
+                  <h6>Mantenerse al día</h6>
+                </div>
+                <div class="card__headline">
+                  <h3>Ver qué hay de nuevo.</h3>
+                </div>
+                <div class="card__content">
+                  <p>Los últimos lanzamientos y actualizaciones en desarrollo.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text text--align-center common-padding--bottom">
+      <div class="container">
+        <div class="text__body">
+          <div class="text__content common-content common-content--size-large">
+            <p>Más información sobre <a href="javascript:void(0);alert('¡Hola! Estoy aquí')">Hotwire</a>, el marco front-end predeterminado para Rails.
+            </p>
+
+            <p><strong>Estar al día</strong> con Tienda Virtual Batan en<a href="javascript:void(0);alert('¡Hola! Estoy aquí')"
+                class="icon icon--twitter">YouTube</a> y <a href="javascript:void(0);alert('¡Hola! Estoy aquí')"
+                class="icon icon--world">Facebook</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer
+    class="footer common-background--grey common-padding--bottom common-padding--top common-shape--top-white-up-left">
+    <div class="footer__logo"><a href="/" aria-label="Ruby on Rails"></a></div>
+    <div class="footer__options">
+      <ul>
+        <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')">Conducta</a></li>
+        <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')">Mantenimiento</a></li>
+        <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')">Seguridad</a></li>
+        <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')">Marcas registradas</a></li>
+        <li><a href="javascript:void(0);alert('¡Hola! Estoy aquí')">Licencia</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
+</html>
