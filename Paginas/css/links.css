@@ -803,7 +803,7 @@ body img {
 .common-content h5,
 .common-content h6 {
     color: #261B23;
-    font-weight: 700;
+    font-weight: 700px;
     letter-spacing: -0.01em;
     padding-bottom: 18px
 }
@@ -861,7 +861,7 @@ body img {
 .common-content p,
 .common-content ul,
 .common-content ol {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 24px
 }
 
@@ -1027,7 +1027,7 @@ body img {
 .common-content--size-large p,
 .common-content--size-large ul,
 .common-content--size-large ol {
-    font-size: 23px;
+    font-size: 20px;
     line-height: 27px
 }
 
@@ -1126,7 +1126,7 @@ body img {
 
 .common-headline h1 {
     color: #D30001;
-    font-size: 47px;
+    font-size: 37px;
     font-weight: 700;
     letter-spacing: -0.01em;
     line-height: 43px
@@ -1150,7 +1150,7 @@ body img {
 
 .common-headline h4 {
     color: #261B23;
-    font-size: 26px;
+    font-size: 20px;
     letter-spacing: -0.006em;
     line-height: 29px
 }
@@ -2909,7 +2909,7 @@ body img {
 }
 
 .trusted {
-    font-size: 15px;
+    font-size: 1.5vh;
     line-height: 0;
     position: relative;
 }
@@ -2919,10 +2919,10 @@ body img {
 }
 
 .trusted__blocks {
-    margin: -5px 30px;
+    margin: 0px 0px;
     position: relative;
     text-align: center;
-    width: calc(100% - 60px);
+    width: calc(100% - 0px);
     z-index: 1;
 }
 
@@ -2930,7 +2930,7 @@ body img {
     display: inline-block;
     margin: 5px;
     position: relative;
-    width: calc(50% - 10px)
+    width: calc(40% - 20px)
 }
 
 .trusted__block a {
