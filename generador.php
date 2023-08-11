@@ -70,8 +70,10 @@
                     // Muestra un producto en un div con el atributo de data-categoria
                     echo '<div class="product" data-categoria="' . $row['categoria'] . '">';
             
-                    // Muestra la imagen del producto
-                    echo '<img src="' . $row['imagen'] . '" alt="' . $row['nombre'] . '">';
+                    // Muestra la imagen del producto con un enlace para la expansión
+                    echo '<div class="product">';
+                    echo '<img src="' . $row['imagen'] . '" alt="' . $row['nombre'] . '" class="expandable-image">';
+                    echo '</div>';
             
                     // Agrega el enlace "Más detalles" que mostrará el contenido adicional al hacer clic en él
                     echo '<a href="#" class="show-details">Más detalles</a>';
@@ -142,6 +144,14 @@
                 }
             });
 
+        });
+
+        // Agrega esta sección al final de tu archivo HTML, dentro de la etiqueta <body> 
+
+        $(document).ready(function() {
+                $(".expandable-image").click(function() {
+                            $(this).toggleClass("expanded");
+                });
         });
         </script>
 

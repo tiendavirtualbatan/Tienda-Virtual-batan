@@ -144,12 +144,28 @@ header nav a:hover {
 }
 
 .product img {
-    width: 100%;
-    height: 200px;
+    width: 90%;
+    height: 100px;
     object-fit: cover;
     border-radius: 15px;
-    margin-bottom:-15px;
+    margin-bottom: -15px;
     border: 1px solid #f91ea100;
+    cursor: pointer; /* Cambiar el cursor al hacer clic */
+    transition: transform 0.3s; /* Agrega una transición suave al expandir */
+}
+
+.product img.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+    margin: 0;
+    border: none;
+    cursor: zoom-out; /* Cambiar el cursor al cerrar */
+    z-index: 9999; /* Asegura que la imagen esté por encima de otros elementos */
 }
 
 .product-details {
