@@ -142,18 +142,6 @@
                 }
             });
 
-            // Cierra los detalles de los productos cuando el usuario desplaza
-            $(window).on("scroll", function() {
-                $(".product-details").each(function() {
-                    var detailPosition = $(this).offset().top;
-                    var windowPosition = $(window).scrollTop() + ($(window).height() * 0.2);
-
-                    if (detailPosition > windowPosition || detailPosition + $(this).height() <
-                        $(window).scrollTop()) {
-                        $(this).hide();
-                    }
-                });
-            });
         });
         </script>
 

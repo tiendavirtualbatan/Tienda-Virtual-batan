@@ -136,7 +136,7 @@ header nav a:hover {
     width: 162px;
     height: auto;
     background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(255, 255, 255));
-    border: 1px solid #f91ea1;
+    border: 1px solid #f91ea100;
     padding: 6px;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(255, 252, 252, 0.7);
@@ -148,8 +148,8 @@ header nav a:hover {
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
-    margin-bottom: 10px;
-    border: 1px solid #f91ea1;
+    margin-bottom:-15px;
+    border: 1px solid #f91ea100;
 }
 
 .product-details {
