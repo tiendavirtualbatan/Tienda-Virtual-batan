@@ -91,10 +91,10 @@
                     echo '<span>Categoría: ' . $row['categoria'] . '</span>';
             
                     // Muestra el tipo de envío del producto
-                    echo '<span>Envío: ' . $row['envio'] . '</span>';
+                    echo '<span>Envío en: ' . $row['envio'] . ' días</span>';
             
                     // Muestra la cantidad disponible del producto
-                    echo '<span>Cantidad: ' . $row['cantidad'] . '</span>';
+                    echo '<span>Disponibles: ' . $row['cantidad'] . ' unidades</span>';
             
                     // Genera un enlace de WhatsApp usando el número de teléfono del vendedor
                     $whatsappLink = 'https://wa.me/506' . $row['telefono'];
