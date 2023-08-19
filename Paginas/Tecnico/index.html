@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es-es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Virtual Batan</title>
+  <!--     - favicon  -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/svg+xml">
+  <!--     - custom css link  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!--     - google font link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"  rel="stylesheet">
+</head>
+
+<body id="top" class="dark_theme">
+  <!--     - #HEADER  -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="h1 logo"><a href="#">Tienda <br>Virtual Batan<span>.</span></a></h1>
+      <div class="navbar-actions"><select name="language" id="lang"><option value="cr">Cr</option></select>
+      <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn><span class="icon"></span></button></div>
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn><span class="one"></span><span class="two"></span><span class="three"></span></button>
+      <nav class=navbar data-navbar><ul class=navbar-list>
+        <li><a class=navbar-link href=#home>INICIO</a>
+        <li><a class=navbar-link href=#about>Acerca de</a>
+        <li><a class=navbar-link href=#skills>Habilidades</a>
+        <li><a class=navbar-link href=#portfolio>Portfolio</a>
+        <li><a class=navbar-link href=#contact>Contacto</a></ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article class="container">
+      <!--         - #HERO      -->
+      <section class="hero" id="home">
+        <figure class="hero-banner">
+          <picture>
+            <source srcset="./assets/images/hero-banner.png" media="(min-width: 768px)">
+            <source srcset="./assets/images/hero-banner-md.png" media="(min-width: 500px)">
+            <img src="./assets/images/hero-banner-sm.png" alt="A man in a blue shirt with a happy expression" class="w-100">
+          </picture>
+        </figure>
+        <div class="hero-content">
+          <h2 class="h2 hero-title">Diseñamos y Construimos Productos Creativos</h2>
+          <a href="#contact" class="btn btn-primary">Ponerse en contacto</a>
+        </div>
+        <ul class="hero-social-list">
+          <li><a href="https://www.facebook.com/tiendavirtualbataan/" class="hero-social-link"><ion-icon name="logo-facebook"></ion-icon><div class="tooltip">Facebook</div></a></li>
+          <li><a href="https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg" class="hero-social-link"><ion-icon name="logo-youtube"></ion-icon><div class="tooltip">YouTube</div></a></li>
+          <li><a href="https://www.tiktok.com/@emir.yuliana" class="hero-social-link"><ion-icon name="logo-TikTok"></ion-icon><div class="tooltip">TikTok</div></a></li>
+        </ul>
+        <a href="#stats" class="scroll-down">Scroll</a>
+      </section>
+      <!--         - #STATS      -->
+      <section class=stats id=stats><ul class=stats-list><li><a class=stats-card href="javascript:void(0);alert('Es verdad')"><div class=card-icon><img alt="Badge icon"src=./assets/images/stats-card_icon-1.png></div><h2 class="card-title h2">15+ <strong>años de experiencia</strong></h2><ion-icon name=chevron-forward-outline></ion-icon></a><li><a class=stats-card href="javascript:void(0);alert('Comunicate con nosotros')"><div class=card-icon><img alt="Checkmark icon"src=./assets/images/stats-card_icon-2.png></div><h2 class="card-title h2">230+ <strong>Proyectos completados</strong></h2><ion-icon name=chevron-forward-outline></ion-icon></a><li><a class=stats-card href="javascript:void(0);alert('Compruebalo Contratandonos')"><div class=card-icon><img alt="Peoples rating icon"src=./assets/images/stats-card_icon-3.png></div><h2 class="card-title h2">95+ <strong>Clientes Felices</strong></h2><ion-icon name=chevron-forward-outline></ion-icon></a></ul></section>
+      <!--         - #ABOUT      -->
+      <section class="about" id="about">
+        <figure class="about-banner"><img src="./assets/images/about-banner.png" alt="A man in a alice blue shirt with a thinking expression"class="w-100"></figure>
+        <div class="about-content section-content">
+          <p class="section-subtitle">Acerca de mí</p>
+          <h2 class="h3 section-title">¿Necesita un producto creativo? ¡Puedo ayudarle!</h2>
+          <p class="section-text">¡Hola! Soy Edwin Madriz y soy un desarrollador apasionado por crear aplicaciones web limpias con funcionalidades intuitivas. Disfruto el proceso de convertir ideas en realidad usando soluciones creativas. Siempre tengo curiosidad por aprender nuevas habilidades, herramientas y conceptos. Además de trabajar en varios proyectos full stack en solitario, he trabajado con equipos creativos, lo que implica stand-ups y comunicaciones diarias, control de fuentes y gestión de proyectos.</p>
+          <div class="btn-group">
+            <button class="btn btn-secondary">Contratame</button>
+            <button class="btn btn-primary">Descargar cv</button>
+          </div>
+        </div>
+      </section>
+      <!--         - #SKILLS      -->
+      <!-- 
+        - #SKILLS
+      -->
+
+      <section class="skills" id="skills">
+
+        <div class="skills-content section-content">
+
+          <p class="section-subtitle">Mis habilidades</p>
+
+          <h2 class="h3 section-title">¿Qué incluyeron mis habilidades de programación?</h2>
+
+          <p class="section-text">
+            Desarrollo una interfaz de usuario simple, intuitiva y receptiva que ayuda a los usuarios a hacer las cosas con menos esfuerzo y tiempo con esas tecnologías.
+          </p>
+
+          <div class="skills-toggle" data-toggle-box>
+            <button class="toggle-btn active" data-toggle-btn>Skills</button>
+
+            <button class="toggle-btn" data-toggle-btn>Tools</button>
+          </div>
+
+        </div>
+
+        <div class="skills-box" data-skills-box>
+
+          <ul class="skills-list">
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">HTML5</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/html5.png" alt="HTML5 logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">CSS3</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/css3.png" alt="CSS3 logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">JavaScript</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/javascript.png" alt="JavaScript logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">TypeScript</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/typescript.png" alt="TypeScript logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">jQuery</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/jquery.png" alt="jQuery logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Bootstrap</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/bootstrap.png" alt="Bootstrap logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Angular</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/angular.png" alt="Angular logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">React</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/react.png" alt="React logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Vue</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/vue.png" alt="Vue logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Firebase</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/firebase.png" alt="Firebase logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">PugJs</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/pugjs.png" alt="PugJs logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">SASS</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/sass.png" alt="SASS logo">
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+          <ul class="tools-list">
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Ajax</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/ajax.png" alt="Ajax logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Gulp</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/gulp.png" alt="Gulp logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Webpack</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/webpack.png" alt="Webpack logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Git</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/git.png" alt="Git logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Npm</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/npm.png" alt="Npm logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Command Line</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/command.png" alt="Command Line logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">VS Code</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/vs-code.png" alt="VS Code logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Trello</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/trello.png" alt="Trello logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">ClickUp</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/clickup.png" alt="ClickUp logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Slack</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/slack.png" alt="Slack logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Photoshop</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/photoshop.png" alt="Photoshop logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Adobe XD</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/adobe-xd.png" alt="Adobe XD logo">
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </section>
+      <!--         - #PROJECTS      -->
+      <section class=project id=portfolio><ul class=project-list><li><div class="project-content section-content"><p class=section-subtitle>Mis trabajos<h2 class="h3 section-title">¡Mira mis obras que te sorprenderán!</h2><p class=section-text>Desarrollamos el sitio web de mejor calidad que sirve a largo plazo. La interfaz bien documentada, limpia, fácil y elegante ayuda a cualquier cliente no técnico.</div><li><a class=project-card href=#><figure class=card-banner><img alt="A macintosh on a yellow background."class=w-100 src=./assets/images/project-1.png></figure><div class=card-content><h3 class="card-title h4">404</h3><time class=publish-date datetime=2022-04>April 2023</time></div></a><li><a class=project-card href=#><figure class=card-banner><img alt="On a Blue background, a Wacom and a mouse."class=w-100 src=./assets/images/project-2.png></figure><div class=card-content><h3 class="card-title h4">404</h3><time class=publish-date datetime=2022-04>April 2023</time></div></a><li><a class=project-card href=#><figure class=card-banner><img alt="A Cassette tape on a mellow apricot background."class=w-100 src=./assets/images/project-3.png></figure><div class=card-content><h3 class="card-title h4">404</h3><time class=publish-date datetime=2022-04>April 2023</time></div></a><li><a class=project-card href=#><figure class=card-banner><img alt="Blue digital watch on a dark liver background."class=w-100 src=./assets/images/project-4.png></figure><div class=card-content><h3 class="card-title h4">404</h3><time class=publish-date datetime=2022-04>April 2022</time></div></a><li><a class=project-card href=#><figure class=card-banner><img alt="On a dark liver background, Airport luggage car carrying a luggage."class=w-100 src=./assets/images/project-5.png></figure><div class=card-content><h3 class="card-title h4">404</h3><time class=publish-date datetime=2022-04>April 2022</time></div></a><li><a class=project-card href=#><figure class=card-banner><img alt="On a yellow background, a digital watch and a glass."class=w-100 src=./assets/images/project-6.png></figure><div class=card-content><h3 class="card-title h4">404</h3><time class=publish-date datetime=2022-04>April 2022</time></div></a><li><a class=project-card href=#><figure class=card-banner><img alt="A fujifilm instant camera on a dark electric blue background."class=w-100 src=./assets/images/project-7.png></figure><div class=card-content><h3 class="card-title h4">404</h3><time class=publish-date datetime=2023-12>December 2023</time></div></a><li><button class=load-more>Cargar más trabajos</button></ul></section>
+      <!--         - #CONTACT      -->
+      <section class=contact id=contact><div class="contact-content section-content"><p class=section-subtitle>Contacto<h2 class="h3 section-title">¿Tienes algún proyecto? Por favor, envíe un mensaje</h2><p class=section-text>Ponte en contacto y déjame saber cómo puedo ayudar. Rellena el formulario y me pondré en contacto lo antes posible.<ul class=contact-list><li class=contact-list-item><div class=contact-item-icon><ion-icon name=location-outline></ion-icon></div><div class=wrapper><h3 class="contact-item-title h4">DIRECCIÓN:</h3><address class=contact-info>Las Vegas Barbilla, Batan, Matina, Limon, 70502</address></div><li class=contact-list-item><div class=contact-item-icon><ion-icon name=call-outline></ion-icon></div><div class=wrapper><h3 class="contact-item-title h4">Telefono:</h3><a class=contact-info href=tel:01234567789>(506) 8354 4170</a> <a class=contact-info href=tel:09765432200>(506) 8789 5592</a></div><li class=contact-list-item><div class=contact-item-icon><ion-icon name=mail-outline></ion-icon></div><div class=wrapper><h3 class="contact-item-title h4">Email:</h3><a class=contact-info href=mailto:tiendavirtualbatan@gmail.com>tiendavirtualbatan@gmail.com</a> <a class=contact-info href=mailto:yakiramartinez94@gmail.com>yakiramartinez94@gmail.com</a></div><li><ul class=contac-social-list><li><a class=contact-social-link href=https://www.facebook.com/tiendavirtualbataan/ ><div class=tooltip>Facebook</div><ion-icon name=logo-facebook></ion-icon></a><li><a class=contact-social-link href=https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg><div class=tooltip>YouTube</div><ion-icon name=logo-youtube></ion-icon></a><li><a class=contact-social-link href=https://www.tiktok.com/@emir.yuliana><div class=tooltip>TikTok</div><ion-icon name=logo-tiktok></ion-icon></a></ul></ul></div><form action=""class=contact-form><div class=form-wrapper><label class=form-label for=name>Name</label><div class=input-wrapper><input class=input-field id=name name=name placeholder="emir madriz"required><ion-icon name=person-circle></ion-icon></div></div><div class=form-wrapper><label class=form-label for=email>Email</label><div class=input-wrapper><input class=input-field id=email name=email placeholder=tiendavirtualbataan@gmail.com required type=email><ion-icon name=mail></ion-icon></div></div><div class=form-wrapper><label class=form-label for=phone>Numero Celular</label><div class=input-wrapper><input class=input-field id=phone name=phone placeholder="Numero Celular"required type=tel><ion-icon name=call></ion-icon></div></div><div class=form-wrapper><label class=form-label for=message>Message</label><div class=input-wrapper><textarea class=input-field id=message name=message placeholder="Write message..."required></textarea><ion-icon name=chatbubbles></ion-icon></div></div><button class="btn btn-primary"type=submit>Enviar</button></form></section>
+    </article>
+  </main>
+  <!--     - #FOOTER  -->
+  <footer class=footer><div class=container><p class="h1 logo"><a href=#>Tienda Virtual Batan<span>.</span></a><p class=copyright>© 2023 <a href="javascript:void(0);alert('Todos los Derechos Reservados')">Todos los Derechos Reservados</a>. Costa Rica</div></footer>
+  <!--     - #GO TO TOP  -->
+  <a href="#top" class="go-top" data-go-top title="Go to Top">    <ion-icon name="arrow-up"></ion-icon>  </a>
+  <!--     - custom js link  -->
+  <script src="./assets/js/script.js"></script>
+  <!--     - ionicon link  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
