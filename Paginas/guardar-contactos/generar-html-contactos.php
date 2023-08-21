@@ -63,7 +63,7 @@ $output = '<!DOCTYPE html>
             background-color: #eaeaea;
             border-radius: 5px;
             margin: 10px;
-            width: 160px;
+            width: 120px;
             height: auto;
         }
 
@@ -122,8 +122,8 @@ if ($result->num_rows > 0) {
         $output .= '<div class="contact-details" data-categoria="' . $row["categoria_nombre"] . '">';
         $output .= '<img class="contact-img" src="uploads/' . $row["img"] . '" alt="' . $row["nombre"] . '">';
         $output .= '<h3>' . $row["nombre"] . '</h3>';
-        $output .= '<p><strong>Llamada directa:</strong><br>&nbsp;<a href="tel:' . $row["numeros"] . '" style="color: red; text-decoration: none; font-weight: bold;">' . $row["numeros"] . '</a></p>';
-        $output .= '<p>&nbsp;<a href="https://wa.me/506' . $row["numeros"] . '" style="color: green; text-decoration: none; font-weight: bold;">Enviar mensaje WhatsApp</a></p>';
+        $output .= '<p><strong>Llamada:</strong><br>&nbsp;<a href="tel:' . $row["numeros"] . '" style="color: red; text-decoration: none; font-weight: bold;">' . $row["numeros"] . '</a></p>';
+        $output .= '<p>&nbsp;<a href="https://wa.me/506' . $row["numeros"] . '" style="color: green; text-decoration: none; font-weight: bold;">WhatsApp</a></p>';
         $output .= '<p><strong>Categoría:</strong><br>&nbsp;' . $row["categoria_nombre"] . '</p>';
         $output .= '</div>';
     }
