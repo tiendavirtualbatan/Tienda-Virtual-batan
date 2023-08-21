@@ -39,23 +39,3 @@ phoneLinks.forEach(function (link) {
         window.open(whatsappLink);
     });
 });
-
-// Funcionalidad del menú responsive
-let menuVisible = false;
-
-function mostrarOcultarMenu() {
-    // Verificar si el menú ya está visible o no
-    if (menuVisible) {
-        document.getElementById("nav").classList = "";
-        menuVisible = false; // Ocultar el menú
-    } else {
-        document.getElementById("nav").classList = "responsive";
-        menuVisible = true; // Mostrar el menú
-    }
-}
-
-// Función para ocultar el menú después de hacer clic en un enlace de navegación en modo responsive
-function seleccionar() {
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
-}

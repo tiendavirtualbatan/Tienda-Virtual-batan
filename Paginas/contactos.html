@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .category-button {
+            margin: 10px;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .numbers {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .number {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #eaeaea;
+            border-radius: 5px;
+        }
+
+        .number img {
+            width: 40px; /* Ancho deseado */
+            height: 40px; /* Alto deseado */
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+    </style>
+    <title>Llamar por teléfono</title>
+</head>
+<body>
+    <div class="container">
+        <div class="category-buttons">
+            <button class="category-button" onclick="toggleNumbers('taxis')">Taxis</button>
+            <button class="category-button" onclick="toggleNumbers('mensajeros')">Mensajeros</button>
+            <button class="category-button" onclick="toggleNumbers('chanceros')">Chanceros</button>
+        </div>
+        
+        <div class="numbers" id="taxis-numbers">
+            <div class="number">
+                <img src="taxi_icon.png" alt="Icono Taxi">
+                <a href="tel:+50611111111">Taxi 1</a>
+            </div>
+            <div class="number">
+                <img src="taxi_icon.png" alt="Icono Taxi">
+                <a href="tel:+50622222222">Taxi 2</a>
+            </div>
+        </div>
+
+        <div class="numbers" id="mensajeros-numbers">
+            <div class="number">
+                <img src="messenger_icon.png" alt="Icono Mensajero">
+                <a href="tel:+50633333333">Mensajero 1</a>
+            </div>
+            <div class="number">
+                <img src="messenger_icon.png" alt="Icono Mensajero">
+                <a href="tel:+50644444444">Mensajero 2</a>
+            </div>
+        </div>
+
+        <div class="numbers" id="chanceros-numbers">
+            <div class="number">
+                <img src="chancero_icon.png" alt="Icono Chancero">
+                <a href="tel:+50655555555">Chancero 1</a>
+            </div>
+            <div class="number">
+                <img src="chancero_icon.png" alt="Icono Chancero">
+                <a href="tel:+50666666666">Chancero 2</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentCategory = null;
+
+        function toggleNumbers(category) {
+            const numbers = document.getElementById(category + "-numbers");
+            if (currentCategory !== category) {
+                if (currentCategory !== null) {
+                    const currentNumbers = document.getElementById(currentCategory + "-numbers");
+                    currentNumbers.style.display = "none";
+                }
+                numbers.style.display = "flex";
+                currentCategory = category;
+            } else {
+                numbers.style.display = "none";
+                currentCategory = null;
+            }
+        }
+    </script>
+</body>
+</html>

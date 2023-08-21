@@ -12,36 +12,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Enlace al archivo de estilos CSS -->
     <link rel="stylesheet" href="sistema/css/index.css" />
+    <link rel="stylesheet" href="sistema/css/btn-animate.css" />
+    <link rel="stylesheet" href="sistema/css/video-container-ocultar.css" />
+    <link rel="stylesheet" href="sistema/css/nav-style-index.css" />
     <title>Tienda Virtual Batan</title>
-    <style>
-        .video-container {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="container1">
-        <!-- Encabezado y menú de navegación -->
-        <header>
-            <!-- Título principal de la página -->
-            <h1 class="gradient-text">Tienda Virtual Batan</h1>
-            <!-- Menú de navegación con enlaces -->
-            <nav id="nav">
-                <a href="index.html" onclick="seleccionar()">Inicio</a>
-                <a href="Paginas/formulario_productos.html" onclick="seleccionar()">Cargar Productos</a>
-                <a href="emir-yuliana/index.html" onclick="seleccionar()">Técnico</a>
+  <!-- main container -->
+  <div class="container">
+    <!-- navbar begin -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <!-- Título principal de la página -->
+        <div class="logo"><button class="button btn-animate"> <span style="font-size:16px"> Tienda Virtual <span style="color:#259dff">Batán</span></span> </button></div>
+      </div>
+      <div class="navbar-list">
+        <ul class="nav-ul">
+          <li class="nav-li"><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-li"><a href="Paginas/formulario_productos.html" class="nav-link">Cargar Productos</a></li>
+          <li class="nav-li"><a href="emir-yuliana/index.html" class="nav-link">Técnico</a></li>
+          <li class="nav-li"><a href="" class="nav-link">Projects</a></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <!-- navbar end -->
+  </div>
 
-            </nav>
-            <!-- Icono del menú responsive para dispositivos móviles -->
-            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <!-- Imagen del ícono de hamburguesa -->
-                <img src="sistema/imagenes/ini.png" alt="Ícono de hamburguesa">
-            </div>
-        </header>
-    </div>
     <!-- Contenedor principal -->
     <div class="container2">
         <div class="form-group">
@@ -114,8 +116,11 @@
         </ul>
     </div>
     <!-- Archivo JavaScript para manipulación de la página -->
+
     <script src="sistema/js/index.js"></script>
-    <iframe class="video-container" width="560" height="315" src="https://www.youtube.com/embed/_OE4EqC5yOQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <script src="sistema/js/nav-index.js"></script>
+
+    <iframe class="video-container-ocultar" width="560" height="315" src="https://www.youtube.com/embed/_OE4EqC5yOQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </body>
 
 </html>

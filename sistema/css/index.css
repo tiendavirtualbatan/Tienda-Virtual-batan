@@ -8,120 +8,6 @@ body {
     /* Gradiente radial con fondo opaco */
 }
 
-/* Estilos para el encabezado */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f91ea1;
-    padding: 10px 40px;
-    border-radius: 10px;
-    margin: 30px 0;
-    width: 90%;
-    margin-top: 70px;
-}
-
-/* Animación de arcoíris para texto */
-@keyframes rainbowAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
-/* Estilos para el texto con gradiente arcoíris */
-.gradient-text {
-    background-image: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 800% 100%;
-    animation: rainbowAnimation 5s linear infinite;
-}
-
-/* Estilos para los enlaces del menú */
-header nav a {
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    margin-left: 20px;
-    font-size: 30px;
-}
-
-/* Estilos al pasar el ratón sobre los enlaces del menú */
-header nav a:hover {
-    color: #fe9018;
-}
-
-/* Estilos para el menú en modo responsive */
-.nav-responsive {
-    display: none;
-    font-size: 25px;
-    color: #a8a8a8;
-}
-
-/* Estilos para el ícono de navegación en modo responsive */
-#icono-nav {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    overflow: hidden;
-    display: none;
-}
-
-/* Estilos para la imagen del ícono de navegación en modo responsive */
-#icono-nav img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Media query para modo responsive */
-@media only screen and (max-width: 900px) {
-
-    /* Ocultar el menú principal */
-    header nav {
-        position: initial;
-        display: none;
-        transform: translate(0);
-    }
-
-    /* Mostrar el menú en modo responsive */
-    .nav-responsive {
-        display: block;
-    }
-
-    /* Estilos para el menú responsive */
-    nav.responsive {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #f91ea1;
-        z-index: 99;
-    }
-
-    /* Estilos para los enlaces del menú responsive */
-    nav.responsive a {
-        display: block;
-        width: fit-content;
-        margin: 10px auto;
-        font-size: 30px;
-        font-weight: bold;
-    }
-
-    /* Mostrar el ícono de navegación en modo responsive */
-    #icono-nav {
-        display: inline-block;
-    }
-}
-
 /* Estilos para el contenedor de productos */
 .product-container {
     display: flex;
@@ -203,22 +89,12 @@ header nav a:hover {
     color: #666;
 }
 
-/* Estilos para el contenedor principal */
-.container1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    margin-top: -67px;
-    /* Asegura que no haya espacio en la parte superior */
-}
-
 .container2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 /* Estilos para el elemento label y el menú desplegable select */
