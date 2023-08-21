@@ -49,8 +49,8 @@ ob_start();
         <ul class="nav-ul">
           <li class="nav-li"><a href="index.html" class="nav-link">Inicio</a></li>
           <li class="nav-li"><a href="Paginas/formulario_productos.html" class="nav-link">Cargar Productos</a></li>
-          <li class="nav-li"><a href="emir-yuliana/index.html" class="nav-link">Técnico</a></li>
-          <li class="nav-li"><a href="" class="nav-link">Projects</a></li>
+          <li class="nav-li"><a href="Paginas/Tecnico/index.html" class="nav-link">Técnico</a></li>
+          <li class="nav-li"><a href="Paginas/guardar-contactos/index.html" class="nav-link">Contactos</a></li>
         </ul>
       </div>
       <div class="menu">
