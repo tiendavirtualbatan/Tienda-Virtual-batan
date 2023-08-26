@@ -2,10 +2,18 @@
 <html>
   <head>
     <title>Recursos CSS súper útiles</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <style>
+      .video-container-ocultar {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
       body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -54,15 +62,15 @@
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
       }
       h1 {
-            font-size: 24px;
-            color: #333;
-            text-decoration: none;
-        }
+        font-size: 24px;
+        color: #333;
+        text-decoration: none;
+      }
 
-        h1 a {
-            color: #ffffff;
-            text-decoration: none;
-        }
+      h1 a {
+        color: #ffffff;
+        text-decoration: none;
+      }
 
       @media (max-width: 768px) {
         .grid-container {
@@ -81,181 +89,692 @@
     <header>
       <h1><a href="../../index.html">Recursos CSS súper útiles</a></h1>
     </header>
-    <br>
+    <br />
     <header>
       <h1>Generadores de propiedades</h1>
     </header>
     <div class="grid-container">
-      <div class="grid-item"><p><a href="https://neumorphism.io/"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--UYyR8aE8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/vPH0YMV/32-neumorphism.gif" alt="" /></a></p></div>
-      <div class="grid-item"><p><a href="https://shadows.brumm.af/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Na5xmzk1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/vD2rd3G/25-shadows-brum.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://9elements.github.io/fancy-border-radius/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--J12yXx0M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/0KQPHHh/35-fancy-border-radius.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://cssbud.com/css-generator/css-glow-generator/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--6-ZEP296--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/DDfw0Mz/54-glow-generator.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://onotakehiko.dev/clothoid/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--TsXizuq4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/HHR644q/33-clothoid.gif" alt="" /></div>
+      <div class="grid-item">
+        <p>
+          <a href="https://neumorphism.io/"
+            ><img
+              src="https://res.cloudinary.com/practicaldev/image/fetch/s--UYyR8aE8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/vPH0YMV/32-neumorphism.gif"
+              alt=""
+          /></a>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p><a href="https://shadows.brumm.af/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--Na5xmzk1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/vD2rd3G/25-shadows-brum.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://9elements.github.io/fancy-border-radius/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--J12yXx0M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/0KQPHHh/35-fancy-border-radius.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p>
+          <a href="https://cssbud.com/css-generator/css-glow-generator/"></a>
+        </p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--6-ZEP296--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/DDfw0Mz/54-glow-generator.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://onotakehiko.dev/clothoid/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--TsXizuq4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/HHR644q/33-clothoid.gif"
+          alt=""
+        />
+      </div>
 
-      <div class="grid-item"><p><a href="https://hype4.academy/tools/glassmorphism-generator"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Oe8GzKEx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/89R9Ckp/55-css-glow.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://bennettfeely.com/clippy/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--QEXoRxlq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/fHjj3FP/34-clippy.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://www.cssfilters.co/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--4zAmfaWU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/4Nwr01c/37-cssfilters.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://www.base64-image.de/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--R-HSoTjG--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/FgTRfQd/38-base64-image.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://quantityqueries.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--XZ9CxA1F--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/wK77hT7/39-quantityqueries.png" alt="" /></div>
+      <div class="grid-item">
+        <p>
+          <a href="https://hype4.academy/tools/glassmorphism-generator"></a>
+        </p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--Oe8GzKEx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/89R9Ckp/55-css-glow.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://bennettfeely.com/clippy/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--QEXoRxlq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/fHjj3FP/34-clippy.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://www.cssfilters.co/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--4zAmfaWU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/4Nwr01c/37-cssfilters.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://www.base64-image.de/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--R-HSoTjG--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/FgTRfQd/38-base64-image.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://quantityqueries.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--XZ9CxA1F--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/wK77hT7/39-quantityqueries.png"
+          alt=""
+        />
+      </div>
 
       <!-- Repite este bloque de grid-item para más columnas -->
     </div>
     <header>
       <h1>Animaciones</h1>
     </header>
-    <div class="grid-container">      
-      <div class="grid-item"><p><a href="https://animista.net/play"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--jP3cq6-G--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/zQ0y2mk/1-animista.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://cubic-bezier.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ePy0dVVB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/bLHhQ41/2-cubic-besier.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://keyframes.app/animate"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LbzewLeX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/dK3Lxgr/3-keyframes.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://waitanimate.wstone.uk/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Rf0mjP6O--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/NZPMwf8/4-waitanimate.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://www.transition.style/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--B8PTm6q9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/YPwRgVW/5-transition.gif" alt="" /></div>
-        <!-- Repite este bloque de grid-item para más columnas -->
+    <div class="grid-container">
+      <div class="grid-item">
+        <p><a href="https://animista.net/play"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--jP3cq6-G--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/zQ0y2mk/1-animista.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://cubic-bezier.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--ePy0dVVB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/bLHhQ41/2-cubic-besier.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://keyframes.app/animate"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--LbzewLeX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/dK3Lxgr/3-keyframes.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://waitanimate.wstone.uk/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--Rf0mjP6O--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/NZPMwf8/4-waitanimate.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://www.transition.style/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--B8PTm6q9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/YPwRgVW/5-transition.gif"
+          alt=""
+        />
+      </div>
+      <!-- Repite este bloque de grid-item para más columnas -->
     </div>
 
     <header>
       <h1>Backgrounds</h1>
     </header>
-    <div class="grid-container"> 
-      <div class="grid-item"><p><a href="https://heropatterns.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--g-q7ryMB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/gdnKVKG/56-hero-backgrounds.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://app.haikei.app/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--_G2SeZ1t--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/dQqztYV/14-haikei.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://doodad.dev/pattern-generator/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q1anKO37--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/th8khVj/15-pattern-generator.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://css-pattern.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--0e3OTUZ5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/Hh37hbb/16-css-pattern.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://patternizer.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Q25p_O4o--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/PMMQC6F/17-patternizer.png" alt="" /></div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p><a href="https://heropatterns.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--g-q7ryMB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/gdnKVKG/56-hero-backgrounds.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://app.haikei.app/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--_G2SeZ1t--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/dQqztYV/14-haikei.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://doodad.dev/pattern-generator/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--q1anKO37--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/th8khVj/15-pattern-generator.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://css-pattern.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--0e3OTUZ5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/Hh37hbb/16-css-pattern.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://patternizer.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--Q25p_O4o--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/PMMQC6F/17-patternizer.png"
+          alt=""
+        />
+      </div>
 
-      <div class="grid-item"><p><a href="http://www.patternify.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--57SDR5c4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/2P45cZT/18-patternify.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://wweb.dev/resources/animated-css-background-generator/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--9DH42eR8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/KFwrZQS/19-animated-bg.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://trianglify.io/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--qoYH9R6n--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/6F812Dd/20-trianglify.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://animatedbackgrounds.me/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--bUzQni9a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/YhxFmVw/21-animatedbackgrounds.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://www.magicpattern.design/tools/css-backgrounds"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--g-q7ryMB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/gdnKVKG/56-hero-backgrounds.gif" alt="" /></div>
+      <div class="grid-item">
+        <p><a href="http://www.patternify.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--57SDR5c4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/2P45cZT/18-patternify.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p>
+          <a
+            href="https://wweb.dev/resources/animated-css-background-generator/"
+          ></a>
+        </p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--9DH42eR8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/KFwrZQS/19-animated-bg.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://trianglify.io/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--qoYH9R6n--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/6F812Dd/20-trianglify.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://animatedbackgrounds.me/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--bUzQni9a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/YhxFmVw/21-animatedbackgrounds.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p>
+          <a href="https://www.magicpattern.design/tools/css-backgrounds"></a>
+        </p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--g-q7ryMB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/gdnKVKG/56-hero-backgrounds.gif"
+          alt=""
+        />
+      </div>
       <!-- Repite este bloque de grid-item para más columnas -->
     </div>
 
     <header>
       <h1>Colores</h1>
     </header>
-    <div class="grid-container"> 
-      <div class="grid-item"><p><a href="https://cssgradient.io/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--aIMLYGRS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/xJG5cCv/6-cssgradient.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://colormixer.web.app/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--iylg2pR8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/k6T022D/60-parametric-mixer.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://palettte.app/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Ai_QGkZI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/wr7Zhdz/61-palettte.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://paletton.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1a1v1Cgq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/qBYcsgk/7-paletton.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://www.grabient.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--O-kfrIXZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/Qj88dCZ/8-grabient.png" alt="" /></div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p><a href="https://cssgradient.io/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--aIMLYGRS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/xJG5cCv/6-cssgradient.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://colormixer.web.app/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--iylg2pR8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/k6T022D/60-parametric-mixer.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://palettte.app/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--Ai_QGkZI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/wr7Zhdz/61-palettte.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://paletton.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--1a1v1Cgq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/qBYcsgk/7-paletton.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://www.grabient.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--O-kfrIXZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/Qj88dCZ/8-grabient.png"
+          alt=""
+        />
+      </div>
 
-      <div class="grid-item"><p><a href="https://webkul.github.io/coolhue/">coolhue</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://webgradients.com/">webgradients</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://gradienthunt.com/">gradienthunt</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://gradientbuttons.colorion.co/">gradientbuttons</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://uigradients.com/">uigradients</a></p><img src="" alt="" /></div>
+      <div class="grid-item">
+        <p><a href="https://webkul.github.io/coolhue/">coolhue</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://webgradients.com/">webgradients</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://gradienthunt.com/">gradienthunt</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p>
+          <a href="https://gradientbuttons.colorion.co/">gradientbuttons</a>
+        </p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://uigradients.com/">uigradients</a></p>
+        <img src="" alt="" />
+      </div>
 
-      <div class="grid-item"><p><a href="https://colorhunt.co/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Rp-JMH8n--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/ZVWbL7s/9-colorhunt.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://larsenwork.com/easing-gradients/#editor"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--t_SGRS5O--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/bdr9R8P/10-easing-gradients.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://flatuicolors.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7TnYbD02--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/t3TwmWw/11-flatuicolors.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://colordesigner.io/tools"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ix61Nmdc--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/1ntDHZc/12-colordesigner.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://colorpalettes.earth/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ykiqt7mW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/tJ0JMK6/13-eart-palettes.png" alt="" /></div>
+      <div class="grid-item">
+        <p><a href="https://colorhunt.co/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--Rp-JMH8n--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/ZVWbL7s/9-colorhunt.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://larsenwork.com/easing-gradients/#editor"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--t_SGRS5O--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/bdr9R8P/10-easing-gradients.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://flatuicolors.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--7TnYbD02--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/t3TwmWw/11-flatuicolors.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://colordesigner.io/tools"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--ix61Nmdc--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/1ntDHZc/12-colordesigner.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://colorpalettes.earth/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--ykiqt7mW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/tJ0JMK6/13-eart-palettes.png"
+          alt=""
+        />
+      </div>
       <!-- Repite este bloque de grid-item para más columnas -->
     </div>
 
     <header>
       <h1>Typography</h1>
     </header>
-    <div class="grid-container"> 
-      <div class="grid-item"><p><a href="https://fontjoy.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--QKN3XjRt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/2jGJdDD/22-font-joy.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://typesetwith.me/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--AjjL_lsL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/5vFDphR/23-typesetwith.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://type-scale.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--c1SRCk0x--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/4809qtW/24-typescale.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://glyphter.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--t3WLtHTu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/x3myt3N/25-glyphter.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://katydecorah.com/font-library"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cO-ciOHn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/gPCghyQ/26-font-library.png" alt="" /></div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p><a href="https://fontjoy.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--QKN3XjRt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/2jGJdDD/22-font-joy.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://typesetwith.me/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--AjjL_lsL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/5vFDphR/23-typesetwith.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://type-scale.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--c1SRCk0x--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/4809qtW/24-typescale.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://glyphter.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--t3WLtHTu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/x3myt3N/25-glyphter.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://katydecorah.com/font-library"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--cO-ciOHn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/gPCghyQ/26-font-library.png"
+          alt=""
+        />
+      </div>
 
-      <div class="grid-item"><p><a href="https://wh0.github.io/glitter/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--E9zAbrXR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/GFyMm5k/27-glitter.png" alt="" /></div>
+      <div class="grid-item">
+        <p><a href="https://wh0.github.io/glitter/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--E9zAbrXR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/GFyMm5k/27-glitter.png"
+          alt=""
+        />
+      </div>
       <!-- Repite este bloque de grid-item para más columnas -->
     </div>
 
     <header>
       <h1>Loaders</h1>
     </header>
-    <div class="grid-container"> 
-      <div class="grid-item"><p><a href="https://tobiasahlin.com/spinkit/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1tLzrsmy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/t2CJLg0/28-spinkit.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://whirl.netlify.app/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--E7FAY-Du--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/rvG8Bzx/29-whirl.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://www.cssportal.com/css-loader-generator/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s---OGzrSyx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/7jwBBj4/30-loader-generator.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://projects.lukehaas.me/css-loaders/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--N4Q5jXBS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/M1YWH6d/31-lukehaas-single-element.gif" alt="" /></div>
-      <div class="grid-item"><p><a href="https://cssloaders.github.io/">cssloaders</a></p><img src="" alt="" /></div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p><a href="https://tobiasahlin.com/spinkit/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--1tLzrsmy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/t2CJLg0/28-spinkit.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://whirl.netlify.app/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--E7FAY-Du--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/rvG8Bzx/29-whirl.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://www.cssportal.com/css-loader-generator/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s---OGzrSyx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/7jwBBj4/30-loader-generator.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://projects.lukehaas.me/css-loaders/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--N4Q5jXBS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.ibb.co/M1YWH6d/31-lukehaas-single-element.gif"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://cssloaders.github.io/">cssloaders</a></p>
+        <img src="" alt="" />
+      </div>
 
-      <div class="grid-item"><p><a href="https://loading.io/css/">loading</a></p><img src="" alt="" /></div>
+      <div class="grid-item">
+        <p><a href="https://loading.io/css/">loading</a></p>
+        <img src="" alt="" />
+      </div>
       <!-- Repite este bloque de grid-item para más columnas -->
     </div>
 
     <header>
       <h1>Layouts</h1>
     </header>
-    <div class="grid-container"> 
-      <div class="grid-item"><p><a href="https://cssgridgarden.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--XbPT5Nu9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/Ph6kx0X/40-css-gridgarden.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://flexboxfroggy.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--tmq25h-D--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/SPy0Qdg/41-flexbox-froggy.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://bennettfeely.com/flexplorer/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--3W35gDvy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/dbqDnnZ/42-flexsplorer.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://www.flexulator.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ufBH0Yks--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/pZNwVZj/43-flexulator.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://cssgrid-generator.netlify.app/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--fI_cxWBm--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/59t7mw0/44-grid-generator.png" alt="" /></div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p><a href="https://cssgridgarden.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--XbPT5Nu9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/Ph6kx0X/40-css-gridgarden.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://flexboxfroggy.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--tmq25h-D--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/SPy0Qdg/41-flexbox-froggy.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://bennettfeely.com/flexplorer/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--3W35gDvy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/dbqDnnZ/42-flexsplorer.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://www.flexulator.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--ufBH0Yks--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/pZNwVZj/43-flexulator.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://cssgrid-generator.netlify.app/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--fI_cxWBm--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/59t7mw0/44-grid-generator.png"
+          alt=""
+        />
+      </div>
 
-      <div class="grid-item"><p><a href="https://grid.layoutit.com/">layoutit</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://layout.bradwoods.io/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--jLSjzv3Q--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/4mzZWMT/45-layout-generator.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://codepen.io/carolineartz/full/ogVXZj"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--rtMWKbAk--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/FK0p8r9/46-box-model.png" alt="" /></div>
+      <div class="grid-item">
+        <p><a href="https://grid.layoutit.com/">layoutit</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://layout.bradwoods.io/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--jLSjzv3Q--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/4mzZWMT/45-layout-generator.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://codepen.io/carolineartz/full/ogVXZj"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--rtMWKbAk--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/FK0p8r9/46-box-model.png"
+          alt=""
+        />
+      </div>
       <!-- Repite este bloque de grid-item para más columnas -->
     </div>
 
     <header>
       <h1>Informativo</h1>
     </header>
-    <div class="grid-container"> 
-      <div class="grid-item"><p><a href="https://css-timeline.vercel.app/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--OR9x8AqS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/fSHtrQ8/47-css-timeline.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://screensizemap.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--XkcVFBLS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/gvt1rX9/48-screensizemap.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://katydecorah.com/css-ruler/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--818Mzngp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/RbVTKXk/49-css-ruler.png" alt="" /></div>
-      <div class="grid-item"><p><a href="http://bada55.io/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--tNDmts4Y--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/WW3vXs6/50-bada55.png" alt="" /></div>
-      <div class="grid-item"><p><a href=""></a></p><img src="" alt="" /></div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p><a href="https://css-timeline.vercel.app/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--OR9x8AqS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/fSHtrQ8/47-css-timeline.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://screensizemap.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--XkcVFBLS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/gvt1rX9/48-screensizemap.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://katydecorah.com/css-ruler/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--818Mzngp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/RbVTKXk/49-css-ruler.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="http://bada55.io/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--tNDmts4Y--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/WW3vXs6/50-bada55.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href=""></a></p>
+        <img src="" alt="" />
+      </div>
 
-      <div class="grid-item"><p><a href="https://www.whocanuse.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--mlvrVJE7--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/ZGVxFvf/59-who-can-use.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://colorable.jxnblk.com/">colorable</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://caniuse.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--4z6jX5kW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/sg6MLP3/57-can-i-use.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://www.caniemail.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--C3cFef5S--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/h7qwsnb/58-can-i-email.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://codebeautify.org/css-tools"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--X_qGDV20--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/82F5fSG/51-css-tools.png" alt="" /></div>
+      <div class="grid-item">
+        <p><a href="https://www.whocanuse.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--mlvrVJE7--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/ZGVxFvf/59-who-can-use.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://colorable.jxnblk.com/">colorable</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://caniuse.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--4z6jX5kW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/sg6MLP3/57-can-i-use.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://www.caniemail.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--C3cFef5S--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/h7qwsnb/58-can-i-email.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://codebeautify.org/css-tools"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--X_qGDV20--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/82F5fSG/51-css-tools.png"
+          alt=""
+        />
+      </div>
 
-      <div class="grid-item"><p><a href="https://unused-css.com/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--TfAx3XqE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/z4MYSs5/52-unused-css.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://component.gallery/"></a></p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LjP2P7-3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/YPLHzd8/53-component-gallery.png" alt="" /></div>
-      <div class="grid-item"><p><a href="https://designsystemsrepo.com/design-systems-recent/">Design System Gallery</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://www.checklist.design/">Checklist.design</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://css-tricks.com/snippets/html/glyphs/">Glyphs</a></p><img src="" alt="" /></div>
+      <div class="grid-item">
+        <p><a href="https://unused-css.com/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--TfAx3XqE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/z4MYSs5/52-unused-css.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://component.gallery/"></a></p>
+        <img
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--LjP2P7-3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/YPLHzd8/53-component-gallery.png"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <p>
+          <a href="https://designsystemsrepo.com/design-systems-recent/"
+            >Design System Gallery</a
+          >
+        </p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://www.checklist.design/">Checklist.design</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://css-tricks.com/snippets/html/glyphs/">Glyphs</a></p>
+        <img src="" alt="" />
+      </div>
 
-      <div class="grid-item"><p><a href="https://glyphsearch.com/">glyphsearch</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://css-tricks.com/">css-tricks</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://github.com/kudapara/curated-design-tools">curated-design-tools</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://github.com/troxler/awesome-css-frameworks">awesome-css-frameworks</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://cssreference.io/">cssreference</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://htmlreference.io/">htmlreference</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"></a></p><img src="MDN CSS Docs" alt="" /></div>
+      <div class="grid-item">
+        <p><a href="https://glyphsearch.com/">glyphsearch</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://css-tricks.com/">css-tricks</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p>
+          <a href="https://github.com/kudapara/curated-design-tools"
+            >curated-design-tools</a
+          >
+        </p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p>
+          <a href="https://github.com/troxler/awesome-css-frameworks"
+            >awesome-css-frameworks</a
+          >
+        </p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://cssreference.io/">cssreference</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://htmlreference.io/">htmlreference</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
+          ></a>
+        </p>
+        <img src="MDN CSS Docs" alt="" />
+      </div>
       <!-- Repite este bloque de grid-item para más columnas -->
     </div>
-  
+
     <header>
       <h1>Extras</h1>
     </header>
-    <div class="grid-container"> 
-      <div class="grid-item"><p><a href="https://you.com">Chat You</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://extract.pics">Extraccion de imagenes</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://hue.tools">Paleta de colores</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://devdocs.io">Documentacion Fulls</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://transform.tools/html-to-pug">Html to Pug</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://joshwcomeau.com/shadow-palette/">Paletas</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://cssloaders.github.io">css loaders</a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href="https://typescale.com">Tamaño texto</a></p><img src="" alt="" /></div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p><a href="https://you.com">Chat You</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://extract.pics">Extraccion de imagenes</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://hue.tools">Paleta de colores</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://devdocs.io">Documentacion Fulls</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://transform.tools/html-to-pug">Html to Pug</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://joshwcomeau.com/shadow-palette/">Paletas</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://cssloaders.github.io">css loaders</a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href="https://typescale.com">Tamaño texto</a></p>
+        <img src="" alt="" />
+      </div>
       <!-- Repite este bloque de grid-item para más columnas -->
     </div>
 
     <header>
       <h1>Proximo</h1>
     </header>
-    <div class="grid-container"> 
-
-      <div class="grid-item"><p><a href=""></a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href=""></a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href=""></a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href=""></a></p><img src="" alt="" /></div>
-      <div class="grid-item"><p><a href=""></a></p><img src="" alt="" /></div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p><a href=""></a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href=""></a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href=""></a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href=""></a></p>
+        <img src="" alt="" />
+      </div>
+      <div class="grid-item">
+        <p><a href=""></a></p>
+        <img src="" alt="" />
+      </div>
       <!-- Repite este bloque de grid-item para más columnas -->
     </div>
+
+    <iframe
+      class="video-container-ocultar"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/_OE4EqC5yOQ?autoplay=1&mute=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
   </body>
 </html>
