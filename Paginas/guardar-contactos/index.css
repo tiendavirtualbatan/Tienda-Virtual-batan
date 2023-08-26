@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.category-button {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-details {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    margin: 10px;
+    width: 120px;
+    height: auto;
+}
+.contact-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0, 136, 255);
+}
+
+
+.contact-name {
+    font-size: 15px;
+    color: black;
+    background-color: #ababab85;
+    margin: 5px 0;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.contact-link {
+    margin-top: 10px;
+}
+
+.contact-link a {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-link.llamada a {
+    color: red;
+    background-color: #fdd;
+}
+
+.contact-strong {
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+}
+
+.contact-link.whatsapp a {
+    color: green;
+    background-color: #dfd;
+}
+.contact-category {
+    margin-top: 5px;
+    font-size: 10px;
+    color: blue;
+    background-color: #0000ff1f;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+
+}
