@@ -6,6 +6,12 @@ body {
     padding: 0;
 }
 
+.video-container-ocultar {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
 .container {
     display: flex;
     flex-direction: column;
