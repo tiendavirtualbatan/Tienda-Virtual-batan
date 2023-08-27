@@ -2,126 +2,619 @@
 <html lang="es-es">
 
 <head>
-    <!-- Meta etiquetas para información de la página -->
-    <meta property="og:title" content="Ventas Celulares Baratos Batan, Siquirres">
-    <meta property="og:description" content="Desbloqueos, Ventas, Reparaciones, Computadoras, Celulares">
-    <meta property="og:image" content="sistema/a.png">
-    <meta property="og:url" content="https://tiendavirtualbatan.com">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Enlace al archivo de estilos CSS -->
-    <link rel="stylesheet" href="sistema/css/index.css" />
-    <link rel="stylesheet" href="sistema/css/btn-animate.css" />
-    <link rel="stylesheet" href="sistema/css/video-container-ocultar.css" />
-    <link rel="stylesheet" href="sistema/css/nav-style-index.css" />
-    <title>Tienda Virtual Batan</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Tienda Virtual Batan</title>
+  <link rel="stylesheet" href="">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    html,
+    body {
+
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Roboto' !important;
+      color: white;
+      font-size: 9px;
+    }
+
+    #magic {
+
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: -9999;
+    }
+
+    .playground {
+
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      display: block;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+
+    }
+
+    .bottomPosition {
+
+      text-align: center;
+      margin-bottom: 50px;
+
+    }
+
+    .minText {
+
+      font-size: 14px;
+    }
+
+    a {
+      color: white;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    h1 {
+      display: block;
+      font-size: 4em;
+      margin-block-start: 0.67em;
+      margin-block-end: 0.67em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+    }
+
+    /*! CSS Used from: https://tiendavirtualbatan.com/sistema/css/btn-animate.css */
+    .button.btn-animate {
+      min-width: 150px;
+      min-height: 40px;
+      font-family: Nunito, sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-weight: 600;
+      color: #fff;
+      background: #fd7e14;
+      background: linear-gradient(90deg, #fd7e14, #ff0050);
+      border: none;
+      box-shadow: 12px 12px 24px rgba(253 126 20, 0.64);
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      padding: 10px;
+    }
+
+    .button.btn-animate,
+    button.btn-animate:before {
+      border-radius: 1000px;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    button.btn-animate:before {
+      content: "";
+      min-width: calc(230px + 12px);
+      min-height: calc(40px + 12px);
+      border: 6px solid #fd7e14;
+      box-shadow: 0 0 60px rgba(253 126 20, 0.64);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    .button.btn-animate:focus,
+    .button.btn-animate:hover {
+      color: #fff;
+      transform: translateY(-6px);
+    }
+
+    button.btn-animate:focus:before,
+    button.btn-animate:hover:before {
+      opacity: 1;
+    }
+
+    button.btn-animate:after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: 6px solid #fd7e14;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.5s infinite;
+    }
+
+    button.btn-animate:focus:after,
+    button.btn-animate:hover:after {
+      animation: none;
+      display: none;
+    }
+
+    /*! CSS Used from: https://tiendavirtualbatan.com/sistema/css/nav-style-index.css */
+    nav.navbar .navbar-brand .logo {
+      font-size: 20px;
+      font-weight: 600px;
+      text-shadow: 0 5px 5px #00000030;
+    }
+
+    /*! CSS Used keyframes */
+    @keyframes ring {
+      0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+      }
+
+      to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+      }
+    }
+
+  </style>
+
 </head>
 
 <body>
-  <!-- main container -->
-  <div class="container">
-    <!-- navbar begin -->
-    <nav class="navbar">
-      <div class="navbar-brand">
-        <!-- Título principal de la página -->
-        <div class="logo"><button class="button btn-animate"> <span style="font-size:16px"> Tienda Virtual <span style="color:#259dff">Batán</span></span> </button></div>
-      </div>
-      <div class="navbar-list">
-        <ul class="nav-ul">
-          <li class="nav-li"><a href="index.html" class="nav-link">Inicio</a></li>
-          <li class="nav-li"><a href="Paginas/formulario_productos.html" class="nav-link">Cargar Productos</a></li>
-          <li class="nav-li"><a href="Paginas/Tecnico/index.html" class="nav-link">Técnico</a></li>
-          <li class="nav-li"><a href="Paginas/guardar-contactos/index.html" class="nav-link">Contactos</a></li>
-          <li class="nav-li"><a href="Paginas/super-useful-css-resources/super-useful-css-resources.html" class="nav-link">Recursos CSS</a></li>
-        </ul>
-      </div>
-      <div class="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-    <!-- navbar end -->
-  </div>
+  <!-- partial:index.partial.html -->
+  <script type="x-shader/x-vertex" id="vertexshader">
 
-    <!-- Contenedor principal -->
-    <div class="container2">
-        <div class="form-group">
-            <!-- Cuadro de búsqueda -->
-            <input type="text" id="buscador" placeholder="Buscar productos por nombre">
+  attribute float size;
+  attribute vec3 customColor;
+  varying vec3 vColor;
+
+  void main() {
+
+    vColor = customColor;
+    vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+    gl_PointSize = size * ( 300.0 / -mvPosition.z );
+    gl_Position = projectionMatrix * mvPosition;
+
+  }
+
+</script>
+  <script type="x-shader/x-fragment" id="fragmentshader">
+
+ uniform vec3 color;
+ uniform sampler2D pointTexture;
+
+ varying vec3 vColor;
+
+ void main() {
+
+   gl_FragColor = vec4( color * vColor, 1.0 );
+   gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+
+ }
+</script>
+
+<div id="magic"></div>
+  <div class="playground">
+    <div class="bottomPosition">
+      <h1 class="special">
+        <div class="navbar-brand">
+          <!-- Título principal de la página -->
+          <a href="http://tiendacr.42web.io/">
+            <div class="logo">
+              <button class="button btn-animate">
+                <span style="font-size:14px">INGRESE <span style="color:#259dff">AQUÍ</span></span>
+              </button>
+            </div>
+          </a>
         </div>
+      </h1>
     </div>
-    <!-- Aquí se mostrarán los productos dinámicamente mediante código JavaScript -->
-    <div class="product-container">
-        <div class="product" data-categoria="Accesorios"><div class="product"><img src="imagenes/Diseños_64c6502fd0e7f.jpg" alt="Manivela Scorpion Gt-903" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Manivela Scorpion Gt-903</h3><p>₡50,000.00</p><span>Categoría: Accesorios</span><span>Envío en: 3 días</span><span>Disponibles: 10 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Accesorios"><div class="product"><img src="imagenes/Diseños_64c650d7e824c.jpg" alt="Set Scorpion Cm118" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Set Scorpion Cm118</h3><p>₡25,000.00</p><span>Categoría: Accesorios</span><span>Envío en: 3 días</span><span>Disponibles: 4 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Computadoras"><div class="product"><img src="imagenes/Diseños_64c651a6abeed.jpg" alt="Case Scorpion Ca-112" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Case Scorpion Ca-112</h3><p>₡15,000.00</p><span>Categoría: Computadoras</span><span>Envío en: 3 días</span><span>Disponibles: 2 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Computadoras"><div class="product"><img src="imagenes/Diseños_64c6520c9c7a8.jpg" alt="Case Scorpion Ca-212" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Case Scorpion Ca-212</h3><p>₡75,000.00</p><span>Categoría: Computadoras</span><span>Envío en: 3 días</span><span>Disponibles: 2 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Software"><div class="product"><img src="imagenes/Diseños_64c652b517c89.jpg" alt="Windows 11 Pro" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Windows 11 Pro</h3><p>₡10,000.00</p><span>Categoría: Software</span><span>Envío en: 1 días</span><span>Disponibles: 20 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Software"><div class="product"><img src="imagenes/Diseños_64c652fe1b969.jpg" alt="Windows 10 Pro" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Windows 10 Pro</h3><p>₡10,000.00</p><span>Categoría: Software</span><span>Envío en: 1 días</span><span>Disponibles: 20 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Software"><div class="product"><img src="imagenes/Diseños_64c65361b5e19.webp" alt="Office 365" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Office 365</h3><p>₡7,000.00</p><span>Categoría: Software</span><span>Envío en: 1 días</span><span>Disponibles: 20 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Software"><div class="product"><img src="imagenes/Diseños_64c6543a42a69.jpg" alt="Photoshop 2023" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Photoshop 2023</h3><p>₡5,000.00</p><span>Categoría: Software</span><span>Envío en: 1 días</span><span>Disponibles: 50 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div>        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $(".show-details").click(function(event) {
-                    event.preventDefault(); // Evita la acción predeterminada del enlace
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js'></script>
+  <script>
+    const preload = () => {
 
-                    var productDetails = $(this).next(".product-details");
+      let manager = new THREE.LoadingManager();
+      manager.onLoad = function () {
+        const environment = new Environment(typo, particle);
+      }
 
-                    // Encuentra todos los detalles del producto, excepto el que se está abriendo
-                    var otherDetails = $(".product-details").not(productDetails);
+      var typo = null;
+      const loader = new THREE.FontLoader(manager);
+      const font = loader.load('https://res.cloudinary.com/dydre7amr/raw/upload/v1612950355/font_zsd4dr.json', function (font) { typo = font; });
+      const particle = new THREE.TextureLoader(manager).load('https://res.cloudinary.com/dfvtkoboz/image/upload/v1605013866/particle_a64uzf.png');
 
-                    // Si el detalle actual está visible, ocúltalo; si no, muestra y oculta los demás detalles
-                    if (productDetails.is(":visible")) {
-                        productDetails.hide();
-                    } else {
-                        otherDetails.hide();
-                        productDetails.show();
-                    }
-                });
+    }
 
-                // Cierra los detalles de los productos cuando se hace clic fuera de ellos
-                $(document).on("click", function(event) {
-                    if (!$(event.target).closest(".show-details, .product-details").length) {
-                        $(".product-details").hide();
-                    }
-                });
+    if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll))
+      preload();
+    else
+      document.addEventListener("DOMContentLoaded", preload);
 
-            });
+    class Environment {
 
-            // Agrega esta sección al final de tu archivo HTML, dentro de la etiqueta <body> 
+      constructor(font, particle) {
 
-            $(document).ready(function() {
-                $(".expandable-image").click(function() {
-                    $(this).toggleClass("expanded");
-                });
-            });
-        </script>
+        this.font = font;
+        this.particle = particle;
+        this.container = document.querySelector('#magic');
+        this.scene = new THREE.Scene();
+        this.createCamera();
+        this.createRenderer();
+        this.setup()
+        this.bindEvents();
+      }
 
-    </div>
-    <!-- Contenedor de íconos de redes sociales fijos -->
-    <div class="sticky-container">
-        <ul class="sticky">
-            <li>
-                <p><a href="https://wa.me/50687895592" target="_self"><img src="sistema/imagenes/whatsapp.png" width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="https://www.youtube.com/channel/UCQla-SX_xSInWU86Z4z0iYg" target="_self"><img src="sistema/imagenes/youtube.png" width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="https://www.instagram.com/yuliana.emir/" target="_self"><img src="sistema/imagenes/instagram.png" width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="https://www.facebook.com/tiendavirtualbataan/" target="_self"><img src="sistema/imagenes/facebook.png" width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="https://twitter.com/emiryuliana" target="_self"><img src="sistema/imagenes/twiter.gif" width="35" height="35"></a></p>
-            </li>
-            <li>
-                <p><a href="emiryuliana/index.html" target="_self"><img src="sistema/imagenes/logo.png" width="35" height="35"></a></p>
-            </li>
-        </ul>
-    </div>
-    <!-- Archivo JavaScript para manipulación de la página -->
+      bindEvents() {
 
-    <script src="sistema/js/index.js"></script>
-    <script src="sistema/js/nav-index.js"></script>
+        window.addEventListener('resize', this.onWindowResize.bind(this));
 
-    <iframe class="video-container-ocultar" width="560" height="315" src="https://www.youtube.com/embed/_OE4EqC5yOQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      }
+
+      setup() {
+
+        this.createParticles = new CreateParticles(this.scene, this.font, this.particle, this.camera, this.renderer);
+      }
+
+      render() {
+
+        this.createParticles.render()
+        this.renderer.render(this.scene, this.camera)
+      }
+
+      createCamera() {
+
+        this.camera = new THREE.PerspectiveCamera(65, this.container.clientWidth / this.container.clientHeight, 1, 10000);
+        this.camera.position.set(0, 0, 100);
+
+      }
+
+      createRenderer() {
+
+        this.renderer = new THREE.WebGLRenderer();
+        this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+
+        this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        this.renderer.outputEncoding = THREE.sRGBEncoding;
+        this.container.appendChild(this.renderer.domElement);
+
+        this.renderer.setAnimationLoop(() => { this.render() })
+
+      }
+
+      onWindowResize() {
+
+        this.camera.aspect = this.container.clientWidth / this.container.clientHeight;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+
+      }
+    }
+
+    class CreateParticles {
+
+      constructor(scene, font, particleImg, camera, renderer) {
+
+        this.scene = scene;
+        this.font = font;
+        this.particleImg = particleImg;
+        this.camera = camera;
+        this.renderer = renderer;
+
+        this.raycaster = new THREE.Raycaster();
+        this.mouse = new THREE.Vector2(-200, 200);
+
+        this.colorChange = new THREE.Color();
+
+        this.buttom = false;
+
+        this.data = {
+
+          text: 'TIENDA\nVIRTUAL\n BATAN',
+          amount: 1500,
+          particleSize: 1,
+          particleColor: 0xffffff,
+          textSize: 16,
+          area: 250,
+          ease: .05,
+        }
+
+        this.setup();
+        this.bindEvents();
+
+      }
+
+
+      setup() {
+
+        const geometry = new THREE.PlaneGeometry(this.visibleWidthAtZDepth(100, this.camera), this.visibleHeightAtZDepth(100, this.camera));
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, transparent: true });
+        this.planeArea = new THREE.Mesh(geometry, material);
+        this.planeArea.visible = false;
+        this.createText();
+
+      }
+
+      bindEvents() {
+
+        document.addEventListener('mousedown', this.onMouseDown.bind(this));
+        document.addEventListener('mousemove', this.onMouseMove.bind(this));
+        document.addEventListener('mouseup', this.onMouseUp.bind(this));
+
+      }
+
+      onMouseDown() {
+
+        this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        this.mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+
+        const vector = new THREE.Vector3(this.mouse.x, this.mouse.y, 0.5);
+        vector.unproject(this.camera);
+        const dir = vector.sub(this.camera.position).normalize();
+        const distance = - this.camera.position.z / dir.z;
+        this.currenPosition = this.camera.position.clone().add(dir.multiplyScalar(distance));
+
+        const pos = this.particles.geometry.attributes.position;
+        this.buttom = true;
+        this.data.ease = .01;
+
+      }
+
+      onMouseUp() {
+
+        this.buttom = false;
+        this.data.ease = .05;
+      }
+
+      onMouseMove() {
+
+        this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        this.mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+
+      }
+
+      render(level) {
+
+        const time = ((.001 * performance.now()) % 12) / 12;
+        const zigzagTime = (1 + (Math.sin(time * 2 * Math.PI))) / 6;
+
+        this.raycaster.setFromCamera(this.mouse, this.camera);
+
+        const intersects = this.raycaster.intersectObject(this.planeArea);
+
+        if (intersects.length > 0) {
+
+          const pos = this.particles.geometry.attributes.position;
+          const copy = this.geometryCopy.attributes.position;
+          const coulors = this.particles.geometry.attributes.customColor;
+          const size = this.particles.geometry.attributes.size;
+
+          const mx = intersects[0].point.x;
+          const my = intersects[0].point.y;
+          const mz = intersects[0].point.z;
+
+          for (var i = 0, l = pos.count; i < l; i++) {
+
+            const initX = copy.getX(i);
+            const initY = copy.getY(i);
+            const initZ = copy.getZ(i);
+
+            let px = pos.getX(i);
+            let py = pos.getY(i);
+            let pz = pos.getZ(i);
+
+            this.colorChange.setHSL(.5, 1, 1)
+            coulors.setXYZ(i, this.colorChange.r, this.colorChange.g, this.colorChange.b)
+            coulors.needsUpdate = true;
+
+            size.array[i] = this.data.particleSize;
+            size.needsUpdate = true;
+
+            let dx = mx - px;
+            let dy = my - py;
+            const dz = mz - pz;
+
+            const mouseDistance = this.distance(mx, my, px, py)
+            let d = (dx = mx - px) * dx + (dy = my - py) * dy;
+            const f = - this.data.area / d;
+
+            if (this.buttom) {
+
+              const t = Math.atan2(dy, dx);
+              px -= f * Math.cos(t);
+              py -= f * Math.sin(t);
+
+              this.colorChange.setHSL(.5 + zigzagTime, 1.0, .5)
+              coulors.setXYZ(i, this.colorChange.r, this.colorChange.g, this.colorChange.b)
+              coulors.needsUpdate = true;
+
+              if ((px > (initX + 70)) || (px < (initX - 70)) || (py > (initY + 70) || (py < (initY - 70)))) {
+
+                this.colorChange.setHSL(.15, 1.0, .5)
+                coulors.setXYZ(i, this.colorChange.r, this.colorChange.g, this.colorChange.b)
+                coulors.needsUpdate = true;
+
+              }
+
+            } else {
+
+              if (mouseDistance < this.data.area) {
+
+                if (i % 5 == 0) {
+
+                  const t = Math.atan2(dy, dx);
+                  px -= .03 * Math.cos(t);
+                  py -= .03 * Math.sin(t);
+
+                  this.colorChange.setHSL(.15, 1.0, .5)
+                  coulors.setXYZ(i, this.colorChange.r, this.colorChange.g, this.colorChange.b)
+                  coulors.needsUpdate = true;
+
+                  size.array[i] = this.data.particleSize / 1.2;
+                  size.needsUpdate = true;
+
+                } else {
+
+                  const t = Math.atan2(dy, dx);
+                  px += f * Math.cos(t);
+                  py += f * Math.sin(t);
+
+                  pos.setXYZ(i, px, py, pz);
+                  pos.needsUpdate = true;
+
+                  size.array[i] = this.data.particleSize * 1.3;
+                  size.needsUpdate = true;
+                }
+
+                if ((px > (initX + 10)) || (px < (initX - 10)) || (py > (initY + 10) || (py < (initY - 10)))) {
+
+                  this.colorChange.setHSL(.15, 1.0, .5)
+                  coulors.setXYZ(i, this.colorChange.r, this.colorChange.g, this.colorChange.b)
+                  coulors.needsUpdate = true;
+
+                  size.array[i] = this.data.particleSize / 1.8;
+                  size.needsUpdate = true;
+
+                }
+              }
+
+            }
+
+            px += (initX - px) * this.data.ease;
+            py += (initY - py) * this.data.ease;
+            pz += (initZ - pz) * this.data.ease;
+
+            pos.setXYZ(i, px, py, pz);
+            pos.needsUpdate = true;
+
+          }
+        }
+      }
+
+      createText() {
+
+        let thePoints = [];
+
+        let shapes = this.font.generateShapes(this.data.text, this.data.textSize);
+        let geometry = new THREE.ShapeGeometry(shapes);
+        geometry.computeBoundingBox();
+
+        const xMid = - 0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
+        const yMid = (geometry.boundingBox.max.y - geometry.boundingBox.min.y) / 2.85;
+
+        geometry.center();
+
+        let holeShapes = [];
+
+        for (let q = 0; q < shapes.length; q++) {
+
+          let shape = shapes[q];
+
+          if (shape.holes && shape.holes.length > 0) {
+
+            for (let j = 0; j < shape.holes.length; j++) {
+
+              let hole = shape.holes[j];
+              holeShapes.push(hole);
+            }
+          }
+
+        }
+        shapes.push.apply(shapes, holeShapes);
+
+        let colors = [];
+        let sizes = [];
+
+        for (let x = 0; x < shapes.length; x++) {
+
+          let shape = shapes[x];
+
+          const amountPoints = (shape.type == 'Path') ? this.data.amount / 2 : this.data.amount;
+
+          let points = shape.getSpacedPoints(amountPoints);
+
+          points.forEach((element, z) => {
+
+            const a = new THREE.Vector3(element.x, element.y, 0);
+            thePoints.push(a);
+            colors.push(this.colorChange.r, this.colorChange.g, this.colorChange.b);
+            sizes.push(1)
+
+          });
+        }
+
+        let geoParticles = new THREE.BufferGeometry().setFromPoints(thePoints);
+        geoParticles.translate(xMid, yMid, 0);
+
+        geoParticles.setAttribute('customColor', new THREE.Float32BufferAttribute(colors, 3));
+        geoParticles.setAttribute('size', new THREE.Float32BufferAttribute(sizes, 1));
+
+        const material = new THREE.ShaderMaterial({
+
+          uniforms: {
+            color: { value: new THREE.Color(0xffffff) },
+            pointTexture: { value: this.particleImg }
+          },
+          vertexShader: document.getElementById('vertexshader').textContent,
+          fragmentShader: document.getElementById('fragmentshader').textContent,
+
+          blending: THREE.AdditiveBlending,
+          depthTest: false,
+          transparent: true,
+        });
+
+        this.particles = new THREE.Points(geoParticles, material);
+        this.scene.add(this.particles);
+
+        this.geometryCopy = new THREE.BufferGeometry();
+        this.geometryCopy.copy(this.particles.geometry);
+
+      }
+
+      visibleHeightAtZDepth(depth, camera) {
+
+        const cameraOffset = camera.position.z;
+        if (depth < cameraOffset) depth -= cameraOffset;
+        else depth += cameraOffset;
+
+        const vFOV = camera.fov * Math.PI / 180;
+
+        return 2 * Math.tan(vFOV / 2) * Math.abs(depth);
+      }
+
+      visibleWidthAtZDepth(depth, camera) {
+
+        const height = this.visibleHeightAtZDepth(depth, camera);
+        return height * camera.aspect;
+
+      }
+
+      distance(x1, y1, x2, y2) {
+
+        return Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
+      }
+    }
+  </script>
+
 </body>
 
 </html>

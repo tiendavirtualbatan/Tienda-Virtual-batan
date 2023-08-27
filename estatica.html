@@ -1,21 +1,3 @@
-<?php
-// Establecer una conexión con la base de datos MySQL
-$conexion = new mysqli('localhost', 'root', '', 'tienda');
-
-// Verificar si la conexión fue exitosa
-if ($conexion->connect_error) {
-    die('Error de conexión: ' . $conexion->connect_error);
-}
-
-// Consulta SQL para seleccionar todos los registros de la tabla "productos"
-$sql = "SELECT * FROM productos";
-
-// Ejecutar la consulta y almacenar el resultado en la variable $result
-$result = $conexion->query($sql);
-
-// Iniciar el buffer de salida para almacenar la salida generada por el script
-ob_start();
-?>
 <!DOCTYPE html>
 <html lang="es-es">
 
@@ -72,62 +54,7 @@ ob_start();
     </div>
     <!-- Aquí se mostrarán los productos dinámicamente mediante código JavaScript -->
     <div class="product-container">
-        <?php
-        // Verifica si hay resultados en la consulta
-        if ($result->num_rows > 0) {
-            // Recorre cada fila de resultados
-            while ($row = $result->fetch_assoc()) {
-                // Muestra un producto en un div con el atributo de data-categoria
-                echo '<div class="product" data-categoria="' . $row['categoria'] . '">';
-
-                // Muestra la imagen del producto con un enlace para la expansión
-                echo '<div class="product">';
-                echo '<img src="' . $row['imagen'] . '" alt="' . $row['nombre'] . '" class="expandable-image">';
-                echo '</div>';
-
-                // Agrega el enlace "Más detalles" que mostrará el contenido adicional al hacer clic en él
-                echo '<a href="#" class="show-details">Más detalles</a>';
-
-                // Muestra los detalles del producto en un div con la clase "product-details" (inicialmente oculto)
-                echo '<div class="product-details" style="display:none;">';
-
-                // Muestra el nombre del producto
-                echo '<h3>' . $row['nombre'] . '</h3>';
-
-                // Muestra el precio del producto formateado como moneda (colones, con dos decimales)
-                echo '<p>₡' . number_format($row['precio'], 2) . '</p>';
-
-                // Muestra la categoría del producto
-                echo '<span>Categoría: ' . $row['categoria'] . '</span>';
-
-                // Muestra el tipo de envío del producto
-                echo '<span>Envío en: ' . $row['envio'] . ' días</span>';
-
-                // Muestra la cantidad disponible del producto
-                echo '<span>Disponibles: ' . $row['cantidad'] . ' unidades</span>';
-
-                // Genera un enlace de WhatsApp usando el número de teléfono del vendedor
-                $whatsappLink = 'https://wa.me/506' . $row['telefono'];
-                echo '<span>WhatsApp: <a href="' . $whatsappLink . '">' . $row['telefono'] . '</a></span>';
-
-                // Muestra el nombre de la tienda del producto
-                echo '<span>Tienda: <span class="tienda">' . $row['tienda'] . '</span></span>';
-
-                // Cierra el div de detalles del producto
-                echo '</div>';
-
-                // Cierra el div del producto actual
-                echo '</div>';
-            }
-        } else {
-            // Si no hay productos, muestra un mensaje indicando que no hay registros.
-            echo "<p>No hay productos registrados.</p>";
-        }
-
-        // Cierra la conexión a la base de datos
-        $conexion->close();
-        ?>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <div class="product" data-categoria="Accesorios"><div class="product"><img src="imagenes/Diseños_64c6502fd0e7f.jpg" alt="Manivela Scorpion Gt-903" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Manivela Scorpion Gt-903</h3><p>₡50,000.00</p><span>Categoría: Accesorios</span><span>Envío en: 3 días</span><span>Disponibles: 10 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Accesorios"><div class="product"><img src="imagenes/Diseños_64c650d7e824c.jpg" alt="Set Scorpion Cm118" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Set Scorpion Cm118</h3><p>₡25,000.00</p><span>Categoría: Accesorios</span><span>Envío en: 3 días</span><span>Disponibles: 4 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Computadoras"><div class="product"><img src="imagenes/Diseños_64c651a6abeed.jpg" alt="Case Scorpion Ca-112" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Case Scorpion Ca-112</h3><p>₡15,000.00</p><span>Categoría: Computadoras</span><span>Envío en: 3 días</span><span>Disponibles: 2 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Computadoras"><div class="product"><img src="imagenes/Diseños_64c6520c9c7a8.jpg" alt="Case Scorpion Ca-212" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Case Scorpion Ca-212</h3><p>₡75,000.00</p><span>Categoría: Computadoras</span><span>Envío en: 3 días</span><span>Disponibles: 2 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Software"><div class="product"><img src="imagenes/Diseños_64c652b517c89.jpg" alt="Windows 11 Pro" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Windows 11 Pro</h3><p>₡10,000.00</p><span>Categoría: Software</span><span>Envío en: 1 días</span><span>Disponibles: 20 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Software"><div class="product"><img src="imagenes/Diseños_64c652fe1b969.jpg" alt="Windows 10 Pro" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Windows 10 Pro</h3><p>₡10,000.00</p><span>Categoría: Software</span><span>Envío en: 1 días</span><span>Disponibles: 20 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Software"><div class="product"><img src="imagenes/Diseños_64c65361b5e19.webp" alt="Office 365" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Office 365</h3><p>₡7,000.00</p><span>Categoría: Software</span><span>Envío en: 1 días</span><span>Disponibles: 20 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div><div class="product" data-categoria="Software"><div class="product"><img src="imagenes/Diseños_64c6543a42a69.jpg" alt="Photoshop 2023" class="expandable-image"></div><a href="#" class="show-details">Más detalles</a><div class="product-details" style="display:none;"><h3>Photoshop 2023</h3><p>₡5,000.00</p><span>Categoría: Software</span><span>Envío en: 1 días</span><span>Disponibles: 50 unidades</span><span>WhatsApp: <a href="https://wa.me/50687895592">87895592</a></span><span>Tienda: <span class="tienda">Tienda Virtual Batan</span></span></div></div>        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function() {
                 $(".show-details").click(function(event) {
@@ -198,16 +125,3 @@ ob_start();
 </body>
 
 </html>
-<?php
-// Finalizar almacenamiento en buffer y guardar el contenido en una variable
-$htmlContent = ob_get_clean();
-
-// Guardar el contenido del buffer en un archivo HTML llamado index.html
-file_put_contents('estatica.html', $htmlContent);
-
-// Redirigir al usuario a index.html
-header('Location: index.html');
-
-// Asegurar que no se ejecute más código después de la redirección
-exit();
-?>
